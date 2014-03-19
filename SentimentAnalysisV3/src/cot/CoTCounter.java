@@ -348,6 +348,117 @@ public class CoTCounter {
 		}
 	}
 	
+   //METHOD FOR GRAPHING TERM DATA IN MATLAB	
+   public void termCountArticlesNotMainTextNounAdjectiveVerbAdverbForMatlabGraph(JsonHandler jh) {
+		
+		// Only create terms from worclasses noun, adjective, verb and adverb only
+		
+		termFrequency = new HashMap<String, Integer>();
+		docFrequency = new HashMap<String, Integer>();
+		for (NewsArticleWithStemmedVersion nawsv : jh.stemmedArticles.getNawsv()) {
+//			for (int i = 0; i < nawsv.getAllPosTaggedWords().size();i++) {
+//				System.out.print(nawsv.getAllPosTaggedWords().get(i).stem + " ");
+//			}
+			ArrayList<PosTaggedWord> ptwList = new ArrayList<PosTaggedWord>();
+			
+			if(nawsv.getPosTaggedTitle().getPosTaggedWords()!= null){
+				for (PosTaggedWord posTaggedWord : nawsv.getPosTaggedTitle().getPosTaggedWords()) {
+					ptwList.add(posTaggedWord);
+				}
+			}	
+			if(nawsv.getPosTaggedLeadText().getPosTaggedWords()!= null){
+				for (PosTaggedWord posTaggedWord : nawsv.getPosTaggedLeadText().getPosTaggedWords()) {
+					ptwList.add(posTaggedWord);
+				}
+			}
+			Set<String> wordset = new TreeSet<String>();
+			for (int i = 0; i < ptwList.size();i++) {
+				ArrayList<String> permittedWordclasses = new ArrayList<String>(Arrays.asList("subst", "adj", "verb", "adv"));
+				String wordclass = ptwList.get(i).wordclass;
+				if (permittedWordclasses.contains(wordclass)) {
+					String str = ptwList.get(i).stem;
+					if (termFrequency.containsKey(str)) {
+						int count = termFrequency.get(str);
+						count++;
+						termFrequency.put(str, count);
+					} else {
+						termFrequency.put(str, 1);
+					}
+//					System.out.println("Contains: " + wordclass);
+					wordset.add(str);
+				} //else {
+//					System.out.println("Does not contain: " + wordclass);
+//				}
+			}
+			// Keep track of set so that no duplicates within same article are counted
+			for (String str : wordset) {
+				if (docFrequency.containsKey(str)) {
+					int count = docFrequency.get(str);
+					count++;
+					docFrequency.put(str, count);
+				} else {
+					docFrequency.put(str, 1);
+				}
+			}
+			//System.out.println("DOC FREQUENCY FOR MATLAB GRAPH:  " + docFrequency.size());
+		}
+	}
+ //METHOD FOR GRAPHING TERM DATA IN MATLAB	
+   public void termCountArticlesNotMainTextForMatlabGraph(JsonHandler jh) {
+		
+		// Only create terms from worclasses noun, adjective, verb and adverb only
+		
+		termFrequency = new HashMap<String, Integer>();
+		docFrequency = new HashMap<String, Integer>();
+		for (NewsArticleWithStemmedVersion nawsv : jh.stemmedArticles.getNawsv()) {
+//			for (int i = 0; i < nawsv.getAllPosTaggedWords().size();i++) {
+//				System.out.print(nawsv.getAllPosTaggedWords().get(i).stem + " ");
+//			}
+			ArrayList<PosTaggedWord> ptwList = new ArrayList<PosTaggedWord>();
+			
+			if(nawsv.getPosTaggedTitle().getPosTaggedWords()!= null){
+				for (PosTaggedWord posTaggedWord : nawsv.getPosTaggedTitle().getPosTaggedWords()) {
+					ptwList.add(posTaggedWord);
+				}
+			}	
+			if(nawsv.getPosTaggedLeadText().getPosTaggedWords()!= null){
+				for (PosTaggedWord posTaggedWord : nawsv.getPosTaggedLeadText().getPosTaggedWords()) {
+					ptwList.add(posTaggedWord);
+				}
+			}
+			Set<String> wordset = new TreeSet<String>();
+			for (int i = 0; i < ptwList.size();i++) {
+				//ArrayList<String> permittedWordclasses = new ArrayList<String>(Arrays.asList("subst", "adj", "verb", "adv"));
+				String wordclass = ptwList.get(i).wordclass;
+				//if (permittedWordclasses.contains(wordclass)) {
+					String str = ptwList.get(i).stem;
+					if (termFrequency.containsKey(str)) {
+						int count = termFrequency.get(str);
+						count++;
+						termFrequency.put(str, count);
+					} else {
+						termFrequency.put(str, 1);
+					}
+//					System.out.println("Contains: " + wordclass);
+					wordset.add(str);
+				//} else {
+//					System.out.println("Does not contain: " + wordclass);
+//				}
+			}
+			// Keep track of set so that no duplicates within same article are counted
+			for (String str : wordset) {
+				if (docFrequency.containsKey(str)) {
+					int count = docFrequency.get(str);
+					count++;
+					docFrequency.put(str, count);
+				} else {
+					docFrequency.put(str, 1);
+				}
+			}
+			//System.out.println("DOC FREQUENCY FOR MATLAB GRAPH:  " + docFrequency.size());
+		}
+	}
+	
 	public HashMap<String, Integer> getCotsForArticle(NewsArticleWithStemmedVersion stemmedArticle){
 		HashMap<String, Integer> articleHashmap = new HashMap<String, Integer>();
 
@@ -468,6 +579,17 @@ public class CoTCounter {
 			out.close();
 		}
 	}
+	
+	public void writeFrequencyOverviewToFile(Map<String, Integer> map, String thefilepath) throws IOException {
+		Gson gson = new Gson();
+		String text = gson.toJson(map);
+		Writer out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(thefilepath), "UTF-8"));
+		try {
+			out.write(text);
+		} finally {
+			out.close();
+		}
+	}
 
 	public void writeListToFile(List<String> list, String thefilepath) throws IOException {
 		Gson gson = new Gson();
@@ -540,6 +662,17 @@ public class CoTCounter {
 	    String path = String.format("%s/%s", System.getProperty("user.dir"), this.getClass().getPackage().getName().replace(".", "/"));
 	    path = path.substring(0, path.length()-4);
 	    return path + "/ArticleResources/CoTs/";
+	}
+	public String getPathWordlistPath() {
+	    String path = String.format("%s/%s", System.getProperty("user.dir"), this.getClass().getPackage().getName().replace(".", "/"));
+	    path = path.substring(0, path.length()-4);
+	    return path + "/ArticleResources/WordlistsOfImportance/";
+	}
+	public String getStaticPathWordlistPath() {
+		CoTCounter cc = new CoTCounter("cotsannotated.json", 0);
+		String path = String.format("%s/%s", System.getProperty("user.dir"), cc.getClass().getPackage().getName().replace(".", "/"));
+		path = path.substring(0, path.length()-4);
+		return path + "/ArticleResources/WordlistsOfImportance/";
 	}
 
 	public static String getStaticPath() {
@@ -712,9 +845,58 @@ public class CoTCounter {
 		return str.substring(0, str.length()-1) + "]";
 	}
 	
-	public static void main(String[] args) throws Exception {
+	public void printSortedHashmapsForMatlab(LinkedHashMap<String, Integer> hashmapToPrint){
 		
-		main4();
+		    Iterator it = hashmapToPrint.entrySet().iterator();
+		    System.out.print("[");
+		    while (it.hasNext()) {
+		        Map.Entry pairs = (Map.Entry)it.next();
+		        System.out.print(pairs.getValue()+" ");
+		        it.remove(); // avoids a ConcurrentModificationException
+		    }
+		    System.out.print("]");
+		
+		
+	}
+	
+	public static void main(String[] args) throws Exception {
+	
+		JsonHandler jh = new JsonHandler("/ArticleSteps/4_StemmedArticles/MainDataSetStemmed.json", "stemmed");
+		CoTCounter ccWORDCLASS = new CoTCounter(2);
+		ccWORDCLASS.termCountArticlesNotMainTextNounAdjectiveVerbAdverbForMatlabGraph(jh);
+		
+		LinkedHashMap<String, Integer> sortedDocFreqMapWC = ccWORDCLASS.sortHashMapByValuesD(ccWORDCLASS.docFrequency);
+		LinkedHashMap<String, Integer> sortedTermFreqMapWC = ccWORDCLASS.sortHashMapByValuesD(ccWORDCLASS.termFrequency);
+		
+		//cc.writeFrequencyOverviewToFile(sortedDocFreqMap, jh.getPath()+"WordlistsOfImportance/DOCFREQUENCYwWC.json");
+		//cc.writeFrequencyOverviewToFile(sortedTermFreqMap, jh.getPath()+"WordlistsOfImportance/TERMFREQUENCYwWC.json");
+		System.out.println("");
+		System.out.println("SORTED TERM FREQUENCY WITH WORDCLASSES");
+		ccWORDCLASS.printSortedHashmapsForMatlab(sortedTermFreqMapWC);
+		System.out.println("");
+		System.out.println("SORTED DOC FREQUENCY WITH WORDCLASSES");
+		ccWORDCLASS.printSortedHashmapsForMatlab(sortedDocFreqMapWC);
+		
+		
+		
+		
+		CoTCounter ccNOWORDCLASS = new CoTCounter(2);
+		ccNOWORDCLASS.termCountArticlesNotMainTextForMatlabGraph(jh);
+		
+		LinkedHashMap<String, Integer> sortedDocFreqMapNOWC = ccNOWORDCLASS.sortHashMapByValuesD(ccNOWORDCLASS.docFrequency);
+		LinkedHashMap<String, Integer> sortedTermFreqMapNOWC = ccNOWORDCLASS.sortHashMapByValuesD(ccNOWORDCLASS.termFrequency);
+		
+		//cc.writeFrequencyOverviewToFile(sortedDocFreqMap, jh.getPath()+"WordlistsOfImportance/DOCFREQUENCYwWC.json");
+		//cc.writeFrequencyOverviewToFile(sortedTermFreqMap, jh.getPath()+"WordlistsOfImportance/TERMFREQUENCYwWC.json");
+		System.out.println("");
+		System.out.println("SORTED TERM FREQUENCY NO WORDLCASSES");
+		ccNOWORDCLASS.printSortedHashmapsForMatlab(sortedTermFreqMapNOWC);
+		System.out.println("");
+		System.out.println("SORTED DOC FREQUENCY NO WORDCLASSES");
+		ccNOWORDCLASS.printSortedHashmapsForMatlab(sortedDocFreqMapNOWC);
+		
+		
+//		main4();
 		
 //		main3();
 		
