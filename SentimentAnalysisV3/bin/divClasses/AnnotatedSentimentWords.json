@@ -1,0 +1,10514 @@
+﻿{
+  "words": [
+    {
+      "counter": 337,
+      "word": "siste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 275,
+      "word": "mer",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 266,
+      "word": "nye",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 242,
+      "word": "flere",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 184,
+      "word": "videre",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 182,
+      "word": "langt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 171,
+      "word": "norske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 160,
+      "word": "4.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 159,
+      "word": "tidligere",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 151,
+      "word": "ny",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 149,
+      "word": "samtidig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 139,
+      "word": "store",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 137,
+      "word": "mye",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 135,
+      "word": "hele",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 132,
+      "word": "god",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 127,
+      "word": "største",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 125,
+      "word": "mange",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 125,
+      "word": "første",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 119,
+      "word": "norsk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 109,
+      "word": "mest",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 107,
+      "word": "amerikanske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 103,
+      "word": "positiv",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 100,
+      "word": "høyere",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 96,
+      "word": "bedre",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 81,
+      "word": "helt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 81,
+      "word": "ytterligere",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 80,
+      "word": "godt",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 77,
+      "word": "nytt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 75,
+      "word": "mindre",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 73,
+      "word": "lavere",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 73,
+      "word": "større",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 73,
+      "word": "stigende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 70,
+      "word": "svenske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 68,
+      "word": "kraftig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 68,
+      "word": "lang",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 65,
+      "word": "tilsvarende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 63,
+      "word": "svært",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 62,
+      "word": "sterk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 61,
+      "word": "gode",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 60,
+      "word": "stor",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 59,
+      "word": "veldig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 58,
+      "word": "litt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 57,
+      "word": "høyeste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 57,
+      "word": "nærmere",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 54,
+      "word": "stadig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 54,
+      "word": "viktig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 53,
+      "word": "teknisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 51,
+      "word": "økt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 50,
+      "word": "fjerde",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 50,
+      "word": "fast",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 48,
+      "word": "ansatte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 47,
+      "word": "totalt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 47,
+      "word": "middels",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 46,
+      "word": "fort",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 46,
+      "word": "spesielt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 46,
+      "word": "økonomiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 45,
+      "word": "betydelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 44,
+      "word": "oppmerksom",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 44,
+      "word": "klart",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 44,
+      "word": "trolig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 43,
+      "word": "mulig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 42,
+      "word": "svakere",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 41,
+      "word": "positivt",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 40,
+      "word": "ansvarlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 40,
+      "word": "lenger",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 40,
+      "word": "beste",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 39,
+      "word": "verdt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 38,
+      "word": "bra",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 38,
+      "word": "høy",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 38,
+      "word": "positive",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 38,
+      "word": "solid",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 37,
+      "word": "fleste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 37,
+      "word": "kort",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 37,
+      "word": "økte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 34,
+      "word": "få",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 34,
+      "word": "rødt",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 33,
+      "word": "støtende",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 33,
+      "word": "injurierende",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 33,
+      "word": "liten",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 33,
+      "word": "relativt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 32,
+      "word": "tidlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 32,
+      "word": "lite",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 30,
+      "word": "lenge",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 30,
+      "word": "minst",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 29,
+      "word": "andre",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 29,
+      "word": "franske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 29,
+      "word": "viktige",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 29,
+      "word": "senere",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 29,
+      "word": "dyrere",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 28,
+      "word": "færre",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 28,
+      "word": "faktisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 28,
+      "word": "europeiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 28,
+      "word": "1.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 28,
+      "word": "administrerende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 27,
+      "word": "eksisterende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 27,
+      "word": "klar",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 27,
+      "word": "private",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 26,
+      "word": "sterke",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 26,
+      "word": "dårlig",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 25,
+      "word": "viktigste",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 25,
+      "word": "ulike",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 24,
+      "word": "såkalte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 24,
+      "word": "særlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 24,
+      "word": "bredere",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 24,
+      "word": "ferske",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 24,
+      "word": "høye",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 23,
+      "word": "høyt",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 23,
+      "word": "tredje",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 23,
+      "word": "globale",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 23,
+      "word": "små",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 23,
+      "word": "omsatte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 23,
+      "word": "skrivende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 23,
+      "word": "størst",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 23,
+      "word": "danske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 22,
+      "word": "lav",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 22,
+      "word": "kommende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 22,
+      "word": "direkte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 22,
+      "word": "sterkt",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 22,
+      "word": "enige",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 22,
+      "word": "uendret",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 22,
+      "word": "sterkere",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 22,
+      "word": "stort",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 22,
+      "word": "negativt",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 21,
+      "word": "britiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 21,
+      "word": "solide",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 21,
+      "word": "best",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 21,
+      "word": "tyske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 21,
+      "word": "vanskelig",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 21,
+      "word": "internasjonale",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 21,
+      "word": "svak",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 21,
+      "word": "årlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 21,
+      "word": "tekniske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 20,
+      "word": "enkelte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 20,
+      "word": "strengere",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 20,
+      "word": "sistnevnte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 20,
+      "word": "langsiktig",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 20,
+      "word": "fortsatt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 19,
+      "word": "negative",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 19,
+      "word": "nærmest",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 19,
+      "word": "omfattende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 19,
+      "word": "ferdig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 18,
+      "word": "rett",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 18,
+      "word": "negativ",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 18,
+      "word": "lave",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 18,
+      "word": "ledig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 18,
+      "word": "tett",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 18,
+      "word": "førstnevnte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 17,
+      "word": "fersk",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 17,
+      "word": "privat",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 17,
+      "word": "foreløpig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 17,
+      "word": "laveste",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 17,
+      "word": "topp",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 17,
+      "word": "feil",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 17,
+      "word": "7.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 17,
+      "word": "inneværende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 17,
+      "word": "offentlige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 17,
+      "word": "seneste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 17,
+      "word": "økonomisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 16,
+      "word": "følgende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 16,
+      "word": "full",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 16,
+      "word": "spanske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 16,
+      "word": "uBS",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 16,
+      "word": "nær",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 16,
+      "word": "kinesiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 16,
+      "word": "raskt",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 16,
+      "word": "gjennomsnittlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 16,
+      "word": "drøye",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 16,
+      "word": "svakt",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 15,
+      "word": "svake",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 15,
+      "word": "overraskende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 15,
+      "word": "snart",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 15,
+      "word": "27.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 15,
+      "word": "liggende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 15,
+      "word": "gamle",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 15,
+      "word": "øvrige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 14,
+      "word": "ofte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 14,
+      "word": "nødvendig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 14,
+      "word": "børsslutt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 14,
+      "word": "utenlandske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 14,
+      "word": "generelt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 14,
+      "word": "halv",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 14,
+      "word": "vanlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 14,
+      "word": "dyreste",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 13,
+      "word": "automatiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 13,
+      "word": "gammel",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 13,
+      "word": "kortsiktig",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 13,
+      "word": "daglig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 13,
+      "word": "virkelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 13,
+      "word": "unge",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 13,
+      "word": "viktigere",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 13,
+      "word": "flytende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 13,
+      "word": "enorme",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 13,
+      "word": "dyrt",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 13,
+      "word": "riktig",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 13,
+      "word": "internasjonal",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 12,
+      "word": "normalt",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 12,
+      "word": "sist",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 12,
+      "word": "lange",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 12,
+      "word": "såkalt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 12,
+      "word": "avgjørende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 12,
+      "word": "hardt",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 12,
+      "word": "3.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 12,
+      "word": "kriserammede",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 12,
+      "word": "japanske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 12,
+      "word": "webcast",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 12,
+      "word": "5.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 12,
+      "word": "sikkert",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 12,
+      "word": "varig",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 12,
+      "word": "beskjedne",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 12,
+      "word": "utvinnbare",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 12,
+      "word": "forsiktig",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 11,
+      "word": "historisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 11,
+      "word": "statlige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 11,
+      "word": "populære",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 11,
+      "word": "skuffende",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 11,
+      "word": "konkurs",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 11,
+      "word": "marginale",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 11,
+      "word": "mulige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 11,
+      "word": "politiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 11,
+      "word": "lengre",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 11,
+      "word": "22.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 11,
+      "word": "markert",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 11,
+      "word": "global",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 11,
+      "word": "brent",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 11,
+      "word": "betydelige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 11,
+      "word": "økende",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 10,
+      "word": "politisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 10,
+      "word": "elendig",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 10,
+      "word": "foreløpige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 10,
+      "word": "eventuelt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 10,
+      "word": "flest",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 10,
+      "word": "20.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 10,
+      "word": "samlede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 10,
+      "word": "stabil",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 10,
+      "word": "italienske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 10,
+      "word": "endelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 10,
+      "word": "enkelt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 10,
+      "word": "pelagisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 10,
+      "word": "toneangivende",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 10,
+      "word": "marginalt",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 10,
+      "word": "tungt",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 10,
+      "word": "billig",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 10,
+      "word": "opptatt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 10,
+      "word": "axess-noterte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 9,
+      "word": "ekstra",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 9,
+      "word": "amerikansk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 9,
+      "word": "offisielle",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 9,
+      "word": "finansielle",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 9,
+      "word": "12.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 9,
+      "word": "31.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 9,
+      "word": "omstridte",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 9,
+      "word": "underliggende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 9,
+      "word": "offentlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 9,
+      "word": "begrenset",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 9,
+      "word": "spennende",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 9,
+      "word": "felles",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 9,
+      "word": "profilerte",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 9,
+      "word": "vanlige",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 9,
+      "word": "tydelig",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 9,
+      "word": "attraktiv",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 9,
+      "word": "nasjonale",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 9,
+      "word": "nøye",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 9,
+      "word": "sentrale",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 9,
+      "word": "overkjøpt",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 9,
+      "word": "ødeleggende",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 9,
+      "word": "tung",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 9,
+      "word": "vesentlig",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 9,
+      "word": "klare",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 9,
+      "word": "eventuell",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 9,
+      "word": "generell",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 9,
+      "word": "eldre",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 8,
+      "word": "stabile",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 8,
+      "word": "totale",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 8,
+      "word": "uheldig",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 8,
+      "word": "jevnt",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 8,
+      "word": "30.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 8,
+      "word": "aktuelt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 8,
+      "word": "dyre",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 8,
+      "word": "lettere",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 8,
+      "word": "dobbelt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 8,
+      "word": "alvorlig",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 8,
+      "word": "meste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 8,
+      "word": "sittende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 8,
+      "word": "fallende",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 8,
+      "word": "aktiv",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 8,
+      "word": "enig",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 8,
+      "word": "nærmeste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 8,
+      "word": "sterkeste",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 8,
+      "word": "sen",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 8,
+      "word": "avhengig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 8,
+      "word": "fremtidige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 8,
+      "word": "planlagte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 8,
+      "word": "endelige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 8,
+      "word": "utfordrende",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 8,
+      "word": "generelle",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 8,
+      "word": "venstre",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 8,
+      "word": "sent",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 8,
+      "word": "røde",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 8,
+      "word": "avanserte",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 8,
+      "word": "ventet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 7,
+      "word": "rike",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 7,
+      "word": "greske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 7,
+      "word": "villig",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 7,
+      "word": "nøytral",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 7,
+      "word": "2.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 7,
+      "word": "tilfreds",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 7,
+      "word": "dårligere",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 7,
+      "word": "8.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 7,
+      "word": "grønt",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 7,
+      "word": "effektiv",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 7,
+      "word": "finansiell",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 7,
+      "word": "markant",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 7,
+      "word": "hovedindeksen",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 7,
+      "word": "lukkede",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 7,
+      "word": "langsiktige",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 7,
+      "word": "ledende",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 7,
+      "word": "tilstrekkelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 7,
+      "word": "15.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 7,
+      "word": "sveitsiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 7,
+      "word": "nordiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 7,
+      "word": "billige",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 7,
+      "word": "knapt",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 7,
+      "word": "halvt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 7,
+      "word": "strålende",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 7,
+      "word": "hvite",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 7,
+      "word": "utestående",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 7,
+      "word": "alvorlige",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 7,
+      "word": "stabilt",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 7,
+      "word": "sosiale",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 7,
+      "word": "fremtidig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 7,
+      "word": "gitt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 7,
+      "word": "katolske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 6,
+      "word": "knappe",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 6,
+      "word": "ekstraordinære",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 6,
+      "word": "tilnærmet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 6,
+      "word": "naturlig",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 6,
+      "word": "drøyt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 6,
+      "word": "redd",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 6,
+      "word": "lokale",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 6,
+      "word": "samlet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 6,
+      "word": "stille",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 6,
+      "word": "attraktivt",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 6,
+      "word": "svensk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 6,
+      "word": "billigere",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 6,
+      "word": "borgerlige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 6,
+      "word": "personlige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 6,
+      "word": "avansert",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 6,
+      "word": "ltd.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 6,
+      "word": "løpende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 6,
+      "word": "9.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 6,
+      "word": "fantastisk",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 6,
+      "word": "eventuelle",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 6,
+      "word": "enklere",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 6,
+      "word": "interessant",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 6,
+      "word": "verste",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 6,
+      "word": "forventet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 6,
+      "word": "mellomstore",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 6,
+      "word": "grunnleggende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 6,
+      "word": "stygge",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 6,
+      "word": "moderat",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 6,
+      "word": "planlagt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 6,
+      "word": "militære",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 6,
+      "word": "fattige",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 5,
+      "word": "bærekraftig",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 5,
+      "word": "tøffe",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 5,
+      "word": "tilgjengelige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "republikanske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "pågående",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "tilgjengelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "redusert",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 5,
+      "word": "13.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "daglige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "borgerlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "lignende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "manglende",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 5,
+      "word": "voldsomme",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 5,
+      "word": "18.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "11.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "viss",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "kinesisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "usikkert",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 5,
+      "word": "10.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "rød",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 5,
+      "word": "lokal",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "støtte",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 5,
+      "word": "strategiske",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 5,
+      "word": "eksterne",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "internt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "sentralt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "sårbare",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 5,
+      "word": "nøyaktig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "videregående",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "utenlandsk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "sosial",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "øverst",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 5,
+      "word": "bred",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "total",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "betraktelig",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 5,
+      "word": "fair",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "dypt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "villige",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 5,
+      "word": "horisontal",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "tunge",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 5,
+      "word": "typisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "offshore",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "flate",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "rikere",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 5,
+      "word": "umiddelbart",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "nødvendige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "28.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "årlige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "rolig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "hovedsakelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "åpent",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "rette",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "lett",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "generiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "overtegnet",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 5,
+      "word": "sannsynlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "range",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "nåværende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "14.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "nyhetsfattig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "rettet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "raskere",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 4,
+      "word": "selvfølgelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "bevisst",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "kriminelle",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 4,
+      "word": "tøffere",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 4,
+      "word": "nødt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "praktisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "død",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 4,
+      "word": "evig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "nært",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "sikker",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 4,
+      "word": "moderne",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 4,
+      "word": "kjente",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "selvsagt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "tidligst",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "lille",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "ulik",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "lønnsomt",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 4,
+      "word": "konkrete",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "fremste",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 4,
+      "word": "sentral",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "umiddelbar",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "historiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "flott",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 4,
+      "word": "statlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "resterende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "hovedsaklig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "åpne",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "varslede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "glade",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 4,
+      "word": "fornuftig",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 4,
+      "word": "konkret",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "senest",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "midlertidig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "var",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "6.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "24Seven",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "kontinuerlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "nervøs",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 4,
+      "word": "dårligst",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 4,
+      "word": "nyeste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "skarve",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 4,
+      "word": "ukjent",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "månedlige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "forsiktige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "lønnsomme",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 4,
+      "word": "solgte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "rimelig",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 4,
+      "word": "tydelige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "garanterte",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 4,
+      "word": "vanskeligere",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 4,
+      "word": "globalt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "fri",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "2011.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "egentlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "enormt",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 4,
+      "word": "syke",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 4,
+      "word": "strategisk",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 4,
+      "word": "joint",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "kjernefysiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "fattig",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 3,
+      "word": "normal",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 3,
+      "word": "rent",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 3,
+      "word": "chilensk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "vanskelige",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 3,
+      "word": "rikeste",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 3,
+      "word": "grundig",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 3,
+      "word": "gjennomsnittlige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "uklart",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "fullt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "robust",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 3,
+      "word": "aktivt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "usikker",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 3,
+      "word": "usikre",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 3,
+      "word": "storstilt",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 3,
+      "word": "vedrørende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "kjent",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "aktuelle",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "tydeligere",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "britisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "hard",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 3,
+      "word": "åttende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "moderate",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "formelt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "voksende",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 3,
+      "word": "attraktive",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 3,
+      "word": "eksklusive",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "ltd",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "faste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "skeptisk",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 3,
+      "word": "blå",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "annerledes",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "inst",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "utsatte",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 3,
+      "word": "regionale",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "automatisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "reduserte",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 3,
+      "word": "dyktige",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 3,
+      "word": "potensielle",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "heftig",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 3,
+      "word": "usannsynlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "ordinær",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "yngre",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 3,
+      "word": "sesongmessig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "flat",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "trygt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "frossen",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "bokført",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "oppdatert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "geografisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "gledelig",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 3,
+      "word": "signifikant",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "oppsiktsvekkende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "teknologitunge",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 3,
+      "word": "føderale",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "hel",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "skammelig",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 3,
+      "word": "enstemmig",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 3,
+      "word": "kritisk",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 3,
+      "word": "fint",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 3,
+      "word": "irske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "femte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "skeptiske",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 3,
+      "word": "europeisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "oppløftende",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 3,
+      "word": "formell",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "jevn",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "smart",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 3,
+      "word": "dobbelte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "forsvarlig",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 3,
+      "word": "italiensk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "dramatisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "fremmøtte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "reelt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "høyest",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 3,
+      "word": "bredt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "gjenstående",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "afrikanske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "skandinaviske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "uavhengig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "fundamentale",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "dyp",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "kompetent",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 3,
+      "word": "spesielle",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "skadelig",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 3,
+      "word": "krevende",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 3,
+      "word": "stolte",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 3,
+      "word": "dårlige",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 3,
+      "word": "bestemt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "kortsiktige",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 3,
+      "word": "robuste",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 3,
+      "word": "russiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "lei",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 3,
+      "word": "upopulær",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 3,
+      "word": "lengste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "konvensjonell",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "skikkelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "fremvoksende",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 3,
+      "word": "elleville",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "sjette",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "lavt",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 3,
+      "word": "verdiøkende",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 3,
+      "word": "registrert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "deleide",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "snaue",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 2,
+      "word": "brasilianske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "svakeste",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 2,
+      "word": "uventede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "kraftige",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 2,
+      "word": "organisert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "kriminell",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 2,
+      "word": "tettbygde",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "regulerende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "misfornøyde",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 2,
+      "word": "foreslåtte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "berørte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "vedkommende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "falske",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 2,
+      "word": "grovt",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 2,
+      "word": "salt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "anbefalte",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 2,
+      "word": "forebyggende",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 2,
+      "word": "21.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "nedre",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "uavhengige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "elektroniske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "effektivt",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 2,
+      "word": "bygget",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "voldsom",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 2,
+      "word": "avventende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "sprekest",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 2,
+      "word": "enkel",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "travel",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "asiatiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "irakiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "frivillig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "unike",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "raskest",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 2,
+      "word": "landsdekkende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "aktuell",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "annonserte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "slett",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "ekstremt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "uventet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "ekstraordinær",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "fornøyde",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 2,
+      "word": "kvart",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "umiddelbare",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "relevant",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "flinkere",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 2,
+      "word": "sprekeste",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 2,
+      "word": "variable",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "magert",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 2,
+      "word": "dramatiske",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 2,
+      "word": "standard",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "heleid",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "utvannende",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 2,
+      "word": "verst",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "skrikende",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 2,
+      "word": "ekstern",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "samfunnsmessige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "faglig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "potensielt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "åpenbart",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "oftere",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "desidert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "sårbar",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "dyr",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 2,
+      "word": "glimrende",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 2,
+      "word": "rASK",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "tryggere",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 2,
+      "word": "finske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "etablert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "underforsynt",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 2,
+      "word": "uenige",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 2,
+      "word": "nevnte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "dystre",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 2,
+      "word": "spurte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "ren",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 2,
+      "word": "hemmelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "urovekkende",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 2,
+      "word": "24.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "statistisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "europa-børsene",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "nasjonal",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "bare",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "friskt",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 2,
+      "word": "faktiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "lovende",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 2,
+      "word": "snau",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 2,
+      "word": "19.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "opprinnelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "ambisiøs",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 2,
+      "word": "overvektet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "fin",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 2,
+      "word": "raske",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 2,
+      "word": "rene",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 2,
+      "word": "tregt",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 2,
+      "word": "tosifret",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "dominerende",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 2,
+      "word": "nedstengt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "glad",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 2,
+      "word": "sunn",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 2,
+      "word": "konkurransedyktige",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 2,
+      "word": "seksuell",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "ubetinget",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "blodrødt",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 2,
+      "word": "rekordhøye",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 2,
+      "word": "solar",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "grunnet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "sikre",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 2,
+      "word": "lidenskapelig",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 2,
+      "word": "falsk",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 2,
+      "word": "sesongjustert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "oD",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "minimalt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "videreført",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "innovative",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 2,
+      "word": "utvalgte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "nitriste",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 2,
+      "word": "surt",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 2,
+      "word": "uforholdsvis",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "korte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "stygg",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 2,
+      "word": "obligatorisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "skittent",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 2,
+      "word": "unødvendig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "rask",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 2,
+      "word": "ordinære",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "indre",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "verre",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 2,
+      "word": "single",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "dårligste",
+      "sentimentValue": "--1"
+    },
+    {
+      "counter": 2,
+      "word": "voksne",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "helhetlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "nevneverdig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "superbillig",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 2,
+      "word": "intenst",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "alternative",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "rødgrønne",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "talt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "brukte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "befolkede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "rasjonelt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "flatt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "forsikringstekniske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "blodrød",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 2,
+      "word": "urealistisk",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 2,
+      "word": "elektrisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "ønsket",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "tiende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "uføre",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "fullstendig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "lengst",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "imponerende",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 2,
+      "word": "arktiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "sensitive",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "tradisjonelle",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "usolgte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "15-årige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "avdøde",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "relative",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "makroøkonomiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "primært",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "målrettet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "rettskraftig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "søndagsåpne",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "stengte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "radioaktivt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "kypriotiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "tørr",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "selskapsspesifikke",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "strengt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "fysiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "strukturelle",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "målrettede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "rettferdig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "bostedsløse",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "samordnet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "løs",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "stram",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "motstridende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "informerte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "urimelige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "arbeidsløse",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "daværende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "sovende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "antikvarisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "mildt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "statoil-ansatte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "savnede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "voksnes",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "fjern",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "17.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "uforenlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "dobbel",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "juridisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "klingende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "øverste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "taiwanskeide",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "representative",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "virkelige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "sørlige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "revidert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "brede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "indirekte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "fastrente",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "optimistiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "kvalifisert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "godkjent",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "kritikkverdige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "upopulære",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "seirende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "frivillige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "alminnelige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "kliniske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "gyldig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "revolusjonære",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "pessimistiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "solgt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "merkbart",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "besøkende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "maksimalt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "deltakende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "enkle",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "anonym",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "skyhøy",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "estimert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "digitale",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "anslått",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "visst",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "kritiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "skyldig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "typiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "mislykket",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "steget",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "fritt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "åpen",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "justispolitiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "parlamentarisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "katastrofalt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "grove",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "2012.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "fungerende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "egyptiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "hyggelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "ekstraordinært",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "effektive",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "rart",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "miljøbevisste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "verdifull",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "velfungerende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "operative",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "mistenkelige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "miljøvennlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "heave-kompensert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "aggressive",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "dagar",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "tilhørende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "malplassert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "pen",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "tjenesteytende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "friskere",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "sårt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "tiltrengte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "kongelige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "doble",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "sarte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "industripolitisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "industripolitiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "logiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "stolt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "miljøvennlige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "øst-europeisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "fIN",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "forverrede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "geopolitiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "utkledd",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "overbevisende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "friske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "5-6.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "børsnotert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "navngitte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "endrede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "trodde",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "16.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "forbigående",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "farligere",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "urolige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "edruelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "forskjellige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "juridiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "ubegrunnet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "operasjonelt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "finansielt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "øvrig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "lystne",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "titalls",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "framtidige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "aksjecaset",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "kortere",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "forutsigbar",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "parallelt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "urimelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "tapt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "kjedelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "profilert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "stygt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "småkjedelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "kontraproduktive",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "spente",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "uenig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "streikende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "aktive",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "konservative",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "separate",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "enorm",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 1,
+      "word": "grei",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "hvassere",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "langvarige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "styrket",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "færøyske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "selektiv",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "knallhardt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "ulovlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "formelle",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "tøft",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "prisbelønte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "dansk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "ledige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "gjensidig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "kommunale",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "preliminært",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "voldelige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "interessante",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "suksessfulle",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "prisede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "bynære",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "betinget",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "tiltalt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "oppnådde",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "hol",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "hotteste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "likt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "dyrest",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "lekreste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "skjulte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "drastisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "detaljerte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "optimistisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "vesentlige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "straffbare",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "spesiell",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "uskyldig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "drøy",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "engelske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "tilbakekjøpsprogrammet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "noble",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "rekordstor",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 1,
+      "word": "forbedret",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "forbedrede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "tillitsvalgte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "regnskapsmessige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "vellykket",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "svakest",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "ambisiøst",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "lys",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "pent",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "fredriksen-dominerte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "ulikt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "partipolitisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "menneskeskapte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "avklart",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "ikke-jernholdige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "kjemiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "virkedagskorrigerte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "sosialt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "mannlige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "tregest",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "tregere",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "vernede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "ordentlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "masse",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "omtalte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "2015.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "hverdagslig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "skapende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "vedtatte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "skriftlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "fryktet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "aggressiv",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "fet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "generisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "sammenlignbare",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "topps",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "femårige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "populært",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "vant",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "flotte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "fine",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "gunstig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "skjult",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "galt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "fleksible",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "kortet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "værende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "sporbart",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "lik",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "lokalt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "nasjonalt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "statistiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "elektriske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "mindreårig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "massiv",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "elendige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "stående",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "2013.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "kursmå",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "skikkelige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "roligere",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "investerte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "brå",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "internasjonalt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "delt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "170.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "kollektive",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "markedsmessige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "imaget",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "fakturert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "vilt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "upresis",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "knusende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "vitenskaplige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "pressede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "trygge",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "urealistiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "gammeldags",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "hensiktsmessig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "kommersielle",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "truet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "sørkoreanske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "avslørende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "lavest",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "komplekse",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "mistenkelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "omstridt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "uforminsket",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "stjålet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "færreste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "da.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "sør-afrikanske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "online",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "grov",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "engstelige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "kalt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "klassisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "riktige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "kyrre",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "tilknyttede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "umulig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "26.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "samfunnsøkonomiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "lokale/regionale",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "ubegrenset",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "seksuelt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "overforsynte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "korrigerende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "oppdaterte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "inkludert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "kostnadseffektiv",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "ellevill",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "folkevalgte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "forpliktende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "likvid",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "vanskeligstilte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "vektet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "overveldende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "game",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "fornøyd",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "sixtinske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "kommunistiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "ubrukt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "sjuende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "dynamisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "sprelske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "utrolige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "vanvittig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "vanvittige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "sjeldne",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "amatørmessig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "påfølgende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "morsomt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "israelske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "fundamental",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "vekstvennlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "skjerpede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "fiktive",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "brukt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "innenlandsk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "nyttig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "rødgrønn",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "rettferdige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "svart",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "hemmelige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "oljefritt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "ikke-garanterte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "statoil-opererte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "vellykkede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "nedsenkbare",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "rettede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "sydney-baserte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "lønnsledende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "gjenværende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "miljømessig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "sannsynlige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "definitivt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kulturelt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "disponibel",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "2006.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "dNB-ansatte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "2002.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "varige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "transparent",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "konservatives",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "foregående",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fete",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "villedende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "regjeringsoppnevnt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "sporadisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ulovlige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "31-årig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "offisielt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "registrerte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "1975.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "uttalte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "sørgende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "musikalske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "døde",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "overlevende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "sugen",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "alanya-reisende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "timesvis",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ikke-eksisterende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "øvre",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fjerne",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kostrelatert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ikke-smittsomme",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kronisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kløyvd",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "arkeologiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "midtre",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "avtagende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "strammere",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "erklærte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "høyre",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "soleklar",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "finanspolitisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "vagere",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "interne",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "alvorligste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "bindende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "løse",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "flinkeste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "sportslige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "sportslig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "nøkterne",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "langvarig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "uorganiserte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "accumulate",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "nedadgående",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "underpriset",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "medisinsk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "knallrødt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "nære",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "serbisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "avlyttingssikre",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "velkjente",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "høyrepopulistiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kortest",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "illikvid",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "gjennomtenkt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "treffsikre",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "rekordsterk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "importveide",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "rekordsterke",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "genial",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "nedjustert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "mekaniske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "installert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "nøyaktige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "giftig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "uansvarlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "strenge",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "diskuterte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "felleseide",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "derres",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "nominelt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "uoversiktlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "umenneskelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "skandaleherjede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fremst",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "risikabel",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tvangsoppløst",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kvitt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "bittelite",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "grann",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "oBOS-tilknyttede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "stramme",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "alternativ",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "\"konstruktive\"",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "mere",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "skreddersydde",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "mobile",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "nordligste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "nordlige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kjøpte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "visse",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "egenhendig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "from",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "geografiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ekstreme",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "besøkte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "selvforsterkende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tyngre",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "side",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "konkurstruede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "forvirrende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "forferdelige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "uløste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "prsoent",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "obligasjonsprogrammet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "innflytningsklart",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "særegen",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "arkitektonisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "penere",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "gjeldende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ovennevnte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "skjør",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "soleklare",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "lureste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "matte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "parat",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "innendørs",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "oppgradert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "hypotetiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kommersielt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kostbar",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "uakseptabelt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "stramt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "industriell",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "industrielle",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "skyldige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "uredelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "flittig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "omsatt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "lukket",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "biologisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "lusetett",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "frisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "het",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "utendørs",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "prosentuelt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "resultatmessige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "bokføringsteknisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "uforstående",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "straffbart",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "28-årig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "32-årig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "regulært",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kvalitetsbevisst",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "hvitt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "proteinholdig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kontrollert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "2014.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tynn",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "utdanningspolitisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ønskelige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "autentiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "verdensledende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "senior",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "drastiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "optiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "automatisert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "offensivt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "bakteriefritt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "spillbasert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "proaktiv",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "york-børsen",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "utsatt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "\"uheldig\"",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "forutgående",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "forvaltningsrettslige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "velforankret",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "forvaltningsrettslig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "rettssikkerhetsmessig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tilfredsstillende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "uvisst",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "rikelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "velbegrunnet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "nyankommet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fordyrende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "unødvendige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ønskelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "etterfølgende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "nullig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "skadeskutte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "utrolig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "rettsmedisinske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "prestisjefylte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "underlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ærverdige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "omsattes",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tilbakeholdte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "«irrasjonelle»",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "irrasjonelle",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fortsatte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "les",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "nederst",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "offisiell",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "sveitsisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "svekkede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "saftige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "skyhøyt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "passende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "administrative",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "sømløst",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "regionalt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "rasjonell",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "oppsatt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fabrikknye",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "poteniselt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fasttømret",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "definert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kunstige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "marine",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "mellomlang",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "matematiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tjente",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "praktiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "3-6.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "11-13.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "13-15.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "26-28.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "5-7.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "maritime",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "5-9.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "6-10.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "11-14.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "15-16.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "20-23.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "magre",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "levende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "reale",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "mildere",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "risikofylt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "dypere",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "selvforskyldte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "seriøs",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "overhengende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "uavklart",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "intensiv",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "rekordlang",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "prosent-eide",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "røykfrie",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "populær",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "utbredt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "sunnere",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tøffeste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "øre,som",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "konkurranseutsette",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "grunt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "skjelv",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "australske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "legitim",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "moralsk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "klok",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tverrpolitisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ubemannet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "gjelda.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "debatterte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "samferdselspolitiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "«gammeldags»",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "snille",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "opparbeidede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "paradoksalt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "belastede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "rettslige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "etterlatte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "anonyme",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "vital",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "legitimt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "søkte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "satte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "200.000.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fått",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "treårig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "utilbørlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "synlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "verdifulle",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "skremmende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "strukturerte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tapte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fjernere",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "13-årige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "samordnede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "lat",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "urettferdig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "behandlet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kjempeviktige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kontraproduktiv",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "overdreven",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "bastante",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "miljøfaglige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kollektiv",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "smålig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fins",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "uerklærte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "digital",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "\"hot\"",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "proffere",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "profesjonelle",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "forvaltede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kludrete",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "sammenfallende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "østeuropeiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "etterlengtet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tysk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "hybrid",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "produsert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "identisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "sure",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "brennhete",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "trimmede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "vond",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "sviktende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "forenlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "overskytende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kommersiell",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "regulatoriske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "opprettede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "produktansvarlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "vanligste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "nøytrale",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "vakuumpakkede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "forferdelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "firkantet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "\"pent\"",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "skjær",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "uaktuelt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "opplyste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kortfattet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "involverte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "merkverdig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "forbipasserende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "assisterende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "omreisende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "knuste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "innsendte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "unormalt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "2009.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "varierende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "oversolgt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kriserammet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "immaterielle",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "29.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "således",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kompenserende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "bokføringsmessig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "break-even",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kaldt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "framtredende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kontroversielle",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "obs",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "forløpende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ekstremistiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "offentliggjort",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "råoljelagrene",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "nordisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ærlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "rettspolitiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "narkodømt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kategorisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "rettslig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "innstendig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "demokratiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "skarpt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "justert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "uforutsigbart",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "skitne",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "mistenkte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "siktede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fBI-inspirert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "pålagte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kriminalitetsforebyggende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ordensmessige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "hyppig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "hyppigere",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "2000.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "lurt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "frikjente",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "sannsynlighetsovervekt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "betente",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "styringsdyktig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "troende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "berikende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "distansert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "religiøst",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "religiøse",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "usunn",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "individorientert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ensom",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "rar",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "avtalefestet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kjempegodt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "uanstendig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "selvstendig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "samlete",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "lukrativ",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "konservativt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "uautoriserte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "middelaldrende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "rekordlave",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "nederste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "2016.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "likeverdige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ytelsesbaserte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "regnskapsmessig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "benyttet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "investert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "seriøse",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "motsatte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "avtalte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "avtalt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "oppgitte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "artig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "optimale",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "trauste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fulltegnet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "gift",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "lykkelige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kjappest",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "delte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "raskeste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "reviderte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "holdbare",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "året",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "oDs",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "snarlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "suverent",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "forenklet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "forbedringsprogrammet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "visjonære",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "miljøsanert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kassable",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tungmetallforurenset",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "sivil",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "funnet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "panamax",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kreative",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "idérike",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "sanselige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "hurtig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "halvferdige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fysisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ensidig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ypperste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "frigjørende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "energigivende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "uhøytidelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "originale",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "barrierebrytende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "mulighetsskapende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "sette",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "selvinitiert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "hevede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kostnadsfritt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ufarlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "oppgjort",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "pliktig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "volumvektet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "stillig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "rådende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "realiserte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fenomenalt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "åpnede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "illojalt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ydmyk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "syvende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "blodrøde",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "oppbrukt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ubyråkratisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "blågrønn",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "uforutsigbar",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "smidig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tungvint",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "innenlandske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "uakseptable",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kriminelt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "trendy",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "skummelt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fælt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "in",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ungt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "halve",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ferjefritt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "avskrekkende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "langs",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ferjefri",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "rente",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "dypest",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "østlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "høyereliggende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "sørlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "blodige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "blanke",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "lojale",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "godtroende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "katalonske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "oftest",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "syk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "dyktigste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kunnskapsrike",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "enestående",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "dypeste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "uholdbart",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ubestemt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "33.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kaldeste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "nedleggingstruede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "hest",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "muntlige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "nordeuropeiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fikse",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "sannferdig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "advarende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "jevnere",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "samfunnsnyttige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "gjentatte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "gjeldstyngede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fornærmede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "påstått",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "straffeskjerpende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "straffskjerpende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "forsinket",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "bilaterale",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "saftig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "søt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "relatert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "likvide",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "outperformet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "selskapsspesifikk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "begrensede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "overkjøpte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ledigmeldte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fult",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "skjøre",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "relativ",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "knallhard",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "klokkeklar",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "uholdbar",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "snill",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "skitt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ubetalte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "utbetalte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ensifret",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "prosentuell",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tilbakeholdne",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "aksjonærvalgt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "mørkest",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "givende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "alternativt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "urolig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "sysselsatte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "pene",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "saudiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "klokt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "knapp",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tegnet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kraftigere",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "glidende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "uavklarte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "sammenhengende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "sultne",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "nedlagte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fastboende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "nedlagt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "vakkert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "egalitære",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kuttet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "meglerhuset",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "lystent",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "akutte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fattigste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "hardest",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tom",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "vedvarende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "cash",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "volatil",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "farmasøytisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fotodynamisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "hPV-relaterte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "44.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "prestisjefylt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "late",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "relaterte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "etterspurt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "undersøkte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fornyet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "23.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "engstelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ufaglærte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kvalifiserte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "vestlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "gratis",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "vidåpne",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "innvandringspolitiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "vestlandske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "britisk-finske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "drøyere",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "presise",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "presis",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "uklar",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "motsatt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "anerkjente",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "subtilt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "spansk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "iberia-ansatte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "børsnoterte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "minimal",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "gunstige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "forvaltet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "likevekte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tapet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "konkurranseutsatt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "stagnerende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "lO",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "delfinformet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "gullforgylt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "stasjonær",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "grønne",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kjørte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fossile",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "konvensjonelle",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "forsøkt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kostbare",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "spent",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "prostituerte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "«åpenbare»",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "intense",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "valgfritt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kjønnsnøytral",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "short",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ukontrollert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tilbakeholden",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "forige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "bemerkelsesverdig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "minste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "gravitasjonsbaserte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "proff",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "utenrikspolitiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "parallell",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "1991.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "sosialistisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kapitalistiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ufør",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tidsbegrenset",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ung",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "mislykkede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "unntatt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "parkert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "energipolitisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "forunderlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "passiv",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tilsynsmessig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "feilaktig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "balansert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ledelsesmessig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "førstkommende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "sunne",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "unormal",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ePC-relaterte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "eksakt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "uNG",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "uoversiktlige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "nominell",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "25.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "«enestående»",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "merkelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "suveren",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "teknologiintensive",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "nedstemt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "pornografiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "avsidesliggende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "beskyttede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "teknologiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "katastrofale",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "animalsk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tilfeldig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "igangsatt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "prøvet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "uberettiget",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "allmennpreventive",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "livsvarig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "trådløse",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "uaktsomt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "livstruende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "hjerneskadd",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "pleietrengende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tilstrekkelige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "delegert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "sterkest",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "forlenget",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "livsforlengende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "lindrende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "løfterik",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "individuell",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "demilitarisert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "forventningsfull",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "utålmodig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "uvanlige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fullverdig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "demokratisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "uopprettelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "målt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tyngste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "asymmetrisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "potensiell",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "viktigst",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "verdiorientert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "levert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "defensive",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "konkurrerende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "diversifisert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "velkommen",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "søreuropeiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "forståelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "anklagede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "skyld",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "pedofile",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "misbrukte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "døgnåpne",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "helsepolitiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "begredelige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "petrobras-leverte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "psykologisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "eksepsjonelt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "hårete",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "verdijusterte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "voldsomt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "lunken",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "motsykliske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "trang",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "overskuelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tidl.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "superlave",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "rapportert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "komplementære",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "pålitelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "overordnede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "gjennomgående",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "heldige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "subarktisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "veldige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "hete",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kystnære",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "endret",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "reelle",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "naive",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "innovativ",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "modne",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "overrraskende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ubalansert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "imøtekommende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "17-18-åringar",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "unikt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fastsatte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "vanskeligstilite",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "glødende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "2017.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "strømlinjeformet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kompliserte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "telenor-ansatte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tradisjonsrike",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "intervjuet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "risikojustert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "utenkelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "humanitært",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ugyldig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "aMerikanske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "overveldede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "maritim",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "flyttbare",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "smal",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "akseptabelt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "søndagsåpent",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tilstøtende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "syltynn",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "greit",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "humoristiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "emeritus",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tronelignende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "nyvalgte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "jordnær",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "nydelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "harde",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "mystisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "utmerket",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "prestisjetunge",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "drivstoffeffektive",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "andre/tredje",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "japansk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "sprekere",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "2003.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "pengepolitisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "rede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "røkke-dominerte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "vesle",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "unoterte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kapitalkrevende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "utredete",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "landbaserte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "blandet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ufattelige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ukjente",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "totalte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "personlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "innledende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "leverte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "forbrukerorienterte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "grundigere",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kutt/senere",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "svekket",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "stagerende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "produktive",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kvinnelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "grønn",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "samstemte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "katastrofal",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "mangeårige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "inhabil",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "vill",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kulturpolitiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "engelskspråklig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "overført",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "loss",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "meningsløst",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "koste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "merket",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "konservativ",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "rekordsterkt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "eventyrlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "avlyst",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "hensyntatt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fondsbasert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "nytegnet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fondsbaserte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "sendt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "marerittaktig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "israelsk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fredelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "vestlige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "dynamiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "statiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "«halal»",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "halal-merket",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "beklagelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "feilmerkede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "menneskelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "&#171;fullstendig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "absolutt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tryggeste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "forsinkede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "bilreduserende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "folkelige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tøff",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "eksklusiv",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "suksessrike",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "troverdig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "angivelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "flinkest",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "teknologisk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "bestående",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "endt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "konkurransedyktig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "sivile",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "650.000.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "flinke",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "sosialdemokratiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fiktiv",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "mildeste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "reell",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "siktedes",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "egnet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ustabile",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ustabilt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "pengepolitiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "antakelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "uunngåelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kapitaleffektiv",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "egenfinansiert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kostnadsfokusert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "defensiv",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "spilleavhengige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "spillavhengige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fortløpende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "dødlighetsgrunnlaget",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "falt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fattigere",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "overordnet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "urørt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kraftfulle",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "boligsosiale",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "boligsosialt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "forvaltningshonnorar",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "rekordhøy",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "skriftelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "intern",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "beskattas",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "trådte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "felaktiv",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "flotteste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "flottest",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "beliggende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "prisforlangende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kald",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kanadiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tidsbestemte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ubygde",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "mangelfull",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "frustrerende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "reisende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "foretrukne",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "forannevnte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "bedret",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fordelaktig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "oljerelaterte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "heldig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "velhavende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "nyutnevnte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "argentinske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "nyvalgt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "svarte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "forutsigbare",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "venezuelanske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "foruroligende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "2007.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "stappfullt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kollektivt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "holdbart",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tremåneders",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "spisset",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "grytidlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ubestridt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "radikalisert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "brennende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "dyktig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "halvdårlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kvinnelige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fartsfylte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "consumer",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kvalitetssikret",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "forretningsmessige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "operativt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "etiske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kvalitetssikre",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tekstilproduserende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "møysommelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "hemmeligstemplede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "«banal»",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "forkastelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fortrolige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ellevte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "innkrevde",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "uvanlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "småkjip",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "oppringt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "rutinemessig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "normalisert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "trykkavlastet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "selvforsynt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "intensivt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tilbakekjøpte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "innløste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "mørkere",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "jevne",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "latte-drikkende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "forbannet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ansattevalgt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "skarpest",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "2013/tidlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ettårig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "respektive",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "partner-opererte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ultradypt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ivrigste",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tam",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "valley-baserte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "prestasjonsrelaterte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tørt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tette",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "kjernetatt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "vertikalt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "betalte",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "variabel",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "prestasjonsorientert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "spesifikt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "framvoksende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "daff",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "startet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "nådige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "aldersrelatert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "komplette",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "pliktige",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "”fair”",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "innelåst",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "regulert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "operasjonelle",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "grundige",
+      "sentimentValue": "0"
+    }
+  ]
+}

@@ -1,0 +1,769 @@
+{
+  "words": [
+    {
+      "counter": 848,
+      "word": "ikke",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 511,
+      "word": "nå",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 410,
+      "word": "også",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 307,
+      "word": "så",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 147,
+      "word": "siden",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 135,
+      "word": "dermed",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 117,
+      "word": "igjen",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 108,
+      "word": "selv",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 101,
+      "word": "hvor",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 95,
+      "word": "fortsatt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 81,
+      "word": "bare",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 79,
+      "word": "minus",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 79,
+      "word": "allerede",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 79,
+      "word": "sammen",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 78,
+      "word": "nesten",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 74,
+      "word": "nok",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 71,
+      "word": "for",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 63,
+      "word": "kun",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 63,
+      "word": "da",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 62,
+      "word": "likevel",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 61,
+      "word": "slik",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 55,
+      "word": "derfor",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 53,
+      "word": "imidlertid",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 52,
+      "word": "enda",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 51,
+      "word": "ca.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 48,
+      "word": "hvordan",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 46,
+      "word": "heller",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 46,
+      "word": "fremdeles",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 44,
+      "word": "hvorfor",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 41,
+      "word": "like",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 38,
+      "word": "hhv.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 35,
+      "word": "akkurat",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 30,
+      "word": "derimot",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 30,
+      "word": "meget",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 29,
+      "word": "kanskje",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 28,
+      "word": "jo",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 27,
+      "word": "ca",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 26,
+      "word": "altså",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 25,
+      "word": "først",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 22,
+      "word": "gjerne",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 22,
+      "word": "dessuten",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 21,
+      "word": "nest",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 20,
+      "word": "henholdsvis",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 20,
+      "word": "omtrent",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 20,
+      "word": "an",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 19,
+      "word": "nylig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 19,
+      "word": "netto",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 19,
+      "word": "aller",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 17,
+      "word": "ellers",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 16,
+      "word": "sist",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 16,
+      "word": "deretter",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 16,
+      "word": "ganske",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 16,
+      "word": "sannsynligvis",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 15,
+      "word": "aldri",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 15,
+      "word": "noensinne",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 14,
+      "word": "pluss",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 13,
+      "word": "alltid",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 13,
+      "word": "omlag",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 10,
+      "word": "ennå",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 10,
+      "word": "nemlig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 10,
+      "word": "alene",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 9,
+      "word": "enn",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 9,
+      "word": "vel",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 8,
+      "word": "helst",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 8,
+      "word": "alt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 7,
+      "word": "bI",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 7,
+      "word": "cirka",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 6,
+      "word": "delvis",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 6,
+      "word": "nettopp",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 6,
+      "word": "hvorav",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 6,
+      "word": "dessverre",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 6,
+      "word": "sånn",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "riktignok",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "altfor",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 5,
+      "word": "etterpå",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "noenlunde",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "gradvis",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "dog",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "kvartalsvis",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 4,
+      "word": "eV",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "lIVE",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "idag",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "brutto",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "straks",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 3,
+      "word": "rasende",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 3,
+      "word": "nOK",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "trutt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "evt.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "isteden",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "midt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "sågar",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "såvidt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "dvs",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "overhodet",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 2,
+      "word": "milevis",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "høyst",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "desto",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "ende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "og",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "utelukkende",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "aldeles",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "hakk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "nødvendigvis",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "såpass",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "vanligvis",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "prosentvis",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "bIs",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "aNA",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "stikk",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "når",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "forholdsvis",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "naturligvis",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "neppe",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 1,
+      "word": "sC",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "spill",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "\"bare\"",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "likeså",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "derigjennom",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "omsider",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "engang",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "oSV",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "muligens",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "motstrøms",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "særdeles",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "sic",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "dernest",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "etappevis",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "enes",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tydeligvis",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "således",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "igang",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "følgelig",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fatt",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "periodevis",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "heldigvis",
+      "sentimentValue": "1"
+    },
+    {
+      "counter": 0,
+      "word": "især",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "senhøstes",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "«like»",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fTS",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "slettes",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "maks",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ifjor",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "forhåpentligvis",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "dvs.",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "ergo",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "halvveis",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "fortrinnsvis",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "nokså",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "amok",
+      "sentimentValue": "-1"
+    },
+    {
+      "counter": 0,
+      "word": "allikevel",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "tvert",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "sjelden",
+      "sentimentValue": "0"
+    },
+    {
+      "counter": 0,
+      "word": "etterhvert",
+      "sentimentValue": "0"
+    }
+  ]
+}

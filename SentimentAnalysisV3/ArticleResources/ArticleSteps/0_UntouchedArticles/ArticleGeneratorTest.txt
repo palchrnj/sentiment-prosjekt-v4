@@ -1,0 +1,31 @@
+{
+  "articles": [
+    {
+      "title": "- Denne aksjen har vært fantastisk for oss",
+      "id": "631279005",
+      "published": "2013-01-14T13:29:53Z",
+      "cat": [
+        "ECONOMY"
+      ],
+      "publisher": "Hegnar",
+      "links": [
+        "http://www.hegnar.no/personlig_okonomi/article716597.ece"
+      ],
+      "text": "- Denne aksjen har vært fantastisk for oss\nHogne Tyssøy har fått etterlengtet fart på avkastningen. Han trekker frem tre    aksjer, hvorav den ene er blant børsens mest mørbankede.\nArcher, BW Offshore, Kongsberg Automotive, PGS, ScanArc, Veripos, Neas,    Scorpio Tankers, Evry, Songa Offshore, Baker Hughes, Armada Seismic, Bank2,    GC Rieber Shipping, Hexagon Composites, Black Earth Farming, Agrinos,    Dockwise, NetConnect, The Containership Company, Norwegian Porperty,    NorDiag, Equinox Offshore og Dannemora Mineral AB fikk alle reisepass.\nNye aksjer i fondet i løpet av 2012 var Deep Sea Supply, Halliburton, Noreco,    Selvaag Bolig og Storebrand.\nOppsving i desember Sammenhengen med ryddesalget skal vi ikke si så mye om, men uansett fikk    fondet etterlengtet fart på avkastningen i desember.\nMens referanseindeksen Oslo Børs Fondsindeks steg 0,7 prosent, la fondet på    seg 2,6 prosent. Likevel tapte fondet klart for markedet 2012 sett under    ett. \"Stillingen\" ble 20,6 vs. 4,1 prosent avkastning, fordel    markedet.\nDe siste tre og fem årene har fondet en negativ snittavkastning på hhv. 6,1 og    5,8 prosent.\nForvalterne har tidligere påpekt hovedårsakene til avkastningsforskjellen med    forholdet mellom små og store aksjer, enkelte bedrifter som ikke har levert    i forhold til forventningene, samt risikoaversjon blant investorene.\nWilh. Wilhelmsen, Dolphin Group og Bakkafrost var enkeltaksjene som bidro mest    positivt til avkastningen i fondet i 2012. På motsatt side dro REC, Its    Learning og BW offshore mest ned.\nMen desember ble altså en oppmuntring for Holberg Norge, og forvalterne    trekker frem tre aksjer.\nNorthland Resources - Aksjen har hatt voldsomme kursutslag gjennom året. Aksjen startet på 8,50,    var nede i 3,50 i slutten av august og endte på 6,00 kroner ved utgangen av    året.\n- Nedturen skyldtes i første omgang et finansieringsbehov og i andre omgang    fallende jernmalmpriser. Rekylen kom etter at selskapet kunne rapportere om    at utbyggingen av jernmalmgruven (i Kaunisvaara), prosessanlegg og    infrastrukturen rundt gikk fortere enn planlagt.\n- Samtidig steg også jernmalmprisen tilbake til nivåene fra tidligere i år.    Fullt operativt vil selskapet kunne produsere rundt fire millioner tonn    jernmalm på årsbasis.\n- Med dagens priser er prosjektet svært lønnsomt. Vi mener det fortsatt er en    god oppside i aksjen, skriver Tyssøy & co..\nDolphin Group - Dette har vært en fantastisk aksje for oss i 2012. Kursen er opp mer enn 100    prosent.\n- Selskapet er fortsatt hyggelig priset basert på analytikernes estimater for    neste år og i den grad de får rett, skal kursen videre opp. Siste indikasjon    fra selskapet er at ratene for neste år holder seg bra. Det lover godt for    2013.\n- Seismikk er likevel en syklisk del av oljeservisenæringen og eventuelle fall    i oljeprisen vil påvirke etterspørselen negativt, skriver forvalterne.\nREC - Aksjen fikk en kursrekyl i desember, og steg omtrent 50 prosent fra bunnen i    måneden.\n- Oppgangen skyldes dels indikasjoner på at konkurrenter reduserer aktiviteter    og ekspansjonsplaner på grunn av lave priser og dels aksjemarkedets søken    etter rekylkandidater på slutten av året. Året under ett er likevel REC en    av vår desidert svakeste aksjer.\n- Verdipotensialet i REC er knyttet til utviklingen i silisiumprisene,    konkurrentenes finansielle styrke, samt selskapets evne til å løse den    finansielle floken i 2014.\n- Det langsiktige markedet for solenergi virker fortsatt bra. Lønnsomheten for    produsentene er den største utfordringen i dag, heter det.\nHogne Tyssøy har i forvaltningen av Holberg Norge med seg Jann Molnes, Robert    Lie Olsen og Tony Fimreite.\nBesøk: Hoffsveien 70A Postadresse: Pb 724 Skøyen 0214 Oslo\n",
+      "lead-text": "  \n                    \n                    \n                    \n                        \n                        \n                            \nHogne Tyssøy har fått etterlengtet fart på avkastningen. Han trekker frem tre \n  aksjer, hvorav den ene er blant børsens mest mørbankede.\n                        \n                        \n                        \n                    \n                    \n                        \n\t\t\t",
+      "feed-image-url": "http://www.hegnar.no/template/ver1-0/gfx/Logo/hegnarlogo_black.gif",
+      "image-url": [
+        "http://www.hegnar.no/multimedia/dynamic/00056/hogne-tyssoy_56255p.jpg"
+      ],
+      "sentiment-value": 0.00016314852,
+      "tags": [
+        "holberg norge",
+        "året"
+      ],
+      "signature": "c79b993092d25526",
+      "_version_": 1424271902761812000,
+      "last_modified": "2013-01-15T23:12:13.243Z"
+    }
+    
+  ]
+}
