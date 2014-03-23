@@ -42,31 +42,31 @@ public class MLMainClassPaperII {
 		
 //		writeArticlesToFiles();
 //		computeAndPrintResultsForLatexTableProportion();
-		computeAndPrintResultsForLatexGraphsProportions();
+//		computeAndPrintResultsForLatexGraphsProportions();
 		
 //		computeAndPrintResultsForLatexTable();
 //		computeAndPrintResultsForLatexGraphs();
 		
 		
 		
-//		double maxPrecision = 0;
-//		String maxString = "";
-//		int counter = 0;
-//		for (int r = 2; r <= 8; r = r + 2) {
-//			for (String binarySelector : getFeatureSelectionString()) {
-//				String candidate = defaultSelector + binarySelector;
-//				double thisPrecision = NBClassifier.runNBC(readMLDataSetSubsetFromFile(r, "tf", 4000, candidate));
-//				if (thisPrecision > maxPrecision) {
-//					maxPrecision = thisPrecision;
-//					maxString = candidate;
-//				}
-//				if (counter % 500 == 0) {
-//					System.out.println(counter + ": " + maxPrecision);
-//				}
-//				counter++;
-//			}
-//			System.out.println(r + ": " + maxString + " --> " + maxPrecision);
-//		}
+		double maxPrecision = 0;
+		String maxString = "";
+		int counter = 0;
+		for (int r = 2; r <= 8; r = r + 2) {
+			for (String binarySelector : getFeatureSelectionString()) {
+				String candidate = defaultSelector + binarySelector;
+				double thisPrecision = NBClassifier.runNBC(readMLDataSetProportionSubsetFromFile(r, "mi", 0.5, candidate));
+				if (thisPrecision > maxPrecision) {
+					maxPrecision = thisPrecision;
+					maxString = candidate;
+				}
+				if (counter % 500 == 0) {
+					System.out.println(counter + ": " + maxPrecision);
+				}
+				counter++;
+			}
+			System.out.println(r + ": " + maxString + " --> " + maxPrecision);
+		}
 		
 //		readMLDataSetFromFile(2, "chi", 4000);
 //		JsonHandler jh = new JsonHandler("/ArticleSteps/4_StemmedArticles/MainDataSetStemmed.json", "stemmed");
@@ -154,6 +154,8 @@ public class MLMainClassPaperII {
 	}
 	
 	public static void computeAndPrintResultsForLatexTableProportion() throws Exception {
+		String featureString = "1111110000000111111001111";
+//		String featureString = "1111110000000000000000000";
 		ArrayList<String> functions = new ArrayList<String>(Arrays.asList("tf", "idf", "tfidf", "mi", "chi"));
 		ArrayList<Double> proportions = new ArrayList<Double>();
 //		sigmas.add(new Integer(500));
@@ -161,6 +163,25 @@ public class MLMainClassPaperII {
 		proportions.add(0.30);
 		proportions.add(0.5);
 		Collections.sort(proportions);
+		HashMap<Integer, Double> radiusAverage = new HashMap<Integer, Double>();
+		radiusAverage.put(2, 0.0);
+		radiusAverage.put(4, 0.0);
+		radiusAverage.put(6, 0.0);
+		radiusAverage.put(8, 0.0);
+		HashMap<Double, Double> proportionAverage = new HashMap<Double, Double>();
+		proportionAverage.put(0.1, 0.0);
+		proportionAverage.put(0.3, 0.0);
+		proportionAverage.put(0.5, 0.0);
+		HashMap<String, Double> rankingAverage = new HashMap<String, Double>();
+		rankingAverage.put("tf", 0.0);
+		rankingAverage.put("idf", 0.0);
+		rankingAverage.put("tfidf", 0.0);
+		rankingAverage.put("mi", 0.0);
+		rankingAverage.put("chi", 0.0);
+		HashMap<String, Double> mlAverage = new HashMap<String, Double>();
+		mlAverage.put("nb", 0.0);
+		mlAverage.put("rf", 0.0);
+		mlAverage.put("j48", 0.0);
 		
 		System.out.print("\\multirow{5}{*}{NB} ");
 		for (String function : functions) {
@@ -171,8 +192,12 @@ public class MLMainClassPaperII {
 			}
 			for (double proportion : proportions) {
 				for (int r = 2; r <= 8; r = r + 2) {
-					double precision = NBClassifier.runNBC(readMLDataSetProportionSubsetFromFile(r, function, proportion, "1111110000000111111111111")) * 100;
+					double precision = NBClassifier.runNBC(readMLDataSetProportionSubsetFromFile(r, function, proportion, featureString)) * 100;
 					System.out.print(String.format(" & %.3g", precision).replace(',', '.'));
+					radiusAverage.put(r, radiusAverage.get(r) + precision);
+					proportionAverage.put(proportion, proportionAverage.get(proportion) + precision);
+					rankingAverage.put(function, rankingAverage.get(function) + precision);
+					mlAverage.put("nb", mlAverage.get("nb") + precision);
 				}
 			}
 			System.out.print(" \\\\\n");
@@ -187,8 +212,12 @@ public class MLMainClassPaperII {
 			}
 			for (double proportion : proportions) {
 				for (int r = 2; r <= 8; r = r + 2) {
-					double precision = RFClassifier.runRF(readMLDataSetProportionSubsetFromFile(r, function, proportion, "1111110000000111111111111")) * 100;
+					double precision = RFClassifier.runRF(readMLDataSetProportionSubsetFromFile(r, function, proportion, featureString)) * 100;
 					System.out.print(String.format(" & %.3g", precision).replace(',', '.'));
+					radiusAverage.put(r, radiusAverage.get(r) + precision);
+					proportionAverage.put(proportion, proportionAverage.get(proportion) + precision);
+					rankingAverage.put(function, rankingAverage.get(function) + precision);
+					mlAverage.put("rf", mlAverage.get("rf") + precision);
 				}
 			}
 			System.out.print(" \\\\\n");
@@ -203,13 +232,38 @@ public class MLMainClassPaperII {
 			}
 			for (double proportion : proportions) {
 				for (int r = 2; r <= 8; r = r + 2) {
-					double precision = J48Classifier.runJ48(readMLDataSetProportionSubsetFromFile(r, function, proportion, "1111110000000111111111111")) * 100;
+					double precision = J48Classifier.runJ48(readMLDataSetProportionSubsetFromFile(r, function, proportion, featureString)) * 100;
 					System.out.print(String.format(" & %.3g", precision).replace(',', '.'));
+					radiusAverage.put(r, radiusAverage.get(r) + precision);
+					proportionAverage.put(proportion, proportionAverage.get(proportion) + precision);
+					rankingAverage.put(function, rankingAverage.get(function) + precision);
+					mlAverage.put("j48", mlAverage.get("j48") + precision);
 				}
 			}
 			System.out.print(" \\\\ \n");
 		}	
-		System.out.print("\\hline \n");
+		System.out.print("\\hline \n\n");
+		
+		for (int key : radiusAverage.keySet()) {
+			radiusAverage.put(key, radiusAverage.get(key) / 45.0);
+		}
+		for (double key : proportionAverage.keySet()) {
+			proportionAverage.put(key, proportionAverage.get(key) / 60.0);
+		}
+		for (String key : rankingAverage.keySet()) {
+			rankingAverage.put(key, rankingAverage.get(key) / 36.0);
+			
+		}
+		for (String key : mlAverage.keySet()) {
+			mlAverage.put(key, mlAverage.get(key) / 60.0);
+			
+		}
+		
+		
+		System.out.println(radiusAverage);
+		System.out.println(proportionAverage);
+		System.out.println(rankingAverage);
+		System.out.println(mlAverage);
 	}
 	
 	
@@ -529,6 +583,18 @@ public class MLMainClassPaperII {
 				innerList.remove(2+6);
 			}
 		}
+		int counter = 0;
+		ArrayList<ArrayList<Double>> larsArrayList = new ArrayList<ArrayList<Double>>();
+		ArrayList<ArrayList<Double>> palArrayList = new ArrayList<ArrayList<Double>>();
+		for (ArrayList<Double> innerList : arrayList) {
+			if (0 <= counter && counter <= 480) {
+				larsArrayList.add(innerList);
+			} else if (492 <= counter && counter <= 992) {
+				palArrayList.add(innerList);
+			}
+			counter++;
+		}
+		arrayList = larsArrayList;
 		return MLArticle.wrapper(arrayList);
 	}
 	
