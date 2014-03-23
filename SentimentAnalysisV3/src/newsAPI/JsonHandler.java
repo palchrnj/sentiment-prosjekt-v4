@@ -13,6 +13,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 import preProcessing.NewsArticleWithStemmedVersion;
+import preProcessing.NewsArticlesWithCots;
 import preProcessing.NewsArticlesWithPosTaggedWords;
 import preProcessing.NewsArticlesWithStemmedVersion;
 import preProcessing.NewsArticlesWithTickers;
@@ -25,6 +26,7 @@ public class JsonHandler {
 	public NewsArticlesWithPosTaggedWords posTaggedArticles;
 	public NewsArticlesWithTickers tickerArticles;
 	public NewsArticlesWithStemmedVersion stemmedArticles;
+	public NewsArticlesWithCots cotsArticles;
 	public NewsArticlesWithFeatures featureArticles;
 
 
@@ -51,9 +53,13 @@ public class JsonHandler {
 		else if(type == "stemmed"){
 			this.stemmedArticles = newsArticlesWithStemmedVersion(this.jsonSource);
 		}
+		else if(type == "cots"){
+			this.cotsArticles = newsArticlesWithCots(this.jsonSource);
+		}
 		else if(type == "features"){
 			this.featureArticles = newsArticlesWithFeatures(this.jsonSource);
 		}
+		
 	}
 	
 
@@ -121,6 +127,11 @@ public class JsonHandler {
 		return articles;
 	}
 	
+	public NewsArticlesWithCots newsArticlesWithCots (String jsonSource){
+		Gson gson = new Gson();
+		NewsArticlesWithCots articles = gson.fromJson(jsonSource, NewsArticlesWithCots.class);
+		return articles;
+	}
 	public NewsArticlesWithFeatures newsArticlesWithFeatures (String jsonSource){
 		Gson gson = new Gson();
 		NewsArticlesWithFeatures articles = gson.fromJson(jsonSource, NewsArticlesWithFeatures.class);

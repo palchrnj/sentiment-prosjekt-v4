@@ -52,7 +52,7 @@ public class MLMainClassPaperII {
 		double maxPrecision = 0;
 		String maxString = "";
 		int counter = 0;
-		for (int r = 2; r <= 8; r = r + 2) {
+		for (int r = 8; r <= 8; r = r + 2) {
 			for (String binarySelector : getFeatureSelectionString()) {
 				String candidate = defaultSelector + binarySelector;
 				double thisPrecision = NBClassifier.runNBC(readMLDataSetProportionSubsetFromFile(r, "mi", 0.5, candidate));
@@ -154,7 +154,7 @@ public class MLMainClassPaperII {
 	}
 	
 	public static void computeAndPrintResultsForLatexTableProportion() throws Exception {
-		String featureString = "1111110000000111111001111";
+		String featureString = "111111000000011111100111111";
 //		String featureString = "1111110000000000000000000";
 		ArrayList<String> functions = new ArrayList<String>(Arrays.asList("tf", "idf", "tfidf", "mi", "chi"));
 		ArrayList<Double> proportions = new ArrayList<Double>();
@@ -393,7 +393,7 @@ public class MLMainClassPaperII {
 			for (String function : functions) {
 				for (double proportion: proportions) {
 					int numberOfCotsToConsider =  (int) (proportion * cotCountMap.get(radius));
-					MLDataSet mldataset = getMLDataSet(jh, radius, function, numberOfCotsToConsider, "1111110000000111111111111");
+					MLDataSet mldataset = getMLDataSet(jh, radius, function, numberOfCotsToConsider, "111111000000011111111111111");
 					writeMLDataSetToFile(mldataset, radius, function, proportion);
 					System.out.println(String.format("Done with r=%s, f=%s and p=%s ", radius, function, proportion));
 				}

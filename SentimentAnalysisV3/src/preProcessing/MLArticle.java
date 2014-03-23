@@ -23,6 +23,8 @@ import org.encog.ml.data.basic.BasicMLData;
 import org.encog.ml.data.basic.BasicMLDataPair;
 import org.encog.ml.data.basic.BasicMLDataSet;
 
+import utils.ExcelStockParser;
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -64,6 +66,9 @@ public class MLArticle {
 	public double hasPositiveTitleClue;
 	public double hasNegativeTitleClue;
 	
+	public double stockPricePercentageChangeYesterday;
+	public double stockPricePercentageChangeLastWeek;
+	
 	public double sentimentClassification;
 	
 	public MLArticle() {
@@ -92,6 +97,11 @@ public class MLArticle {
 		setUpTitleClues(nawsv);
 		
 		sentimentClassification = extractAggregateSentimentFromString(nawsv.getSentimentValue());
+		
+		ExcelStockParser esp = new ExcelStockParser();
+		stockPricePercentageChangeYesterday = esp.getPercentageChangeOfArticle(nawsv, 1);
+		stockPricePercentageChangeLastWeek = esp.getPercentageChangeOfArticle(nawsv, 7);
+		
 	}
 	
 	private void setDate(String dateStr) {
@@ -490,8 +500,9 @@ public class MLArticle {
 		return mldatapair;
 	}
 
+	//GENERATE VECTOR
 	public MLDataPair getMLDataPair(String binaryIndicator) {
-		if (binaryIndicator.length() != 25) {
+		if (binaryIndicator.length() != 27) {
 			throw new IllegalArgumentException("String must be of length 25, not of length " + binaryIndicator.length());
 		}
 		ArrayList<Double> inputList = new ArrayList<Double>();
@@ -570,6 +581,12 @@ public class MLArticle {
 		}
 		if (binaryIndicator.charAt(24) == '1') {
 			inputList.add(hasNegativeTitleClue);
+		}
+		if (binaryIndicator.charAt(25) == '1') {
+			inputList.add(stockPricePercentageChangeYesterday);
+		}
+		if (binaryIndicator.charAt(26) == '1') {
+			inputList.add(stockPricePercentageChangeLastWeek);
 		}
 
 		ArrayList<Double> idealList = new ArrayList<Double>();

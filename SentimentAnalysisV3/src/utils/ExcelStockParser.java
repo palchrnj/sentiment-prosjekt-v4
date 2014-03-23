@@ -9,12 +9,15 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 
+import newsAPI.JsonHandler;
+
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 
 import preProcessing.NewsArticleWithCots;
+import preProcessing.NewsArticleWithStemmedVersion;
 import preProcessing.NewsArticlesWithCots;
 
 public class ExcelStockParser {
@@ -59,7 +62,7 @@ public class ExcelStockParser {
 		HashMap<String, String> stockOverview = new HashMap<String, String>();
 		
 		for(int i=2; i<sheet.getLastRowNum()+1; i++){
-			stockOverview.put(sheet.getRow(i).getCell(0).toString(), sheet.getRow(i).getCell(1).toString());
+			stockOverview.put(sheet.getRow(i).getCell(0).toString(), sheet.getRow(i).getCell(2).toString());
 		}
 		
 		Date date = c.getTime();
@@ -70,10 +73,10 @@ public class ExcelStockParser {
 		Date fromDate = cal.getTime();
 		
 		
-		System.out.println("TODAYS DATE " + date);
-		System.out.println("PREVIOUS DATE " + fromDate);
+//		System.out.println("TODAYS DATE " + date);
+//		System.out.println("PREVIOUS DATE " + fromDate);
 
-		System.out.println(stockOverview.toString());
+//		System.out.println(stockOverview.toString());
 		double todaysValue = 0;
 		double previousValue = 0;
 		
@@ -81,8 +84,8 @@ public class ExcelStockParser {
 	    String todayFormated = DATE_FORMAT.format(date);
 	    String fromDayFormated = DATE_FORMAT.format(fromDate);
 	    
-		System.out.println("TODAYS DATE FORMATED " + todayFormated);
-		System.out.println("PREVIOUS DATE FORMATED " + fromDayFormated); 
+//		System.out.println("TODAYS DATE FORMATED " + todayFormated);
+//		System.out.println("PREVIOUS DATE FORMATED " + fromDayFormated); 
 	    
 		
 		//INCREASE OR DECREASE DATE TO FIND A VALUE
@@ -90,16 +93,17 @@ public class ExcelStockParser {
 			try {
 				todaysValue = Double.parseDouble(stockOverview.get(todayFormated));
 			} catch (Exception e) {
+//				System.out.println("Todays date increased");
 				c.add(Calendar.DATE, 1);
 				date = c.getTime();
 			    todayFormated = DATE_FORMAT.format(date);
-	
 			}
 		}
 		while(previousValue == 0){
 			try {
 				previousValue = Double.parseDouble(stockOverview.get(fromDayFormated));
 			} catch (Exception e) {
+//				System.out.println("From Date decreased");
 				cal.add(Calendar.DATE, -1);
 				fromDate = cal.getTime();
 			    fromDayFormated = DATE_FORMAT.format(fromDate);
@@ -107,11 +111,38 @@ public class ExcelStockParser {
 		}
 		
 		
-		System.out.println("TODAYS VALUE " + todaysValue);
-		System.out.println("PREVIOUS VALUE " + previousValue);
+//		System.out.println("TODAYS VALUE " + todaysValue);
+//		System.out.println("PREVIOUS VALUE " + previousValue);
+		
+		percentileChange = (todaysValue-previousValue)/todaysValue;
+
+//		System.out.println("Percentile change " + percentileChange);
+		
 		return percentileChange;
 		
 	}
+	
+	public double getPercentageChangeOfArticle(NewsArticleWithStemmedVersion nawc, int days) throws IOException{
+		String ticker = nawc.getTickerList().get(0);
+		String date = nawc.getpublished();
+//		System.out.println(date);
+		Calendar c = Calendar.getInstance();
+		
+		int year = Integer.parseInt(date.split("-")[0]);
+		int month = Integer.parseInt(date.split("-")[1]);
+		int day = Integer.parseInt(date.split("-")[2].substring(0,1));
+		
+		c.set(year, month, day);
+		try {
+			return this.getPercentileChangeInStock(ticker, c, days);
+		} catch (Exception e) {
+			return 0;
+		}
+		
+	
+	}
+	
+	
 	
 	
 	
@@ -132,9 +163,12 @@ public class ExcelStockParser {
 //	
 //		}
 //		System.out.println(stockDate.toString());
-		Calendar c = Calendar.getInstance();
-		c.set(2012, 10, 1);
-		esp.getPercentileChangeInStock("ROM", c, 1);
+		JsonHandler h = new JsonHandler("ArticleSteps/5_CotsArticles/MainDataSetCOTS.json" , "cots");
+		
+		esp.getPercentageChangeOfArticle(h.stemmedArticles.getNawsv().get(50), 10);
+//		Calendar c = Calendar.getInstance();
+//		c.set(2012, 19, 7);
+//		esp.getPercentileChangeInStock("BIONOR", c, 1);
 
 	}
 	
