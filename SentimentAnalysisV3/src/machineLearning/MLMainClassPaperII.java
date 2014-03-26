@@ -41,32 +41,32 @@ public class MLMainClassPaperII {
 	public static void main(String[] args) throws Exception {
 		
 //		writeArticlesToFiles();
-//		computeAndPrintResultsForLatexTableProportion();
+		computeAndPrintResultsForLatexTableProportion();
 //		computeAndPrintResultsForLatexGraphsProportions();
 		
-//		computeAndPrintResultsForLatexTable();
+		computeAndPrintResultsForLatexTable();
 //		computeAndPrintResultsForLatexGraphs();
 		
 		
 		
-		double maxPrecision = 0;
-		String maxString = "";
-		int counter = 0;
-		for (int r = 8; r <= 8; r = r + 2) {
-			for (String binarySelector : getFeatureSelectionString()) {
-				String candidate = defaultSelector + binarySelector;
-				double thisPrecision = NBClassifier.runNBC(readMLDataSetProportionSubsetFromFile(r, "mi", 0.5, candidate));
-				if (thisPrecision > maxPrecision) {
-					maxPrecision = thisPrecision;
-					maxString = candidate;
-				}
-				if (counter % 500 == 0) {
-					System.out.println(counter + ": " + maxPrecision);
-				}
-				counter++;
-			}
-			System.out.println(r + ": " + maxString + " --> " + maxPrecision);
-		}
+//		double maxPrecision = 0;
+//		String maxString = "";
+//		int counter = 0;
+//		for (int r = 8; r <= 8; r = r + 2) {
+//			for (String binarySelector : getFeatureSelectionString()) {
+//				String candidate = defaultSelector + binarySelector;
+//				double thisPrecision = NBClassifier.runNBC(readMLDataSetProportionSubsetFromFile(r, "mi", 0.5, candidate));
+//				if (thisPrecision > maxPrecision) {
+//					maxPrecision = thisPrecision;
+//					maxString = candidate;
+//				}
+//				if (counter % 500 == 0) {
+//					System.out.println(counter + ": " + maxPrecision);
+//				}
+//				counter++;
+//			}
+//			System.out.println(r + ": " + maxString + " --> " + maxPrecision);
+//		}
 		
 //		readMLDataSetFromFile(2, "chi", 4000);
 //		JsonHandler jh = new JsonHandler("/ArticleSteps/4_StemmedArticles/MainDataSetStemmed.json", "stemmed");
@@ -98,6 +98,7 @@ public class MLMainClassPaperII {
 	public static void computeAndPrintResultsForLatexTable() throws Exception {
 		ArrayList<String> functions = new ArrayList<String>(Arrays.asList("tf", "idf", "tfidf", "mi", "chi"));
 		ArrayList<Integer> sigmas = new ArrayList<Integer>();
+		String featureString = "111111000000011111100111111";
 //		sigmas.add(new Integer(500));
 		sigmas.add(new Integer(1000));
 		sigmas.add(new Integer(2000));
@@ -113,7 +114,7 @@ public class MLMainClassPaperII {
 			}
 			for (int sigma : sigmas) {
 				for (int r = 2; r <= 8; r = r + 2) {
-					double precision = NBClassifier.runNBC(readMLDataSetSubsetFromFile(r, function, sigma, "1111110000000111111111111")) * 100;
+					double precision = NBClassifier.runNBC(readMLDataSetSubsetFromFile(r, function, sigma, featureString)) * 100;
 					System.out.print(String.format(" & %.3g", precision).replace(',', '.'));
 				}
 			}
@@ -129,7 +130,7 @@ public class MLMainClassPaperII {
 			}
 			for (int sigma : sigmas) {
 				for (int r = 2; r <= 8; r = r + 2) {
-					double precision = RFClassifier.runRF(readMLDataSetSubsetFromFile(r, function, sigma, "1111110000000111111111111")) * 100;
+					double precision = RFClassifier.runRF(readMLDataSetSubsetFromFile(r, function, sigma, featureString)) * 100;
 					System.out.print(String.format(" & %.3g", precision).replace(',', '.'));
 				}
 			}
@@ -145,7 +146,7 @@ public class MLMainClassPaperII {
 			}
 			for (int sigma : sigmas) {
 				for (int r = 2; r <= 8; r = r + 2) {
-					double precision = J48Classifier.runJ48(readMLDataSetSubsetFromFile(r, function, sigma, "1111110000000111111111111")) * 100;
+					double precision = J48Classifier.runJ48(readMLDataSetSubsetFromFile(r, function, sigma, featureString)) * 100;
 					System.out.print(String.format(" & %.3g", precision).replace(',', '.'));
 				}
 			}
