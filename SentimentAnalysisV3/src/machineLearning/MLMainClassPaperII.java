@@ -41,10 +41,11 @@ public class MLMainClassPaperII {
 	public static void main(String[] args) throws Exception {
 		
 //		writeArticlesToFiles();
-		computeAndPrintResultsForLatexTableProportion();
+		writeArticlesToFilesSigmas();
+//		computeAndPrintResultsForLatexTableProportion();
 //		computeAndPrintResultsForLatexGraphsProportions();
 		
-		computeAndPrintResultsForLatexTable();
+//		computeAndPrintResultsForLatexTable();
 //		computeAndPrintResultsForLatexGraphs();
 		
 		
@@ -413,8 +414,8 @@ public class MLMainClassPaperII {
 		for (int radius = 2; radius <= 8; radius = radius + 1) {
 			for (String function : functions) {
 				for (int sigma : sigmas) {
-					MLDataSet mldataset = getMLDataSet(jh, radius, function, sigma, "1111110000000111111111111");
-					writeMLDataSetToFile(mldataset, radius, function, sigma);
+					MLDataSet mldataset = getMLDataSet(jh, radius, function, sigma, "111111000000011111111111111");
+					writeMLDataSetToFileSigmas(mldataset, radius, function, sigma);
 					System.out.println(String.format("Done with r=%s, f=%s and s=%s ", radius, function, sigma));
 				}
 			}
