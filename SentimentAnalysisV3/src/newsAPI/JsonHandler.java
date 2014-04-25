@@ -138,6 +138,8 @@ public class JsonHandler {
 		return articles;
 	}
 	
+	
+	
 	/* METHOD FOR DETERMINING RELATIVE PATHS */
 	public String getPath() {
 	    String path = String.format("%s/%s", System.getProperty("user.dir"), this.getClass().getPackage().getName().replace(".", "/"));
