@@ -126,6 +126,8 @@ public class HegnarArticleExtractor {
 		nawt.setversion(" ");
 		nawt.setSentimentValue(" ");
 		
+		System.out.println(title.text());
+		
 		return nawt;
 	}
 	
@@ -145,6 +147,7 @@ public class HegnarArticleExtractor {
 			try {
 				articleList.add(this.generateNewsArticleRawFromUrl(linkList.get(i)));
 			} catch (Exception e) {
+				System.out.println("Exception: " + e);
 				continue;
 			}
 		}
@@ -188,10 +191,12 @@ public class HegnarArticleExtractor {
 	public void createAllhegnarTickerArticles() throws IOException{
 		TextFileHandler tfh = new TextFileHandler();
 		String tickerList = tfh.getTickerList();
-		for(int i=0; i<tickerList.split("\\r?\\n").length; i++){
-			System.out.println(tickerList.split("\\r?\\n")[i]);
-			this.writeArticlesToFile(tickerList.split("\\r?\\n")[i]);
-		}
+//		System.out.println(tickerList.split("\\r?\\n").length);
+//		for(int i=104; i<tickerList.split("\\r?\\n").length; i++){
+//			System.out.println(tickerList.split("\\r?\\n")[i]);
+//			this.writeArticlesToFile(tickerList.split("\\r?\\n")[i]);
+//		}
+		this.writeArticlesToFile("YAR");
 		
 	}
 	
