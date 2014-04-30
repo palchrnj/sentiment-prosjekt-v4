@@ -123,6 +123,7 @@ public class HegnarArticleOverview {
 		DateTime lastArticleDate = new DateTime();
 
 		ArrayList<Double> articleIndiceValues = new ArrayList<Double>();
+		ArrayList<String> articleDateValues = new ArrayList<String>();
 		
 		for(int i=0; i<articleList.size(); i++){
 			
@@ -154,6 +155,7 @@ public class HegnarArticleOverview {
 						continue;
 					}
 					else{
+						articleDateValues.add(articleDateString);
 						articleIndiceValues.add(getValueFromIndiceOfTicker(ticker, articleDate, typeOfIndiceValue));
 					}
 					
@@ -170,6 +172,10 @@ public class HegnarArticleOverview {
 		}
 		for(int i=0; i<articleIndiceValues.size(); i++){
 			System.out.print(articleIndiceValues.get(i)+" ");
+		}
+		System.out.println("----");
+		for(int i=0; i<articleDateValues.size(); i++){
+			System.out.print(articleDateValues.get(i)+" ");
 		}
 		
 		
