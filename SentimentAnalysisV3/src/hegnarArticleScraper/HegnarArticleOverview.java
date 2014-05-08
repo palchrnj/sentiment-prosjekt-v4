@@ -10,6 +10,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 
 import newsAPI.NewsArticlesRaw;
@@ -22,6 +23,7 @@ import com.google.gson.Gson;
 
 import preProcessing.NewsArticleWithTickers;
 import preProcessing.NewsArticlesWithTickers;
+import preProcessing.TextFileHandler;
 import utils.ExcelStockParser;
 
 public class HegnarArticleOverview {
@@ -92,7 +94,7 @@ public class HegnarArticleOverview {
 			//String indiceDateString = sheet.getRow(i).getCell(0).toString();
 			DateTime indiceDate = new DateTime(yearNumber, monthNumber, dayNumber, 0, 0);
 			if(indiceDate.equals(dateOfInterest)){
-				System.out.println("Samme dag");
+//				System.out.println("Samme dag");
 				if(sheet.getRow(i).getCell(typeOfIndiceValue).toString().contains("E")){
 					valueToReturn = Double.parseDouble(sheet.getRow(i).getCell(typeOfIndiceValue).toString().split("E")[0]);
 				}
@@ -100,7 +102,7 @@ public class HegnarArticleOverview {
 					valueToReturn = Double.parseDouble(sheet.getRow(i).getCell(typeOfIndiceValue).toString());
 				}
 
-				System.out.println(valueToReturn);
+//				System.out.println(valueToReturn);
 			}
 			
 		}
@@ -115,7 +117,7 @@ public class HegnarArticleOverview {
 			return articles;
 	}
 	
-	public void getArticlesTickerDate(String ticker, int typeOfIndiceValue) throws IOException{
+	public TickerResourceInfo getArticlesTickerDate(String ticker, int typeOfIndiceValue) throws IOException{
 		
 		NewsArticlesWithTickers nawt = this.getArticlesFromTicker(ticker);
 		ArrayList<NewsArticleWithTickers> articleList = nawt.getNewsArticlesWithTickers();
@@ -124,11 +126,17 @@ public class HegnarArticleOverview {
 
 		ArrayList<Double> articleIndiceValues = new ArrayList<Double>();
 		ArrayList<String> articleDateValues = new ArrayList<String>();
+		ArrayList<Integer> articleCountValues = new ArrayList<Integer>();
+		
+		int articleCount = 1;
 		
 		for(int i=0; i<articleList.size(); i++){
+	
 			
 			
 			if(articleList.get(i).getpublished() != null){
+				
+			
 				
 				String articleDateString = articleList.get(i).getpublished();
 				
@@ -151,32 +159,56 @@ public class HegnarArticleOverview {
 				
 				try {
 					if(lastArticleDate.equals(articleDate)){
-						System.out.println("Samme dato som forrige dag");
+						articleCount++;
+//						System.out.println("Samme dato som forrige dag");
 						continue;
 					}
 					else{
+						articleCountValues.add(articleCount);
 						articleDateValues.add(articleDateString);
 						articleIndiceValues.add(getValueFromIndiceOfTicker(ticker, articleDate, typeOfIndiceValue));
+						articleCount = 1;
 					}
 					
 					lastArticleDate = articleDate;
-					
-					
-					
+
 				} catch (Exception e) {
-					System.out.println("EXCEPTION: " + e);
+					//CATCHE MED Å HENTE NESTE VERDI
+					boolean foundStockValue = false;
+					DateTime nextActiveStockDate = new DateTime();
+
+					while(!foundStockValue){
+						try {
+							articleIndiceValues.add(getValueFromIndiceOfTicker(ticker, nextActiveStockDate, typeOfIndiceValue));
+							foundStockValue = true;
+						} catch (Exception e2) {
+							nextActiveStockDate = articleDate.plusDays(1);
+							// TODO: handle exception
+						}
+
+					}
+//					System.out.println("EXCEPTION: " + e);
 				}
 			
 			}
 			
 		}
-		for(int i=0; i<articleIndiceValues.size(); i++){
-			System.out.print(articleIndiceValues.get(i)+" ");
-		}
-		System.out.println("----");
-		for(int i=0; i<articleDateValues.size(); i++){
-			System.out.print(articleDateValues.get(i)+" ");
-		}
+//		System.out.println("ArticleIndiceValuesSize: " + articleIndiceValues.size() +" ArticleDateValues: " + articleDateValues.size() + " ArticleCountValues: " + articleCountValues.size());
+//		for(int i=0; i<articleIndiceValues.size(); i++){
+//			System.out.print(articleIndiceValues.get(i)+" ");
+//		}
+//		System.out.println("\n----");
+//		for(int i=0; i<articleDateValues.size(); i++){
+//			System.out.print(articleDateValues.get(i)+" ");
+//		}
+//		System.out.println("\n----");
+//		for(int i=0; i<articleCountValues.size(); i++){
+//			System.out.print(articleCountValues.get(i)+" ");
+//		}
+		
+		TickerResourceInfo tri = new TickerResourceInfo(articleIndiceValues, articleDateValues, articleCountValues);
+		tri.ticker = ticker;
+		return tri;
 		
 		
 	}
@@ -196,16 +228,30 @@ public class HegnarArticleOverview {
 	}
 	
 	
+	public ArrayList<TickerResourceInfo> getTickersResourceInformation() throws IOException{
+		ArrayList<TickerResourceInfo> tri = new ArrayList<TickerResourceInfo>();
+		
+		TextFileHandler tfh = new TextFileHandler();
+		String tickerList = tfh.getTickerList();
+		for(int i=0; i<tickerList.split("\\r?\\n").length; i++){
+			
+			tri.add(getArticlesTickerDate(tickerList.split("\\r?\\n")[i],6));
+		}
+		
+		return tri;
+	}
 	
 	
-	
-
 	public static void main(String args[]) throws IOException{
 		DateTime d = new DateTime(2014,2,27,0,0);
 		HegnarArticleOverview hao = new HegnarArticleOverview();
 		//hao.getValueFromIndiceOfTicker("EVRY", d, 3);
-		hao.getArticlesTickerDate("AFG", 1);
-		
+		//hao.getArticlesTickerDate("SAS", 6);
+		ArrayList<TickerResourceInfo> allTickersOverview = hao.getTickersResourceInformation();
+		Collections.sort(allTickersOverview);
+		for(int i=0; i<allTickersOverview.size(); i++){
+			System.out.println("TICKER: " +allTickersOverview.get(i).ticker + " |||||||   AVG ARTICLES POSTED: "+ allTickersOverview.get(i).getAverageArticlesPostedInADay() + " ||||||||||   TOTAL ARTICLES: " + allTickersOverview.get(i).getTotalArticleCount());
+		}
 	}
 
 }

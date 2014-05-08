@@ -114,7 +114,7 @@ public class HegnarArticleExtractor {
 		nawt.setText(mainText.text());
 		nawt.setpublished(publishedString);
 		nawt.setPublisher("Hegnar");
-		nawt.setImageUrl(feedImageUrl.toString().split("\"")[3]);
+		nawt.setImageUrl(" ");
 		nawt.setlast_modified(publishedString);
 		nawt.setId(id);
 		nawt.setSignature(" ");
@@ -145,10 +145,11 @@ public class HegnarArticleExtractor {
 		
 		for(int i=0; i<linkList.size(); i++){
 			try {
+				System.out.println("LINKLIST " + i + " URL: " + linkList.get(i));
 				articleList.add(this.generateNewsArticleRawFromUrl(linkList.get(i)));
 			} catch (Exception e) {
-				System.out.println("Exception: " + e);
-				continue;
+				System.out.println("Exception bla: " + e);
+				
 			}
 		}
 		
@@ -196,7 +197,7 @@ public class HegnarArticleExtractor {
 //			System.out.println(tickerList.split("\\r?\\n")[i]);
 //			this.writeArticlesToFile(tickerList.split("\\r?\\n")[i]);
 //		}
-		this.writeArticlesToFile("YAR");
+		this.writeArticlesToFile("NAS");
 		
 	}
 	
