@@ -36,6 +36,11 @@ public class TextFileHandler {
 		String tickerList = this.getTextFileAsString(this.getPath()+"/WordListsOfImportance/TickerOverview.txt", StandardCharsets.UTF_8);
 		return tickerList;
 	}
+	//GET TICKER LIST
+	public String getTickerListMissingTicker() throws IOException{
+		String tickerList = this.getTextFileAsString(this.getPath()+"/WordListsOfImportance/TickerOverviewOnlyMissingTickers.txt", StandardCharsets.UTF_8);
+		return tickerList;
+	}
 	//GET ANALYTIC CLUES FROM FILE AS STRINGLIST
 	public String[] getAnalyticalClues() throws IOException{
 			String[] analyticArticleCluesList = null;

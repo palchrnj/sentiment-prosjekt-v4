@@ -137,74 +137,79 @@ public class HegnarArticleOverview {
 			if(articleList.get(i).getpublished() != null){
 				
 			
-				
-				String articleDateString = articleList.get(i).getpublished();
-				
-				//FIGURE OUT ARTICLE YEAR
-				String articleYear = articleDateString.split("-")[0];
-
-				String articleMonth = articleDateString.split("-")[1];
-				String articleDay = articleDateString.split("-")[2].split("T")[0];
-				
-				int articleYearNumber = 2000 + Integer.parseInt(articleYear);
-				int articleMonthNumber = Integer.parseInt(articleMonth);
-				int articleDayNumber = Integer.parseInt(articleDay);
-				
-				DateTime articleDate = new DateTime(articleYearNumber, articleMonthNumber, articleDayNumber, 0, 0);
-				
-//				System.out.println("ARTICLE DATE: " + articleDateString);
-//				System.out.println("DATETIME: " + articleDate.toString());
-				
-				
-				
 				try {
-					if(lastArticleDate.equals(articleDate)){
-						articleCount++;
-//						System.out.println("Samme dato som forrige dag");
-						continue;
-					}
-					else{
-						articleCountValues.add(articleCount);
-						articleDateValues.add(articleDateString);
-						articleIndiceValues.add(getValueFromIndiceOfTicker(ticker, articleDate, typeOfIndiceValue));
-						articleCount = 1;
+					String articleDateString = articleList.get(i).getpublished();
+					
+					//FIGURE OUT ARTICLE YEAR
+					String articleYear = articleDateString.split("-")[0];
+
+					String articleMonth = articleDateString.split("-")[1];
+					String articleDay = articleDateString.split("-")[2].split("T")[0];
+					
+					int articleYearNumber = 2000 + Integer.parseInt(articleYear);
+					int articleMonthNumber = Integer.parseInt(articleMonth);
+					int articleDayNumber = Integer.parseInt(articleDay);
+					
+					DateTime articleDate = new DateTime(articleYearNumber, articleMonthNumber, articleDayNumber, 0, 0);
+					
+//					System.out.println("ARTICLE DATE: " + articleDateString);
+//					System.out.println("DATETIME: " + articleDate.toString());
+					
+					
+					
+					try {
+						if(lastArticleDate.equals(articleDate)){
+							articleCount++;
+//							System.out.println("Samme dato som forrige dag");
+							continue;
+						}
+						else{
+							articleCountValues.add(articleCount);
+							articleDateValues.add(articleDateString);
+							articleIndiceValues.add(getValueFromIndiceOfTicker(ticker, articleDate, typeOfIndiceValue));
+							articleCount = 1;
+						}
+						
+						lastArticleDate = articleDate;
+
+					} catch (Exception e) {
+						//CATCHE MED Å HENTE NESTE VERDI
+						boolean foundStockValue = false;
+						DateTime nextActiveStockDate = new DateTime();
+
+						while(!foundStockValue){
+							try {
+								articleIndiceValues.add(getValueFromIndiceOfTicker(ticker, nextActiveStockDate, typeOfIndiceValue));
+								foundStockValue = true;
+							} catch (Exception e2) {
+								nextActiveStockDate = articleDate.plusDays(1);
+								// TODO: handle exception
+							}
+
+						}
+//						System.out.println("EXCEPTION: " + e);
 					}
 					
-					lastArticleDate = articleDate;
-
 				} catch (Exception e) {
-					//CATCHE MED Å HENTE NESTE VERDI
-					boolean foundStockValue = false;
-					DateTime nextActiveStockDate = new DateTime();
-
-					while(!foundStockValue){
-						try {
-							articleIndiceValues.add(getValueFromIndiceOfTicker(ticker, nextActiveStockDate, typeOfIndiceValue));
-							foundStockValue = true;
-						} catch (Exception e2) {
-							nextActiveStockDate = articleDate.plusDays(1);
-							// TODO: handle exception
-						}
-
-					}
-//					System.out.println("EXCEPTION: " + e);
+					continue;
 				}
+				
 			
 			}
 			
 		}
-//		System.out.println("ArticleIndiceValuesSize: " + articleIndiceValues.size() +" ArticleDateValues: " + articleDateValues.size() + " ArticleCountValues: " + articleCountValues.size());
-//		for(int i=0; i<articleIndiceValues.size(); i++){
-//			System.out.print(articleIndiceValues.get(i)+" ");
-//		}
-//		System.out.println("\n----");
-//		for(int i=0; i<articleDateValues.size(); i++){
-//			System.out.print(articleDateValues.get(i)+" ");
-//		}
-//		System.out.println("\n----");
-//		for(int i=0; i<articleCountValues.size(); i++){
-//			System.out.print(articleCountValues.get(i)+" ");
-//		}
+		System.out.println("ArticleIndiceValuesSize: " + articleIndiceValues.size() +" ArticleDateValues: " + articleDateValues.size() + " ArticleCountValues: " + articleCountValues.size());
+		for(int i=0; i<articleIndiceValues.size(); i++){
+			System.out.print(articleIndiceValues.get(i)+" ");
+		}
+		System.out.println("\n----");
+		for(int i=0; i<articleDateValues.size(); i++){
+			System.out.print(articleDateValues.get(i)+" ");
+		}
+		System.out.println("\n----");
+		for(int i=0; i<articleCountValues.size(); i++){
+			System.out.print(articleCountValues.get(i)+" ");
+		}
 		
 		TickerResourceInfo tri = new TickerResourceInfo(articleIndiceValues, articleDateValues, articleCountValues);
 		tri.ticker = ticker;
@@ -234,7 +239,7 @@ public class HegnarArticleOverview {
 		TextFileHandler tfh = new TextFileHandler();
 		String tickerList = tfh.getTickerList();
 		for(int i=0; i<tickerList.split("\\r?\\n").length; i++){
-			
+			System.out.println("TICKER " + i);
 			tri.add(getArticlesTickerDate(tickerList.split("\\r?\\n")[i],6));
 		}
 		
@@ -245,13 +250,13 @@ public class HegnarArticleOverview {
 	public static void main(String args[]) throws IOException{
 		DateTime d = new DateTime(2014,2,27,0,0);
 		HegnarArticleOverview hao = new HegnarArticleOverview();
-		//hao.getValueFromIndiceOfTicker("EVRY", d, 3);
-		//hao.getArticlesTickerDate("SAS", 6);
-		ArrayList<TickerResourceInfo> allTickersOverview = hao.getTickersResourceInformation();
-		Collections.sort(allTickersOverview);
-		for(int i=0; i<allTickersOverview.size(); i++){
-			System.out.println("TICKER: " +allTickersOverview.get(i).ticker + " |||||||   AVG ARTICLES POSTED: "+ allTickersOverview.get(i).getAverageArticlesPostedInADay() + " ||||||||||   TOTAL ARTICLES: " + allTickersOverview.get(i).getTotalArticleCount());
-		}
+//		hao.getValueFromIndiceOfTicker("STL", d, 3);
+		hao.getArticlesTickerDate("STL", 6);
+//		ArrayList<TickerResourceInfo> allTickersOverview = hao.getTickersResourceInformation();
+//		Collections.sort(allTickersOverview);
+//		for(int i=0; i<allTickersOverview.size(); i++){
+//			System.out.println("TICKER: " +allTickersOverview.get(i).ticker + " |||||||   AVG ARTICLES POSTED: "+ allTickersOverview.get(i).getAverageArticlesPostedInADay() + " ||||||||||   TOTAL ARTICLES: " + allTickersOverview.get(i).getTotalArticleCount());
+//		}
 	}
 
 }

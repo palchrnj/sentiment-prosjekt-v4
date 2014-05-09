@@ -30,6 +30,7 @@ public class ExcelStockParser {
 	    return path.split(this.getClass().getPackage().getName())[0]+"/ArticleResources/";
 	}
 	
+	
 	public HashMap<String, String> getGraph() throws IOException{
 		ExcelStockParser esp = new ExcelStockParser();
 		InputStream myxls = new FileInputStream(esp.getPath()+"/StockExcelSheets/data.xls");

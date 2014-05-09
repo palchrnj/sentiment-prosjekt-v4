@@ -52,56 +52,111 @@ public class HegnarArticleExtractor {
 		Document hegnarDoc;
 		hegnarDoc = Jsoup.connect(url).get();
 		hegnarDoc.outputSettings().charset("utf-8");
-		Elements title = hegnarDoc.select(".storyContent h2");
-		Elements ingress = hegnarDoc.select(".storyContent h5");
-		Elements mainText = hegnarDoc.select(".wrappingContent");
-		Elements published = hegnarDoc.select(".byline");
-		Elements feedImageUrl = hegnarDoc.select(".activeitem");
-		
-		//GET PUBLSIHED DATE
-		String date = published.text().split("HegnarOnline - ")[1].split("\\.")[0];
-		String month = published.text().split("HegnarOnline - ")[1].split("\\.")[1];
-		if(month.length()<2){
-			month = "0"+month;
+		// GET TITLE FROM HEGNAR
+		Elements title = new Elements();
+		try {
+			title = hegnarDoc.select(".storyContent h2");
+		} catch (Exception e) {
+			System.out.println("Could not set title");
 		}
-		String year = published.text().split("HegnarOnline - ")[1].split("\\.")[2].split(" ")[0];
-		String hourOfDay = published.text().split("HegnarOnline - ")[1].split(" ")[1].split(":")[0];
-		String minute = published.text().split("HegnarOnline - ")[1].split(" ")[1].split(":")[1].substring(0,2);
+		// GET INGRESS FROM HEGNAR
+		Elements ingress = new Elements(); 
+		try {
+			ingress = hegnarDoc.select(".storyContent h5");
+		} catch (Exception e) {
+			System.out.println("Could not set ingress");
+		}
+		//GET MAIN TEXT FROM HEGNAR
+		Elements mainText = new Elements();
+		try {
+			mainText = hegnarDoc.select(".wrappingContent");
+		} catch (Exception e) {
+			System.out.println("Could not set maint text");
+		}
+		//GET PUBLISH DATE FROM HEGNAR
+		String publishedString = "UNDEFINED";
+		Elements published = new Elements();
+		try {
+			 published = hegnarDoc.select(".byline");
+			 
+			 //GET PUBLSIHED DATE
+			String date = published.text().split("HegnarOnline - ")[1].split("\\.")[0];
+			String month = published.text().split("HegnarOnline - ")[1].split("\\.")[1];
+			if(month.length()<2){
+				month = "0"+month;
+			}
+			String year = published.text().split("HegnarOnline - ")[1].split("\\.")[2].split(" ")[0];
+			String hourOfDay = published.text().split("HegnarOnline - ")[1].split(" ")[1].split(":")[0];
+			String minute = published.text().split("HegnarOnline - ")[1].split(" ")[1].split(":")[1].substring(0,2);
+			
+			publishedString = year+"-"+month+"-"+date+"T"+hourOfDay+":"+minute+":00Z";
+		} catch (Exception e) {
+			System.out.println("Could not set publish date text");
+		}
+		//GET FEED IMG URL DATE FROM HEGNAR
+		Elements feedImageUrl = new Elements();
+		try {
+			feedImageUrl = hegnarDoc.select(".activeitem");
+		} catch (Exception e) {
+			System.out.println("Could not set feed img url date text");
+		}
+				
 		
-		String publishedString = year+"-"+month+"-"+date+"T"+hourOfDay+":"+minute+":00Z";
+		
+	
 	
 		ArrayList<String> tickerList = new ArrayList<String>();
 		ArrayList<String> keywordList = new ArrayList<String>();
 		
-
-		Elements newsHeadlines = hegnarDoc.select(".ticker");
-		
-		if(newsHeadlines.size() > 0){
-			String htmlText = newsHeadlines.get(0).text();
-			String[] htmlTickersTextArray = htmlText.split("Se aksjeticker:");
-			String[] tickers = htmlTickersTextArray[1].split(" ");
-			for(int i=1; i<tickers.length; i++){
-				tickerList.add(tickers[i]);
-			}
+		Elements newsHeadlines = new Elements();
+		try {
+			 newsHeadlines = hegnarDoc.select(".ticker");
+				if(newsHeadlines.size() > 0){
+					String htmlText = newsHeadlines.get(0).text();
+					String[] htmlTickersTextArray = htmlText.split("Se aksjeticker:");
+					String[] tickers = htmlTickersTextArray[1].split(" ");
+					for(int i=1; i<tickers.length; i++){
+						tickerList.add(tickers[i]);
+					}
+				}
+		} catch (Exception e) {
+			System.out.println("COULD NOT FIND TICKERS");
 		}
+
+		
+	
 
 		//Adds author name to object
-		Elements articleAuthor = hegnarDoc.select(".ArtikkelForfatter");
-		
-		if(articleAuthor.size() > 0){
-			String articleAuthorText = articleAuthor.get(0).text();
-			authorName = articleAuthorText;
-		}
-		//Adds Keywords to object
-		if(hegnarDoc.select("meta[name=keywords]").size() > 0){
-			String keywordsRaw = hegnarDoc.select("meta[name=keywords]").get(0).attr("content");
-			String[] keywordArray = keywordsRaw.split(",");
-			for (int i = 0; i < keywordArray.length; i++) {
-				if(keywordArray[i] != " "){
-					keywordList.add(keywordArray[i]);
-				}	
+		Elements articleAuthor = new Elements();
+		try {
+			articleAuthor = hegnarDoc.select(".ArtikkelForfatter");
+			if(articleAuthor.size() > 0){
+				String articleAuthorText = articleAuthor.get(0).text();
+				authorName = articleAuthorText;
 			}
-		}	
+			
+		} catch (Exception e) {
+			System.out.println("COULD NOT FIND AUTHOR");
+		}
+	
+		
+		Elements keywords = new Elements();
+		try {
+			keywords = hegnarDoc.select("meta[name=keywords]");
+			//Adds Keywords to object
+			if(keywords.size() > 0){
+				String keywordsRaw = keywords.get(0).attr("content");
+				String[] keywordArray = keywordsRaw.split(",");
+				for (int i = 0; i < keywordArray.length; i++) {
+					if(keywordArray[i] != " "){
+						keywordList.add(keywordArray[i]);
+					}	
+				}
+			}	
+		} catch (Exception e) {
+			System.out.println("COULD NOT FIND KEYWORDS");
+		}
+		
 		
 //		System.out.println("TITLE - " + title.text());
 //		System.out.println("INGRESS - " + ingress.text());
@@ -191,13 +246,14 @@ public class HegnarArticleExtractor {
 	
 	public void createAllhegnarTickerArticles() throws IOException{
 		TextFileHandler tfh = new TextFileHandler();
-		String tickerList = tfh.getTickerList();
-//		System.out.println(tickerList.split("\\r?\\n").length);
-//		for(int i=104; i<tickerList.split("\\r?\\n").length; i++){
-//			System.out.println(tickerList.split("\\r?\\n")[i]);
-//			this.writeArticlesToFile(tickerList.split("\\r?\\n")[i]);
-//		}
-		this.writeArticlesToFile("NAS");
+		String tickerList = tfh.getTickerListMissingTicker();
+		
+		System.out.println(tickerList.split("\\r?\\n").length);
+		for(int i=0; i<tickerList.split("\\r?\\n").length; i++){
+			System.out.println(tickerList.split("\\r?\\n")[i]);
+			this.writeArticlesToFile(tickerList.split("\\r?\\n")[i]);
+		}
+		//this.writeArticlesToFile("TOM");
 		
 	}
 	

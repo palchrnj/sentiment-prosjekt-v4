@@ -34,16 +34,11 @@ public class TickerResourceInfo implements Comparable<TickerResourceInfo> {
 
 	@Override
 	public int compareTo(TickerResourceInfo o) {
-		if(this.getAverageArticlesPostedInADay() > o.getAverageArticlesPostedInADay()){
-			return 1;
-		}
-		else if(this.getAverageArticlesPostedInADay() < o.getAverageArticlesPostedInADay()){
-			return -1;
-		}
-		else{
-			return 0;
-		}
-		
+			Double firstDouble = new Double(this.getAverageArticlesPostedInADay());
+			Double secondDouble = new Double(o.getAverageArticlesPostedInADay());
+			int retval =  firstDouble.compareTo(secondDouble);
+			return retval;
+
 	}
 
 
