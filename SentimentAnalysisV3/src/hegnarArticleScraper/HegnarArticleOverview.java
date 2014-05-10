@@ -47,49 +47,49 @@ public class HegnarArticleOverview {
 			int dayNumber = Integer.parseInt(day);
 			int monthNumber = 0;
 			int yearNumber = Integer.parseInt(year);
-			
+			month = month.toLowerCase();
 			switch (month) {
-				case "Jan":
+				case "jan":
 					monthNumber =1;
 					break;
-				case "Feb":
+				case "feb":
 					monthNumber =2;
 					break;
-				case "Mar":
+				case "mar":
 					monthNumber =3;
 					break;
-				case "Apr":
+				case "apr":
 					monthNumber =4;
 					break;
-				case "May":
+				case "mai":
 					monthNumber =5;
 					break;
-				case "Jun":
+				case "jun":
 					monthNumber =6;
 					break;
-				case "Jul":
+				case "jul":
 					monthNumber =7;
 					break;
-				case "Aug":
+				case "aug":
 					monthNumber =8;
 					break;
-				case "Sep":
+				case "sep":
 					monthNumber =9;
 					break;
-				case "Oct":
+				case "okt":
 					monthNumber =10;
 					break;
-				case "Nov":
+				case "nov":
 					monthNumber =11;
 					break;
-				case "Dec":
+				case "des":
 					monthNumber =12;
 					break;
 				default:
-					System.out.println("Kunne ikke finne måned");
+					System.out.println("Kunne ikke finne mï¿½ned:" + month);
 					break;
 			}
-			//System.out.println("DAG: " + dayNumber +" MÅNED: " + monthNumber + " ÅR: " + yearNumber);
+			//System.out.println("DAG: " + dayNumber +" Mï¿½NED: " + monthNumber + " ï¿½R: " + yearNumber);
 		
 			//String indiceDateString = sheet.getRow(i).getCell(0).toString();
 			DateTime indiceDate = new DateTime(yearNumber, monthNumber, dayNumber, 0, 0);
@@ -101,7 +101,6 @@ public class HegnarArticleOverview {
 				else{
 					valueToReturn = Double.parseDouble(sheet.getRow(i).getCell(typeOfIndiceValue).toString());
 				}
-
 //				System.out.println(valueToReturn);
 			}
 			
@@ -115,6 +114,128 @@ public class HegnarArticleOverview {
 			Gson gson = new Gson();
 			NewsArticlesWithTickers articles = gson.fromJson(jsonSource, NewsArticlesWithTickers.class);
 			return articles;
+	}
+	
+	// RETURNS LIST WITH ALL DATES BETWEEN 1/1/2007 and 14/2/2014 
+	public static ArrayList<DateTime> getAllDatesBetweenJanFirst2007AndFebFourteen2014() {
+		ArrayList<DateTime> dateList = new ArrayList<DateTime>();
+		DateTime yesterday = new DateTime(2007,1,1,0,0);
+		dateList.add(yesterday);
+		DateTime today = yesterday.plusDays(1);
+		DateTime endDate = new DateTime(2014,2,15,0,0);
+		while (today.isBefore(endDate)) {
+			dateList.add(today);
+			yesterday = today;
+			today = yesterday.plusDays(1);
+		}
+		return dateList;
+	}
+	
+	// RETURNS ARTICLE PUBLICATION COUNT IN ARTICLE LIST FOR GIVEN DATE
+	public int getArticleCountForDate(ArrayList<NewsArticleWithTickers> articleList, DateTime date) {
+		int count = 0;
+		// LOOP THORUGH ARTICLES
+		for(int i=0; i<articleList.size(); i++){
+			
+			// CHECK FOR GET PUBLISHED FIELD TO AVOID NULL POINTER
+			String articleDateString = articleList.get(i).getpublished();
+			if(articleDateString  != null){
+				try {
+					String articleYear = articleDateString.split("-")[0];
+					String articleMonth = articleDateString.split("-")[1];
+					String articleDay = articleDateString.split("-")[2].split("T")[0];
+					int articleYearNumber = 2000 + Integer.parseInt(articleYear);
+					int articleMonthNumber = Integer.parseInt(articleMonth);
+					int articleDayNumber = Integer.parseInt(articleDay);
+					DateTime articleDate = new DateTime(articleYearNumber, articleMonthNumber, articleDayNumber, 0, 0);
+					if (articleDate.equals(date)) {
+						count++;
+					}
+				} catch (Exception e) {
+					System.out.println("Execption: " + e);
+				}
+			}
+		}
+		return count;
+	}
+	
+	// 
+	public static double getValueFromIndiceOfTickerStatic(String ticker, DateTime dateOfInterest, int typeOfIndiceValue) throws IOException{
+		double valueToReturn = 0.0;
+		//GET WORKBOOK
+		ExcelStockParser esp = new ExcelStockParser();
+		String indiceSheet = "/Indices/"+ticker+".xls";
+		InputStream myxls = new FileInputStream(esp.getPath()+indiceSheet);
+		HSSFWorkbook wb = new HSSFWorkbook(myxls);
+		
+		HSSFSheet sheet = wb.getSheetAt(0);   //first sheet
+		
+		for(int i=2; i<sheet.getLastRowNum()+1; i++){
+			String day = sheet.getRow(i).getCell(0).toString().split("-")[0];
+			String month = sheet.getRow(i).getCell(0).toString().split("-")[1];
+			String year = sheet.getRow(i).getCell(0).toString().split("-")[2];
+			int dayNumber = Integer.parseInt(day);
+			int monthNumber = 0;
+			int yearNumber = Integer.parseInt(year);
+			month = month.toLowerCase();
+			switch (month) {
+				case "jan":
+					monthNumber =1;
+					break;
+				case "feb":
+					monthNumber =2;
+					break;
+				case "mar":
+					monthNumber =3;
+					break;
+				case "apr":
+					monthNumber =4;
+					break;
+				case "mai":
+					monthNumber =5;
+					break;
+				case "jun":
+					monthNumber =6;
+					break;
+				case "jul":
+					monthNumber =7;
+					break;
+				case "aug":
+					monthNumber =8;
+					break;
+				case "sep":
+					monthNumber =9;
+					break;
+				case "okt":
+					monthNumber =10;
+					break;
+				case "nov":
+					monthNumber =11;
+					break;
+				case "des":
+					monthNumber =12;
+					break;
+				default:
+					System.out.println("Kunne ikke finne mï¿½ned:" + month);
+					break;
+			}
+			//System.out.println("DAG: " + dayNumber +" Mï¿½NED: " + monthNumber + " ï¿½R: " + yearNumber);
+		
+			//String indiceDateString = sheet.getRow(i).getCell(0).toString();
+			DateTime indiceDate = new DateTime(yearNumber, monthNumber, dayNumber, 0, 0);
+			if (indiceDate.equals(dateOfInterest) || indiceDate.isAfter(dateOfInterest)) {
+				if(sheet.getRow(i).getCell(typeOfIndiceValue).toString().contains("E")){
+					valueToReturn = Double.parseDouble(sheet.getRow(i).getCell(typeOfIndiceValue).toString().split("E")[0]);
+				}
+				else{
+					valueToReturn = Double.parseDouble(sheet.getRow(i).getCell(typeOfIndiceValue).toString());
+				}
+				return valueToReturn;
+			} else {
+				// Do nothing
+			}
+		}
+		return -1.0;
 	}
 	
 	public TickerResourceInfo getArticlesTickerDate(String ticker, int typeOfIndiceValue) throws IOException{
@@ -133,7 +254,7 @@ public class HegnarArticleOverview {
 		for(int i=0; i<articleList.size(); i++){
 	
 			
-			
+//			System.out.println(articleList.get(i).getpublished());
 			if(articleList.get(i).getpublished() != null){
 				
 			
@@ -173,7 +294,7 @@ public class HegnarArticleOverview {
 						lastArticleDate = articleDate;
 
 					} catch (Exception e) {
-						//CATCHE MED Å HENTE NESTE VERDI
+						//CATCHE MED ï¿½ HENTE NESTE VERDI
 						boolean foundStockValue = false;
 						DateTime nextActiveStockDate = new DateTime();
 
@@ -246,17 +367,35 @@ public class HegnarArticleOverview {
 		return tri;
 	}
 	
-	
-	public static void main(String args[]) throws IOException{
-		DateTime d = new DateTime(2014,2,27,0,0);
+	public static void printArticleCountAndIndexValuesForMatlab(String ticker, int column) throws IOException {
+		DateTime d = new DateTime(2013,10,31,0,0);
 		HegnarArticleOverview hao = new HegnarArticleOverview();
 //		hao.getValueFromIndiceOfTicker("STL", d, 3);
-		hao.getArticlesTickerDate("STL", 6);
-//		ArrayList<TickerResourceInfo> allTickersOverview = hao.getTickersResourceInformation();
-//		Collections.sort(allTickersOverview);
-//		for(int i=0; i<allTickersOverview.size(); i++){
-//			System.out.println("TICKER: " +allTickersOverview.get(i).ticker + " |||||||   AVG ARTICLES POSTED: "+ allTickersOverview.get(i).getAverageArticlesPostedInADay() + " ||||||||||   TOTAL ARTICLES: " + allTickersOverview.get(i).getTotalArticleCount());
-//		}
+		NewsArticlesWithTickers nawt = hao.getArticlesFromTicker(ticker);
+		ArrayList<NewsArticleWithTickers> articleList = nawt.getNewsArticlesWithTickers();
+		ArrayList<DateTime> dateList = getAllDatesBetweenJanFirst2007AndFebFourteen2014();
+		ArrayList<Integer> articleCounts = new ArrayList<Integer>();
+		ArrayList<Double> indexValues = new ArrayList<Double>();
+		for (DateTime date : dateList) {
+			articleCounts.add(hao.getArticleCountForDate(articleList, date)); 
+			indexValues.add(getValueFromIndiceOfTickerStatic(ticker, date, column));
+		}
+		System.out.println(ticker + "ArticleCounts = " + articleCounts + ";");
+		System.out.println(ticker + "IndexValues = " + indexValues + ";");
+	}
+	
+	public static void main(String args[]) throws IOException{
+		printArticleCountAndIndexValuesForMatlab("TEL", 6);
+		
+//		DateTime d = new DateTime(2014,2,27,0,0);
+//		HegnarArticleOverview hao = new HegnarArticleOverview();
+////		hao.getValueFromIndiceOfTicker("STL", d, 3);
+//		hao.getArticlesTickerDate("STL", 6);
+////		ArrayList<TickerResourceInfo> allTickersOverview = hao.getTickersResourceInformation();
+////		Collections.sort(allTickersOverview);
+////		for(int i=0; i<allTickersOverview.size(); i++){
+////			System.out.println("TICKER: " +allTickersOverview.get(i).ticker + " |||||||   AVG ARTICLES POSTED: "+ allTickersOverview.get(i).getAverageArticlesPostedInADay() + " ||||||||||   TOTAL ARTICLES: " + allTickersOverview.get(i).getTotalArticleCount());
+////		}
 	}
 
 }
