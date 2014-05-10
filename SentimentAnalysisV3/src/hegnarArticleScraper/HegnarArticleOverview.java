@@ -64,6 +64,9 @@ public class HegnarArticleOverview {
 				case "mai":
 					monthNumber =5;
 					break;
+				case "may":
+					monthNumber = 5;
+					break;
 				case "jun":
 					monthNumber =6;
 					break;
@@ -79,10 +82,16 @@ public class HegnarArticleOverview {
 				case "okt":
 					monthNumber =10;
 					break;
+				case "oct":
+					monthNumber =10;
+					break;
 				case "nov":
 					monthNumber =11;
 					break;
 				case "des":
+					monthNumber =12;
+					break;
+				case "dec":
 					monthNumber =12;
 					break;
 				default:
@@ -179,42 +188,51 @@ public class HegnarArticleOverview {
 			int yearNumber = Integer.parseInt(year);
 			month = month.toLowerCase();
 			switch (month) {
-				case "jan":
-					monthNumber =1;
-					break;
-				case "feb":
-					monthNumber =2;
-					break;
-				case "mar":
-					monthNumber =3;
-					break;
-				case "apr":
-					monthNumber =4;
-					break;
-				case "mai":
-					monthNumber =5;
-					break;
-				case "jun":
-					monthNumber =6;
-					break;
-				case "jul":
-					monthNumber =7;
-					break;
-				case "aug":
-					monthNumber =8;
-					break;
-				case "sep":
-					monthNumber =9;
-					break;
-				case "okt":
-					monthNumber =10;
-					break;
-				case "nov":
-					monthNumber =11;
-					break;
-				case "des":
-					monthNumber =12;
-					break;
+			case "jan":
+				monthNumber =1;
+				break;
+			case "feb":
+				monthNumber =2;
+				break;
+			case "mar":
+				monthNumber =3;
+				break;
+			case "apr":
+				monthNumber =4;
+				break;
+			case "mai":
+				monthNumber =5;
+				break;
+			case "may":
+				monthNumber = 5;
+				break;
+			case "jun":
+				monthNumber =6;
+				break;
+			case "jul":
+				monthNumber =7;
+				break;
+			case "aug":
+				monthNumber =8;
+				break;
+			case "sep":
+				monthNumber =9;
+				break;
+			case "okt":
+				monthNumber =10;
+				break;
+			case "oct":
+				monthNumber =10;
+				break;
+			case "nov":
+				monthNumber =11;
+				break;
+			case "des":
+				monthNumber =12;
+				break;
+			case "dec":
+				monthNumber =12;
+				break;
 				default:
 					System.out.println("Kunne ikke finne m�ned:" + month);
 					break;
@@ -276,8 +294,6 @@ public class HegnarArticleOverview {
 //					System.out.println("ARTICLE DATE: " + articleDateString);
 //					System.out.println("DATETIME: " + articleDate.toString());
 					
-					
-					
 					try {
 						if(lastArticleDate.equals(articleDate)){
 							articleCount++;
@@ -319,24 +335,83 @@ public class HegnarArticleOverview {
 			}
 			
 		}
-		System.out.println("ArticleIndiceValuesSize: " + articleIndiceValues.size() +" ArticleDateValues: " + articleDateValues.size() + " ArticleCountValues: " + articleCountValues.size());
-		for(int i=0; i<articleIndiceValues.size(); i++){
-			System.out.print(articleIndiceValues.get(i)+" ");
-		}
-		System.out.println("\n----");
-		for(int i=0; i<articleDateValues.size(); i++){
-			System.out.print(articleDateValues.get(i)+" ");
-		}
-		System.out.println("\n----");
-		for(int i=0; i<articleCountValues.size(); i++){
-			System.out.print(articleCountValues.get(i)+" ");
-		}
+//		System.out.println("ArticleIndiceValuesSize: " + articleIndiceValues.size() +" ArticleDateValues: " + articleDateValues.size() + " ArticleCountValues: " + articleCountValues.size());
+//		for(int i=0; i<articleIndiceValues.size(); i++){
+//			System.out.print(articleIndiceValues.get(i)+" ");
+//		}
+//		System.out.println("\n----");
+//		for(int i=0; i<articleDateValues.size(); i++){
+//			System.out.print(articleDateValues.get(i)+" ");
+//		}
+//		System.out.println("\n----");
+//		for(int i=0; i<articleCountValues.size(); i++){
+//			System.out.print(articleCountValues.get(i)+" ");
+//		}
 		
 		TickerResourceInfo tri = new TickerResourceInfo(articleIndiceValues, articleDateValues, articleCountValues);
 		tri.ticker = ticker;
+		tri.setTotalNumberOfArticles(articleList.size());
+		
+		
+		//CALCULATE TOTAL TRADES AND VOLUME
+		ExcelStockParser esp = new ExcelStockParser();
+		String indiceSheet = "/Indices/"+ticker+".xls";
+		InputStream myxls = new FileInputStream(esp.getPath()+indiceSheet);
+		HSSFWorkbook wb = new HSSFWorkbook(myxls);
+		
+		HSSFSheet sheet = wb.getSheetAt(0);   //first sheet
+		
+		double totalVolume = 0;
+		double totalTrades = 0;
+		
+		for(int i=2; i<sheet.getLastRowNum()+1; i++){
+			try {
+				double dayVolume = Double.parseDouble(sheet.getRow(i).getCell(6).toString());
+				totalVolume+=dayVolume;
+			} catch (Exception e) {
+				double dayVolume = 0.0;
+				totalVolume+=dayVolume;
+			}
+			
+			try {
+				double dayTrades = Double.parseDouble(sheet.getRow(i).getCell(9).toString());
+				totalTrades+= dayTrades;
+			} catch (Exception e) {
+		
+				double dayTrades = 0;
+				totalTrades+= dayTrades;
+			}
+		}
+		System.out.println("-------");
+		System.out.println("TOTAL VOLUME FOR INDEX: " + totalVolume);
+		System.out.println("TOTAL TRADES FOR INDEX: " + totalTrades);
+		System.out.println("VOLUME/TRADES:  " + (totalVolume/totalTrades));
+		double volumeTradesVariable = (totalVolume/totalTrades);
+		double averageTrades = (totalTrades/sheet.getLastRowNum()+1);
+		
+		tri.setVolumeTradeVariable(volumeTradesVariable);
+		tri.setAverageTotalTrade(averageTrades);
+
+		//FIND COMPANY MARKET VALUE
+		ExcelStockParser newEsp = new ExcelStockParser();
+		String marketValueSheet = "/WordlistsOfImportance/CompanyMarketValues.xls";
+		InputStream myxlsnew = new FileInputStream(newEsp.getPath()+marketValueSheet);
+		HSSFWorkbook wbnew = new HSSFWorkbook(myxlsnew);
+		
+		HSSFSheet sheetnew = wbnew.getSheetAt(0);   //first sheet
+
+		double companyMarketValue = 0;
+		
+		for(int i=2; i<sheetnew.getLastRowNum()+1; i++){
+			if(sheetnew.getRow(i).getCell(0).toString().equals(ticker)){
+				companyMarketValue = Double.parseDouble(sheetnew.getRow(i).getCell(1).toString().replace(" ","")); 
+				tri.setCompanyMarketValue(companyMarketValue);
+			}
+	
+		}
+		
 		return tri;
-		
-		
+
 	}
 	
 	static String readFile(String path, Charset encoding) throws IOException 
@@ -366,6 +441,22 @@ public class HegnarArticleOverview {
 		
 		return tri;
 	}
+	public ArrayList<TickerResourceInfo> getTickersResourceInformationVolumeTradeSorted() throws IOException{
+		ArrayList<TickerResourceInfo> tri = new ArrayList<TickerResourceInfo>();
+		
+		TextFileHandler tfh = new TextFileHandler();
+		String tickerList = tfh.getTickerList();
+		for(int i=0; i<tickerList.split("\\r?\\n").length; i++){
+			System.out.println("TICKER " + i);
+			TickerResourceInfo tickerResourceInfo = getArticlesTickerDate(tickerList.split("\\r?\\n")[i],6);
+			if(tickerResourceInfo.getAverageArticlesPostedInADay() > 1.1 && tickerResourceInfo.getTotalNumberOfArticles()>200){
+				tri.add(tickerResourceInfo);
+			}
+		}
+		
+		return tri;
+	}
+	
 	
 	public static void printArticleCountAndIndexValuesForMatlab(String ticker, int column) throws IOException {
 		DateTime d = new DateTime(2013,10,31,0,0);
@@ -385,17 +476,17 @@ public class HegnarArticleOverview {
 	}
 	
 	public static void main(String args[]) throws IOException{
-		printArticleCountAndIndexValuesForMatlab("TEL", 6);
+//		printArticleCountAndIndexValuesForMatlab("NAS", 6);
 		
 //		DateTime d = new DateTime(2014,2,27,0,0);
-//		HegnarArticleOverview hao = new HegnarArticleOverview();
-////		hao.getValueFromIndiceOfTicker("STL", d, 3);
-//		hao.getArticlesTickerDate("STL", 6);
-////		ArrayList<TickerResourceInfo> allTickersOverview = hao.getTickersResourceInformation();
-////		Collections.sort(allTickersOverview);
-////		for(int i=0; i<allTickersOverview.size(); i++){
-////			System.out.println("TICKER: " +allTickersOverview.get(i).ticker + " |||||||   AVG ARTICLES POSTED: "+ allTickersOverview.get(i).getAverageArticlesPostedInADay() + " ||||||||||   TOTAL ARTICLES: " + allTickersOverview.get(i).getTotalArticleCount());
-////		}
+		HegnarArticleOverview hao = new HegnarArticleOverview();
+//		hao.getValueFromIndiceOfTicker("STL", d, 3);
+//		hao.getArticlesTickerDate("NAS", 6);
+		ArrayList<TickerResourceInfo> allTickersOverview = hao.getTickersResourceInformationVolumeTradeSorted();
+		Collections.sort(allTickersOverview);
+		for(int i=0; i<allTickersOverview.size(); i++){
+			System.out.println(allTickersOverview.get(i).toString());
+		}
 	}
 
 }
