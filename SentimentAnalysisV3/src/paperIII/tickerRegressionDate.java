@@ -37,13 +37,6 @@ public class tickerRegressionDate {
 		
 	}
 	
-	
-
-	
-	
-	
-	
-
 
 	//GETTERS & SETTERS
 	public DateTime getDate() {

@@ -25,18 +25,18 @@ public class tickerRegressionOverviewGenerator {
 	
 	public DateTime stringToDateTime(String date){
 		
-		String year = date.substring(0,3);
-		String month = date.substring(3,5);
-		String day = date.substring(5,7);
+		String year = date.substring(0,4);
+		String month = date.substring(4,6);
+		String day = date.substring(6,8);
 		
 		System.out.println(year + " " + month + " " + day);
-//		int yearAsInteger = Integer.parseInt(year);
-//		int monthAsInteger = Integer.parseInt(month);
-//		int dayAsInteger = Integer.parseInt(day);
+		int yearAsInteger = Integer.parseInt(year);
+		int monthAsInteger = Integer.parseInt(month);
+		int dayAsInteger = Integer.parseInt(day);
 		
-//		DateTime newDateTime = new DateTime(yearAsInteger, monthAsInteger, dayAsInteger, 0, 0);
+		DateTime newDateTime = new DateTime(yearAsInteger, monthAsInteger, dayAsInteger, 0, 0);
 
-		return new DateTime();
+		return newDateTime;
 	}
 	
 	public HSSFSheet getTickerExcelSheet(String ticker) throws IOException{
@@ -54,9 +54,10 @@ public class tickerRegressionOverviewGenerator {
 	public static void main(String[] args) throws IOException{
 		tickerRegressionOverviewGenerator trog = new tickerRegressionOverviewGenerator();
 		
+		//DATE TEST
 		HSSFSheet testSheet = trog.getTickerExcelSheet("FUNCOM"); 
-		System.out.println(testSheet.getRow(1).getCell(0).toString());
-		System.out.println(trog.stringToDateTime(testSheet.getRow(1).getCell(0).toString()));
+		System.out.println("SHEET DATE ROW:  " + testSheet.getRow(1).getCell(0).toString().replace(".", "").substring(0, 8));
+		System.out.println(trog.stringToDateTime(testSheet.getRow(1).getCell(0).toString().replace(".", "").substring(0, 8)));
 		
 		
 	}
