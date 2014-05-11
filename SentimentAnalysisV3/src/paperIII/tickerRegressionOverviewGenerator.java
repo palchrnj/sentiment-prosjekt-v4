@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
@@ -50,16 +51,36 @@ public class tickerRegressionOverviewGenerator {
 		return sheet;
 	}
 	
+	//GENERATE DateTime values HashMap for indices
+	public HashMap<DateTime, indiceDateRow> getIndexHashmap(String ticker) throws IOException{
+		HashMap<DateTime, indiceDateRow> indexHashmap = new HashMap<>();
+		
+		
+		
+		HSSFSheet tickerExcelSheet = this.getTickerExcelSheet(ticker);
+		for(int i=2; i<tickerExcelSheet.getLastRowNum()+1; i++){
+			
+			DateTime date = this.stringToDateTime(tickerExcelSheet.getRow(i).getCell(0).toString().replace(".", "").substring(0, 8));
+			double close = Double.parseDouble(tickerExcelSheet.getRow(i).getCell(1).toString());
+			double volume = Double.parseDouble(tickerExcelSheet.getRow(i).getCell(2).toString());
+			double value = Double.parseDouble(tickerExcelSheet.getRow(i).getCell(3).toString());
+			
+			System.out.println(close + volume+ value);
+	
+		}
+		
+		return indexHashmap;
+		
+	}
+	
 	
 	public static void main(String[] args) throws IOException{
 		tickerRegressionOverviewGenerator trog = new tickerRegressionOverviewGenerator();
-		
+
 		//DATE TEST
 		HSSFSheet testSheet = trog.getTickerExcelSheet("FUNCOM"); 
 		System.out.println("SHEET DATE ROW:  " + testSheet.getRow(1).getCell(0).toString().replace(".", "").substring(0, 8));
 		System.out.println(trog.stringToDateTime(testSheet.getRow(1).getCell(0).toString().replace(".", "").substring(0, 8)));
-		
-		
 	}
 	
 	
