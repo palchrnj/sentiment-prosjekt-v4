@@ -59,7 +59,6 @@ public class ArticleAnnotationExtractor {
 	}
 	
 	
-	
 	public static void main(String[] args) throws IOException{
 		ArticleAnnotationExtractor aae = new ArticleAnnotationExtractor();
 		aae.writeArticlesToFile("STL", 10);
