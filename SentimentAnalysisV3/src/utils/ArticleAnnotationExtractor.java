@@ -58,7 +58,6 @@ public class ArticleAnnotationExtractor {
 		this.writeLinksToFile(g.toJson(nawt), this.getPath()+"/ArticlesToBeAnnotated/", name);	
 	}
 	
-	
 	public static void main(String[] args) throws IOException{
 		ArticleAnnotationExtractor aae = new ArticleAnnotationExtractor();
 		aae.writeArticlesToFile("STL", 10);
