@@ -40,9 +40,9 @@ public class tickerRegressionOverviewGenerator {
 		return newDateTime;
 	}
 	
-	public HSSFSheet getTickerExcelSheet(String ticker) throws IOException{
+	public HSSFSheet getTickerExcelSheet(String ticker, String fileEnding) throws IOException{
 		ExcelStockParser esp = new ExcelStockParser();
-		String indiceSheet = "/ChosenIndices/"+ticker+".xls";
+		String indiceSheet = "/ChosenIndices/"+ticker+"."+fileEnding;
 		InputStream myxls = new FileInputStream(esp.getPath()+indiceSheet);
 		HSSFWorkbook wb = new HSSFWorkbook(myxls);
 		
@@ -55,30 +55,37 @@ public class tickerRegressionOverviewGenerator {
 	public HashMap<DateTime, indiceDateRow> getIndexHashmap(String ticker) throws IOException{
 		HashMap<DateTime, indiceDateRow> indexHashmap = new HashMap<>();
 		
-		
-		
-		HSSFSheet tickerExcelSheet = this.getTickerExcelSheet(ticker);
+		HSSFSheet tickerExcelSheet = this.getTickerExcelSheet(ticker, "xls");
 		for(int i=2; i<tickerExcelSheet.getLastRowNum()+1; i++){
 			
-			DateTime date = this.stringToDateTime(tickerExcelSheet.getRow(i).getCell(0).toString().replace(".", "").substring(0, 8));
+			DateTime tickerDate = this.stringToDateTime(tickerExcelSheet.getRow(i).getCell(0).toString().replace(".", "").substring(0, 8));
 			double close = Double.parseDouble(tickerExcelSheet.getRow(i).getCell(1).toString());
 			double volume = Double.parseDouble(tickerExcelSheet.getRow(i).getCell(2).toString());
 			double value = Double.parseDouble(tickerExcelSheet.getRow(i).getCell(3).toString());
 			
-			System.out.println(close + volume+ value);
+			System.out.println(close + volume + value);
 	
 		}
 		
 		return indexHashmap;
 		
 	}
+	//GET ARTICLES AND SENTIMENT STATS FOR DATE
+	//GET COMPANY MARKET VALUE FOR DATE
+	//GET OILPRICE FOR DATE
+	//GET INFLATION FOR DATE
+	//GET OSEAX FOR DATE
+	//GET NIBOR FOR DATE
+	//GET UNEMPLOYMNET RATE FOR DATE
+	//GET EURO/NOK EXCHANGE RATE FOR DATE
+	
 	
 	
 	public static void main(String[] args) throws IOException{
 		tickerRegressionOverviewGenerator trog = new tickerRegressionOverviewGenerator();
 
 		//DATE TEST
-		HSSFSheet testSheet = trog.getTickerExcelSheet("FUNCOM"); 
+		HSSFSheet testSheet = trog.getTickerExcelSheet("FUNCOM", "xls"); 
 		System.out.println("SHEET DATE ROW:  " + testSheet.getRow(1).getCell(0).toString().replace(".", "").substring(0, 8));
 		System.out.println(trog.stringToDateTime(testSheet.getRow(1).getCell(0).toString().replace(".", "").substring(0, 8)));
 	}

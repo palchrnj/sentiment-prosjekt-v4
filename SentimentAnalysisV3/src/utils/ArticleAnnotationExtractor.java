@@ -5,6 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
+import java.util.ArrayList;
 
 import com.google.gson.Gson;
 
@@ -37,6 +38,14 @@ public class ArticleAnnotationExtractor {
 		
 	}
 	
+	public NewsArticlesWithTickers getNewsArticlesFromTickerNoInterval(String ticker) throws IOException{
+		HegnarArticleOverview hao = new HegnarArticleOverview();
+		
+		NewsArticlesWithTickers allNewsArticles = hao.getArticlesFromTickerAnnotated(ticker);
+
+		return allNewsArticles;
+		
+	}
 	
 	public void writeLinksToFile(String text, String path, String name) throws IOException{
 		Writer out = new BufferedWriter(new OutputStreamWriter(
@@ -58,9 +67,45 @@ public class ArticleAnnotationExtractor {
 		this.writeLinksToFile(g.toJson(nawt), this.getPath()+"/ArticlesToBeAnnotated/", name);	
 	}
 	
+	public void writeCombinedArticlesToFile() throws IOException{
+		Gson g = new Gson();
+		String name = "NEW-ARTICLE-TO-ANNOTATE-COMBINED";
+		NewsArticlesWithTickers combinedNawts = new NewsArticlesWithTickers();
+		
+		NewsArticlesWithTickers FUNCOMarticles = this.getNewsArticlesFromTickerNoInterval("FUNCOM");
+		NewsArticlesWithTickers IOXarticles = this.getNewsArticlesFromTickerNoInterval("IOX");
+		NewsArticlesWithTickers NAURarticles = this.getNewsArticlesFromTickerNoInterval("NAUR");
+		NewsArticlesWithTickers NORarticles = this.getNewsArticlesFromTickerNoInterval("NOR");
+		NewsArticlesWithTickers NSGarticles = this.getNewsArticlesFromTickerNoInterval("NSG");
+		NewsArticlesWithTickers RCLarticles = this.getNewsArticlesFromTickerNoInterval("RCL");
+		NewsArticlesWithTickers SDRLarticles = this.getNewsArticlesFromTickerNoInterval("SDRL");
+		NewsArticlesWithTickers STLarticles = this.getNewsArticlesFromTickerNoInterval("STL");
+		NewsArticlesWithTickers TELarticles = this.getNewsArticlesFromTickerNoInterval("TEL");
+		NewsArticlesWithTickers YARarticles = this.getNewsArticlesFromTickerNoInterval("YAR");
+		
+		
+		combinedNawts.getNewsArticlesWithTickers().addAll(FUNCOMarticles.getNewsArticlesWithTickers());
+		combinedNawts.getNewsArticlesWithTickers().addAll(IOXarticles.getNewsArticlesWithTickers());
+		combinedNawts.getNewsArticlesWithTickers().addAll(NAURarticles.getNewsArticlesWithTickers());
+		combinedNawts.getNewsArticlesWithTickers().addAll(NORarticles.getNewsArticlesWithTickers());
+		combinedNawts.getNewsArticlesWithTickers().addAll(NSGarticles.getNewsArticlesWithTickers());
+		combinedNawts.getNewsArticlesWithTickers().addAll(RCLarticles.getNewsArticlesWithTickers());
+		combinedNawts.getNewsArticlesWithTickers().addAll(SDRLarticles.getNewsArticlesWithTickers());
+		combinedNawts.getNewsArticlesWithTickers().addAll(STLarticles.getNewsArticlesWithTickers());
+		combinedNawts.getNewsArticlesWithTickers().addAll(TELarticles.getNewsArticlesWithTickers());
+		combinedNawts.getNewsArticlesWithTickers().addAll(YARarticles.getNewsArticlesWithTickers());
+		
+		
+		System.out.println(combinedNawts.getNewsArticlesWithTickers().size());
+		
+		
+		this.writeLinksToFile(g.toJson(combinedNawts), this.getPath()+"/ArticlesAnnotated/", name);	
+	}
+	
+	
 	public static void main(String[] args) throws IOException{
 		ArticleAnnotationExtractor aae = new ArticleAnnotationExtractor();
-		aae.writeArticlesToFile("STL", 10);
+		aae.writeCombinedArticlesToFile();
 	}
 	
 	

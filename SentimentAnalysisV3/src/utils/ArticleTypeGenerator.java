@@ -80,20 +80,21 @@ public class ArticleTypeGenerator {
 		
 		NewsArticlesWithStemmedVersion nawsv = handler.stemmedArticles;
 		System.out.println("Size: " + nawsv.getNawsv().size());
+		System.out.println("STEMMED TITLE: " + nawsv.getNawsv().get(1).getStemmedTitle());
 		
-		NewsArticlesWithCots nawcs = new NewsArticlesWithCots();
-		
-		ArrayList<NewsArticleWithCots>  cotsList = new ArrayList<NewsArticleWithCots>();
-		for(int i=0; i<nawsv.getNawsv().size(); i++){
-				//System.out.println(nawsv.getNawsv().get(i).getId());
-				System.out.println(cc.initiateCotsArticle(nawsv.getNawsv().get(i)));
-				cotsList.add(cc.initiateCotsArticle(nawsv.getNawsv().get(i)));	
-		}
-		nawcs.setNawc(cotsList);
-		
-		Gson gson = new Gson();
-		String cotsArticlesAsJson = gson.toJson(nawcs);
-		this.writeToArticleFile(cotsArticlesAsJson, this.getPath()+"ArticleSteps/5_CotsArticles", newFileName);	
+//		NewsArticlesWithCots nawcs = new NewsArticlesWithCots();
+//		
+//		ArrayList<NewsArticleWithCots>  cotsList = new ArrayList<NewsArticleWithCots>();
+//		for(int i=0; i<nawsv.getNawsv().size(); i++){
+//				//System.out.println(nawsv.getNawsv().get(i).getId());
+//				System.out.println(cc.initiateCotsArticle(nawsv.getNawsv().get(i)));
+//				cotsList.add(cc.initiateCotsArticle(nawsv.getNawsv().get(i)));	
+//		}
+//		nawcs.setNawc(cotsList);
+//		
+//		Gson gson = new Gson();
+//		String cotsArticlesAsJson = gson.toJson(nawcs);
+//		this.writeToArticleFile(cotsArticlesAsJson, this.getPath()+"ArticleSteps/5_CotsArticles", newFileName);	
 	}
 	
 	
@@ -127,12 +128,11 @@ public class ArticleTypeGenerator {
 		//atg.generateCleanTickerArticles("ArticleSteps/0_UntouchedArticles/MainDataSet.txt", "MainDataSetClean");
 		
 		//atg.generateTickerArticles("ArticleSteps/1_RawArticles/ArticleGeneratorTestClean.json", "ArticleGeneratorTestTicker");
-		//atg.generatePOStaggedArticles("ArticleSteps/2_TickerArticles/MainDataSetClean.json", "MainDataSetPOS");
-		//atg.generateStemmedArticles("ArticleSteps/3_POStaggedArticles/MainDataSetPOS.json", "MainDataSetStemmed");
-		atg.generateCotsArticles("ArticleSteps/4_StemmedArticles/MainDataSetStemmed.json", "MainDataSetCOTS");
+		//atg.generatePOStaggedArticles("ArticleSteps/2_TickerArticles/NEW-ARTICLE-TO-ANNOTATE-COMBINED.json", "NEW-ARTICLE-TO-ANNOTATE-COMBINED-POS");
+		atg.generateStemmedArticles("ArticleSteps/3_POStaggedArticles/NEW-ARTICLE-TO-ANNOTATE-COMBINED-POS.json", "NEW-ARTICLE-TO-ANNOTATE-COMBINED-STEMMED");
+		//atg.generateCotsArticles("ArticleSteps/4_StemmedArticles/MainDataSetStemmed.json", "MainDataSetCOTS");
 		
 		//atg.generateFeatureArticles("ArticleSteps/4_StemmedArticles/ArticleGeneratorTestStemmed.json", "ArticleGeneratorTestFeatures");
-		
 	}
 	
 

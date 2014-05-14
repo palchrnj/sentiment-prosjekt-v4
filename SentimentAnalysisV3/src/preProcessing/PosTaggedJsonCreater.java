@@ -103,6 +103,7 @@ public class PosTaggedJsonCreater {
 	    HttpURLConnection connection = null;  
 	    try {
 	      //Create connection
+	     System.out.println("STARTING CONNECTION");
 	      url = new URL("http://classy.nokvero.com:5000/obt/");
 	      connection = (HttpURLConnection)url.openConnection();
 	      connection.setRequestMethod("POST");
@@ -143,7 +144,7 @@ public class PosTaggedJsonCreater {
 	      return response.toString();
 	 
 	    } catch (Exception e) {
-
+	    	System.out.println("Exception" + e);
 	      e.printStackTrace();
 	      return null;
 
@@ -164,6 +165,7 @@ public class PosTaggedJsonCreater {
 		//System.out.println("Length of articles: " + articles.getNewsArticlesWithTickers().size());
 		
 		for(int i=0; i<articles.getNewsArticlesWithTickers().size(); i++){
+			System.out.println("ARTICLES SIZE: " + articles.getNewsArticlesWithTickers().size());
 			System.out.println("Counter: " + i);
 			nawpti.getNawpti().add(this.getNiceArticle(articles.getNewsArticlesWithTickers().get(i)));
 		}
