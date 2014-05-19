@@ -46,6 +46,15 @@ public class ArticleAnnotationExtractor {
 		return allNewsArticles;
 		
 	}
+	public NewsArticlesWithTickers getAllNewsArticlesFromTickerNoInterval(String ticker) throws IOException{
+		HegnarArticleOverview hao = new HegnarArticleOverview();
+		
+		NewsArticlesWithTickers allNewsArticles = hao.getArticlesFromTicker(ticker);
+
+		return allNewsArticles;
+		
+	}
+	
 	
 	public void writeLinksToFile(String text, String path, String name) throws IOException{
 		Writer out = new BufferedWriter(new OutputStreamWriter(
@@ -101,11 +110,45 @@ public class ArticleAnnotationExtractor {
 		
 		this.writeLinksToFile(g.toJson(combinedNawts), this.getPath()+"/ArticlesAnnotated/", name);	
 	}
+	public void writeAllNewHegnarArticlesToFileCombined() throws IOException{
+		Gson g = new Gson();
+		String name = "NEW-HEGNAR-ARTICLES-COMBINED";
+		NewsArticlesWithTickers combinedNawts = new NewsArticlesWithTickers();
+		
+		NewsArticlesWithTickers FUNCOMarticles = this.getAllNewsArticlesFromTickerNoInterval("FUNCOM");
+		NewsArticlesWithTickers IOXarticles = this.getAllNewsArticlesFromTickerNoInterval("IOX");
+		NewsArticlesWithTickers NAURarticles = this.getAllNewsArticlesFromTickerNoInterval("NAUR");
+		NewsArticlesWithTickers NORarticles = this.getAllNewsArticlesFromTickerNoInterval("NOR");
+		NewsArticlesWithTickers NSGarticles = this.getAllNewsArticlesFromTickerNoInterval("NSG");
+		NewsArticlesWithTickers RCLarticles = this.getAllNewsArticlesFromTickerNoInterval("RCL");
+		NewsArticlesWithTickers SDRLarticles = this.getAllNewsArticlesFromTickerNoInterval("SDRL");
+		NewsArticlesWithTickers STLarticles = this.getAllNewsArticlesFromTickerNoInterval("STL");
+		NewsArticlesWithTickers TELarticles = this.getAllNewsArticlesFromTickerNoInterval("TEL");
+		NewsArticlesWithTickers YARarticles = this.getAllNewsArticlesFromTickerNoInterval("YAR");
+		
+		
+		combinedNawts.getNewsArticlesWithTickers().addAll(FUNCOMarticles.getNewsArticlesWithTickers());
+		combinedNawts.getNewsArticlesWithTickers().addAll(IOXarticles.getNewsArticlesWithTickers());
+		combinedNawts.getNewsArticlesWithTickers().addAll(NAURarticles.getNewsArticlesWithTickers());
+		combinedNawts.getNewsArticlesWithTickers().addAll(NORarticles.getNewsArticlesWithTickers());
+		combinedNawts.getNewsArticlesWithTickers().addAll(NSGarticles.getNewsArticlesWithTickers());
+		combinedNawts.getNewsArticlesWithTickers().addAll(RCLarticles.getNewsArticlesWithTickers());
+		combinedNawts.getNewsArticlesWithTickers().addAll(SDRLarticles.getNewsArticlesWithTickers());
+		combinedNawts.getNewsArticlesWithTickers().addAll(STLarticles.getNewsArticlesWithTickers());
+		combinedNawts.getNewsArticlesWithTickers().addAll(TELarticles.getNewsArticlesWithTickers());
+		combinedNawts.getNewsArticlesWithTickers().addAll(YARarticles.getNewsArticlesWithTickers());
+		
+		
+		System.out.println(combinedNawts.getNewsArticlesWithTickers().size());
+		
+		
+		this.writeLinksToFile(g.toJson(combinedNawts), this.getPath()+"/AllNewHegnarArticles/", name);	
+	}
 	
 	
 	public static void main(String[] args) throws IOException{
 		ArticleAnnotationExtractor aae = new ArticleAnnotationExtractor();
-		aae.writeCombinedArticlesToFile();
+		aae.writeAllNewHegnarArticlesToFileCombined();
 	}
 	
 	

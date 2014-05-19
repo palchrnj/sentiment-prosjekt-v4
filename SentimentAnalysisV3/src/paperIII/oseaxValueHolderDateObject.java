@@ -6,17 +6,33 @@ public class oseaxValueHolderDateObject {
 	double intradayReturn;
 	double stddevReturnLastThirtyDays;
 	double changeInStddevLastThirtyDays;
+	double totalTraded;
 	boolean recession;
 	boolean bull;
 	
-	public oseaxValueHolderDateObject(double c, double ir, double srltd, double cisltd, boolean r, boolean b){
+	public oseaxValueHolderDateObject(double c, double ir, double srltd, double cisltd, boolean r, boolean b, double totalTraded){
 		this.close = c;
 		this.intradayReturn = ir;
 		this.stddevReturnLastThirtyDays = srltd;
 		this.changeInStddevLastThirtyDays = cisltd;
 		this.recession = r;
 		this.bull = b;
+		this.totalTraded = totalTraded;
 	}
+
+	
+	
+	public double getTotalTraded() {
+		return totalTraded;
+	}
+
+
+
+	public void setTotalTraded(double totalTraded) {
+		this.totalTraded = totalTraded;
+	}
+
+
 
 	public double getClose() {
 		return close;

@@ -7,6 +7,7 @@ public class tickerRegressionDate {
 	
 	public DateTime date;
 	
+	public String ticker;
 	
 	//Independent variables
 	public int numberOfPublishedArticles;
@@ -14,16 +15,24 @@ public class tickerRegressionDate {
 	public int numberOfNegativePublishedArticles;
 	public double averageSentimentValue;
 	
-	public double oseaxVolatility;
-	public double oseaxVolatilityPercentageChange;
+	public double oseaxClose;
+	public double oseaxChangeInStddevLastThirtyDays;
+	public double oseaxIntradayReturn;
+	public double oseaxStddevReturnLastThrityDays;
+	
+	public double indiceClose;
+	public double indiceValue;
+	public double indiceVolume;
 	
 	public double threeMonthNIBOR;
 	public double monthlyInflation;
+	public double unemploymentRate;
 	
 	public double oilPrice;
 	public double euroNokExchangeRate;
 	
 	public boolean isRecession;
+	public boolean isBull;
 	
 	//Dependent variables
 	public double tradedVolume;
@@ -37,11 +46,145 @@ public class tickerRegressionDate {
 		
 	}
 	
+	public String toString(){
+		return 
+		"TICKER: "+ ticker + 
+		" || DATE: "+ date.toString("YYYY.MM.DD") + 
+		" || INDICE VALUE: " + indiceValue +
+		" || INDICE VOLUME: " + indiceVolume +
+		" || INDICE CLOSE: " + indiceClose +
+		" || OSEAX CLOSE: " + oseaxClose +
+		" || OSEAX STDDEV CHANGE LAST THIRTY DAYS: " + oseaxChangeInStddevLastThirtyDays + 
+		" || OSEAX INTRADAY RETURN: " + oseaxIntradayReturn + 
+		" || OSEAX STDDEV RETURN LAST THIRTY DAYS: " + oseaxStddevReturnLastThrityDays+
+		" || OSEAX TOTAL TRADED: " + tradedVolumeTotalTradedVolumeVariable+
+		" || THREE MONTH NIBOR: " + threeMonthNIBOR+
+		" || MONTHY INFLATION: " + monthlyInflation+
+		" || UNEMPLOYMENT RATE: " + unemploymentRate+
+		" || OIL PRICE: " + oilPrice+
+		" || EURO NOK EXCHANGE RATE: " + euroNokExchangeRate+
+		" || RECESSION: "+isRecession+
+		" || MARKET VALUE: "+tradedVolumeMarketValueVariable+
+		" || BULL: " + isBull;
+		
+	}
+	
+	
+	
+	
 
 	//GETTERS & SETTERS
+	
+	
 	public DateTime getDate() {
 		return date;
 	}
+
+	public String getTicker() {
+		return ticker;
+	}
+
+	public void setTicker(String ticker) {
+		this.ticker = ticker;
+	}
+
+	public double getIndiceClose() {
+		return indiceClose;
+	}
+
+	public void setIndiceClose(double indiceClose) {
+		this.indiceClose = indiceClose;
+	}
+
+	public double getIndiceValue() {
+		return indiceValue;
+	}
+
+	public void setIndiceValue(double indiceValue) {
+		this.indiceValue = indiceValue;
+	}
+
+	public double getIndiceVolume() {
+		return indiceVolume;
+	}
+
+	public void setIndiceVolume(double indiceVolume) {
+		this.indiceVolume = indiceVolume;
+	}
+
+	public boolean isBull() {
+		return isBull;
+	}
+
+
+
+	public void setBull(boolean isBull) {
+		this.isBull = isBull;
+	}
+
+
+
+	public double getOseaxClose() {
+		return oseaxClose;
+	}
+
+
+
+	public void setOseaxClose(double oseaxClose) {
+		this.oseaxClose = oseaxClose;
+	}
+
+
+
+	public double getOseaxChangeInStddevLastThirtyDays() {
+		return oseaxChangeInStddevLastThirtyDays;
+	}
+
+
+
+	public void setOseaxChangeInStddevLastThirtyDays(
+			double oseaxChangeInStddevLastThirtyDays) {
+		this.oseaxChangeInStddevLastThirtyDays = oseaxChangeInStddevLastThirtyDays;
+	}
+
+
+
+	public double getOseaxIntradayReturn() {
+		return oseaxIntradayReturn;
+	}
+
+
+
+	public void setOseaxIntradayReturn(double oseaxIntradayReturn) {
+		this.oseaxIntradayReturn = oseaxIntradayReturn;
+	}
+
+
+
+	public double getOseaxStddevReturnLastThrityDays() {
+		return oseaxStddevReturnLastThrityDays;
+	}
+
+
+
+	public void setOseaxStddevReturnLastThrityDays(
+			double oseaxStddevReturnLastThrityDays) {
+		this.oseaxStddevReturnLastThrityDays = oseaxStddevReturnLastThrityDays;
+	}
+
+
+
+	public double getUnemploymentRate() {
+		return unemploymentRate;
+	}
+
+
+
+	public void setUnemploymentRate(double unemploymentRate) {
+		this.unemploymentRate = unemploymentRate;
+	}
+
+
 
 	public void setDate(DateTime date) {
 		this.date = date;
@@ -97,32 +240,15 @@ public class tickerRegressionDate {
 
 
 	public double getOseaxVolatility() {
-		return oseaxVolatility;
+		return oseaxClose;
 	}
 
 
 
 
 	public void setOseaxVolatility(double oseaxVolatility) {
-		this.oseaxVolatility = oseaxVolatility;
+		this.oseaxClose = oseaxVolatility;
 	}
-
-
-
-
-	public double getOseaxVolatilityPercentageChange() {
-		return oseaxVolatilityPercentageChange;
-	}
-
-
-
-
-	public void setOseaxVolatilityPercentageChange(
-			double oseaxVolatilityPercentageChange) {
-		this.oseaxVolatilityPercentageChange = oseaxVolatilityPercentageChange;
-	}
-
-
 
 
 	public double getThreeMonthNIBOR() {

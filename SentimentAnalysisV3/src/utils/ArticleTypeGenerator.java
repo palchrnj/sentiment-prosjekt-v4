@@ -122,16 +122,22 @@ public class ArticleTypeGenerator {
 	    return path.split(this.getClass().getPackage().getName())[0]+"/ArticleResources/";
 	}
 	
+//	public int getNumberOfArticles() throws IOException{
+//		JsonHandler h = new JsonHandler("/ArticleSteps/3_POStaggedArticles/NEW-ARTICLE-TO-ANNOTATE-COMBINED-POS.json", "pos");
+//		System.out.println(h.getTickerArticles());
+//		return h.getTickerArticles().getNewsArticlesWithTickers().size();
+//	}
+	
 	public static void main(String[] args) throws IOException{
 		ArticleTypeGenerator atg = new ArticleTypeGenerator();
 		//atg.generateCleanRawArticles("ArticleSteps/0_UntouchedArticles/MainDataSet.txt", "MainDataSetClean");
 		//atg.generateCleanTickerArticles("ArticleSteps/0_UntouchedArticles/MainDataSet.txt", "MainDataSetClean");
 		
 		//atg.generateTickerArticles("ArticleSteps/1_RawArticles/ArticleGeneratorTestClean.json", "ArticleGeneratorTestTicker");
-		//atg.generatePOStaggedArticles("ArticleSteps/2_TickerArticles/NEW-ARTICLE-TO-ANNOTATE-COMBINED.json", "NEW-ARTICLE-TO-ANNOTATE-COMBINED-POS");
-		atg.generateStemmedArticles("ArticleSteps/3_POStaggedArticles/NEW-ARTICLE-TO-ANNOTATE-COMBINED-POS.json", "NEW-ARTICLE-TO-ANNOTATE-COMBINED-STEMMED");
+		atg.generatePOStaggedArticles("ArticleSteps/2_TickerArticles/NEW-HEGNAR-ARTICLES-COMBINED.json", "NEW-HEGNAR-ARTICLES-COMBINED-POS");
+		//atg.generateStemmedArticles("ArticleSteps/3_POStaggedArticles/NEW-HEGNAR-ARTICLES-COMBINED.json", "NEW-ARTICLE-TO-ANNOTATE-COMBINED-STEMMED");
 		//atg.generateCotsArticles("ArticleSteps/4_StemmedArticles/MainDataSetStemmed.json", "MainDataSetCOTS");
-		
+	
 		//atg.generateFeatureArticles("ArticleSteps/4_StemmedArticles/ArticleGeneratorTestStemmed.json", "ArticleGeneratorTestFeatures");
 	}
 	

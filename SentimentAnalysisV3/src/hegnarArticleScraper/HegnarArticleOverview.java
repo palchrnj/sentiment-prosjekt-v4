@@ -118,11 +118,11 @@ public class HegnarArticleOverview {
 	}
 	
 	public NewsArticlesWithTickers getArticlesFromTicker(String ticker) throws IOException{
-			String path = this.getPath()+"/HegnarArticlesNew/HegnarArticlesWithTicker/NEW-HEGNAR-ARITCLE-WITH-TICKER-" + ticker+".json";
-			String jsonSource = this.getJsonSource(path);
-			Gson gson = new Gson();
-			NewsArticlesWithTickers articles = gson.fromJson(jsonSource, NewsArticlesWithTickers.class);
-			return articles;
+		String path = this.getPath()+"/HegnarArticlesNew/HegnarArticlesWithTicker/NEW-HEGNAR-ARITCLE-WITH-TICKER-" + ticker+".json";
+		String jsonSource = this.getJsonSource(path);
+		Gson gson = new Gson();
+		NewsArticlesWithTickers articles = gson.fromJson(jsonSource, NewsArticlesWithTickers.class);
+		return articles;
 	}
 	public NewsArticlesWithTickers getArticlesFromTickerAnnotated(String ticker) throws IOException{
 		String path = this.getPath()+"/HegnarArticlesNew/ArticlesAnnotated/NEW-ARTICLE-ANNOTATED-" + ticker+".json";
@@ -130,7 +130,9 @@ public class HegnarArticleOverview {
 		Gson gson = new Gson();
 		NewsArticlesWithTickers articles = gson.fromJson(jsonSource, NewsArticlesWithTickers.class);
 		return articles;
-}
+	}
+
+	
 	
 	// RETURNS LIST WITH ALL DATES BETWEEN 1/1/2007 and 14/2/2014 
 	public static ArrayList<DateTime> getAllDatesBetweenJanFirst2007AndFebFourteen2014() {

@@ -2,6 +2,7 @@ package paperIII;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -9,6 +10,13 @@ import java.util.HashMap;
 
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.CreationHelper;
+import org.apache.poi.ss.usermodel.Font;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
 import org.joda.time.DateTime;
 
 import utils.ExcelStockParser;
@@ -30,7 +38,7 @@ public class tickerRegressionOverviewGenerator {
 		String month = date.substring(4,6);
 		String day = date.substring(6,8);
 		
-		System.out.println(year + " " + month + " " + day);
+	//	System.out.println(year + " " + month + " " + day);
 		int yearAsInteger = Integer.parseInt(year);
 		int monthAsInteger = Integer.parseInt(month);
 		int dayAsInteger = Integer.parseInt(day);
@@ -146,7 +154,7 @@ public class tickerRegressionOverviewGenerator {
 		HashMap<DateTime, Double> dateMarketValueHashmap = new HashMap<>();
 		
 		HSSFSheet marketValueExcelSheet = this.getMarketValueExcelSheet(ticker, "xls");
-		System.out.println(marketValueExcelSheet.getLastRowNum());
+		//System.out.println(marketValueExcelSheet.getLastRowNum());
 		for(int i=0; i<marketValueExcelSheet.getLastRowNum()+1; i++){
 
 			DateTime marketValueDate = this.marketValueDateStringToDateTime(marketValueExcelSheet.getRow(i).getCell(0).toString());
@@ -215,6 +223,7 @@ public class tickerRegressionOverviewGenerator {
 			double ir = Double.parseDouble(oseaxExcelSheet.getRow(i).getCell(2).toString());
 			double srltd = Double.parseDouble(oseaxExcelSheet.getRow(i).getCell(3).toString());
 			double pcisltd = Double.parseDouble(oseaxExcelSheet.getRow(i).getCell(4).toString());
+			double totalTraded = Double.parseDouble(oseaxExcelSheet.getRow(i).getCell(7).toString());
 			double r = Double.parseDouble(oseaxExcelSheet.getRow(i).getCell(5).toString());
 			double b = Double.parseDouble(oseaxExcelSheet.getRow(i).getCell(6).toString());
 			
@@ -230,9 +239,9 @@ public class tickerRegressionOverviewGenerator {
 			
 			
 
-			oseaxValueHolderDateObject ovhdo = new oseaxValueHolderDateObject(close, ir, srltd, pcisltd, recession, bull);
-			System.out.println("DATE: " + oseaxDate.toString() + " VALUE: " + ovhdo.getClose() + " IR: " + ovhdo.getIntradayReturn() + " SRLTD:  " + ovhdo.getStddevReturnLastThirtyDays() + 
-					" PCILSTD: " + ovhdo.getChangeInStddevLastThirtyDays() + " RECESSION: " + ovhdo.recession + " BULL: " + ovhdo.bull);
+			oseaxValueHolderDateObject ovhdo = new oseaxValueHolderDateObject(close, ir, srltd, pcisltd, recession, bull,totalTraded);
+//			System.out.println("DATE: " + oseaxDate.toString() + " VALUE: " + ovhdo.getClose() + " IR: " + ovhdo.getIntradayReturn() + " SRLTD:  " + ovhdo.getStddevReturnLastThirtyDays() + 
+//					" PCILSTD: " + ovhdo.getChangeInStddevLastThirtyDays() + " RECESSION: " + ovhdo.recession + " BULL: " + ovhdo.bull);
 			
 			oseaxDateHashmap.put(oseaxDate, ovhdo);
 		}
@@ -244,13 +253,13 @@ public class tickerRegressionOverviewGenerator {
 		HashMap<DateTime, Double> niborDateHashMap = new HashMap<>();
 		HSSFSheet niborExcelSheet = this.getIndependantVariableExcelSheet("niborNew", "xls");
 		
-		System.out.println(niborExcelSheet.getLastRowNum());
+	//	System.out.println(niborExcelSheet.getLastRowNum());
 		for(int i=1; i<niborExcelSheet.getLastRowNum() && niborExcelSheet.getRow(i).getCell(0).toString().length() > 0; i++){
-			System.out.println(niborExcelSheet.getRow(i).getCell(0).toString());
+	//		System.out.println(niborExcelSheet.getRow(i).getCell(0).toString());
 			DateTime niborDate = this.marketValueDateStringToDateTime(niborExcelSheet.getRow(i).getCell(0).toString());
 			double niborForValueForDate = Double.parseDouble(niborExcelSheet.getRow(i).getCell(1).toString());
 			
-			System.out.println("DATE: " + niborDate.toString() + " VALUE: " + niborForValueForDate);
+			//System.out.println("DATE: " + niborDate.toString() + " VALUE: " + niborForValueForDate);
 			
 			niborDateHashMap.put(niborDate, niborForValueForDate);
 
@@ -265,14 +274,14 @@ public class tickerRegressionOverviewGenerator {
 		HashMap<DateTime, Double> unemploymentDateHashMap = new HashMap<>();
 		HSSFSheet unemploymentExcelSheet = this.getIndependantVariableExcelSheet("unemployment", "xls");
 		
-		System.out.println(unemploymentExcelSheet.getLastRowNum());
+		//System.out.println(unemploymentExcelSheet.getLastRowNum());
 		for(int i=0; i<unemploymentExcelSheet.getLastRowNum()+1 && unemploymentExcelSheet.getRow(i).getCell(0).toString().length() > 0; i++){
 			
-			System.out.println(unemploymentExcelSheet.getRow(i).getCell(0).toString());
+			//System.out.println(unemploymentExcelSheet.getRow(i).getCell(0).toString());
 			DateTime unemploymentDate = this.inflationDateStringToDateTime(unemploymentExcelSheet.getRow(i).getCell(0).toString());
 			double unemploymentValueForDate = Double.parseDouble(unemploymentExcelSheet.getRow(i).getCell(1).toString());
 			
-			System.out.println("DATE: " + unemploymentDate.toString() + " VALUE: " + unemploymentValueForDate);
+			//System.out.println("DATE: " + unemploymentDate.toString() + " VALUE: " + unemploymentValueForDate);
 			
 			unemploymentDateHashMap.put(unemploymentDate, unemploymentValueForDate);
 	
@@ -289,13 +298,13 @@ public class tickerRegressionOverviewGenerator {
 		
 		double previousDateExchangeRateValue = 0.0;
 		
-		System.out.println(exchangeRateExcelSheet.getLastRowNum());
+		//System.out.println(exchangeRateExcelSheet.getLastRowNum());
 		for(int i=3; i<exchangeRateExcelSheet.getLastRowNum()+1 && exchangeRateExcelSheet.getRow(i).getCell(0).toString().length() > 0; i++){
 			
-			System.out.println(exchangeRateExcelSheet.getRow(i).getCell(0).toString());
+		//	System.out.println(exchangeRateExcelSheet.getRow(i).getCell(0).toString());
 			
 			DateTime exchangeRateDate = this.marketValueDateStringToDateTime(exchangeRateExcelSheet.getRow(i).getCell(0).toString());
-			System.out.println("value" + exchangeRateExcelSheet.getRow(i).getCell(1));
+		//	System.out.println("value" + exchangeRateExcelSheet.getRow(i).getCell(1));
 			
 			double exchangeRateValueForDate = 0.0;
 			if(exchangeRateExcelSheet.getRow(i).getCell(1).toString().length()>0){
@@ -306,7 +315,7 @@ public class tickerRegressionOverviewGenerator {
 				exchangeRateValueForDate = previousDateExchangeRateValue;
 			}
 			
-			System.out.println("DATE: " + exchangeRateDate.toString() + " VALUE: " + exchangeRateValueForDate);
+//			System.out.println("DATE: " + exchangeRateDate.toString() + " VALUE: " + exchangeRateValueForDate);
 			
 			exchangeRateHashMap.put(exchangeRateDate, exchangeRateValueForDate);
 			
@@ -318,17 +327,239 @@ public class tickerRegressionOverviewGenerator {
 	
 	
 	//INITIATE ALL VARIABLES
-	public void initiateTickerRegressionDateObjects(String ticker) throws IOException{
+	public ArrayList<tickerRegressionDate> initiateTickerRegressionDateObjects(String ticker, DateTime startDate, DateTime endDate) throws IOException{
 		HashMap<DateTime, Double> oilPriceDateValueHashMap = this.getOilPriceForDate();
 		HashMap<DateTime, Double> eurNokExchangeRateDateValueHashMap = this.getEuroNokExchangeRateForDate();
 		HashMap<DateTime, Double> inflationDateValueHashMap = this.getInflationForDate();
-		HashMap<DateTime, Double> exchangeRateDateValueHashMap = this.getMarketValueForDate(ticker);
+		HashMap<DateTime, Double> marketValueHashMap = this.getMarketValueForDate(ticker);
 		HashMap<DateTime, Double> niborDateValueHashMap = this.getNiborForDate();
 		HashMap<DateTime, Double> unemploymentDateValueHashMap = this.getUnemploymentForDate();
-		HashMap<DateTime, oseaxValueHolderDateObject> exchangeRateHashMap = this.getOseaxForDate();
+		HashMap<DateTime, oseaxValueHolderDateObject> oseaxHashmap = this.getOseaxForDate();
+		HashMap<DateTime, indiceDateRow> indiceOverview = this.getIndexHashmap(ticker);
+		
+		int counter = 0;
 		
 		
-		HashMap<DateTime, Double> exchangeRateHashMap = new HashMap<>();
+		DateTime currentDate = startDate;
+		ArrayList<tickerRegressionDate> tickerRegressionDates = new ArrayList<>();
+		
+		while(!currentDate.equals(endDate)){
+			System.out.println("CURRENT DATE: " + currentDate.toString());
+			
+			tickerRegressionDate currentDateRegressionObject = new tickerRegressionDate();
+			//INITIATE DATES
+			currentDateRegressionObject.setDate(currentDate);
+			//OILPRICE
+			double oilPrice = 0.0;
+			DateTime changedDateOilPrice = currentDate;
+			while(oilPrice == 0.0){
+				try {
+					System.out.println("OILPRICE DENNE ER EVIG: " + oilPrice + " DATE " + changedDateOilPrice.toString());
+					oilPrice = oilPriceDateValueHashMap.get(changedDateOilPrice);
+					currentDateRegressionObject.setOilPrice(oilPrice);
+				} catch (Exception e) {
+					changedDateOilPrice = changedDateOilPrice.minusDays(1);
+				}
+			}
+			
+			//EURNOK EXCHANGE RATE
+			double eurNok = 0.0;
+			DateTime changedDateEURNOK = currentDate;
+			while(eurNok == 0.0){
+				try {
+					System.out.println("EXCHANGERATE DENNE ER EVIG: " + eurNok);
+					eurNok = eurNokExchangeRateDateValueHashMap.get(changedDateEURNOK);
+					currentDateRegressionObject.setEuroNokExchangeRate(eurNok);
+				} catch (Exception e) {
+					changedDateEURNOK = changedDateEURNOK.minusDays(1);
+				}
+			}
+			//INFLATION
+			double inflation = -9999999999999999999999.0;
+			DateTime changedDateINFLATION = currentDate;
+			while(inflation == -9999999999999999999999.0){
+				try {
+					System.out.println("INFLATION DENNE ER EVIG: " + inflation + " INFALTEIONM DATE " + changedDateINFLATION.toString("YYYY.MM.dd"));
+					inflation = inflationDateValueHashMap.get(changedDateINFLATION);
+					currentDateRegressionObject.setMonthlyInflation(inflation);
+				} catch (Exception e) {
+					changedDateINFLATION = changedDateINFLATION.minusDays(1);
+				}
+			}
+			//MARKET VALUE
+			double marketValue = 0.0;
+			DateTime changedDateMARKETVALUE = currentDate;
+			while(marketValue == 0.0){
+				try {
+					System.out.println("MARKETVALUE DENNE ER EVIG: " + marketValue);
+					marketValue = marketValueHashMap.get(changedDateMARKETVALUE);
+					currentDateRegressionObject.setTradedVolumeMarketValueVariable(marketValue);
+				} catch (Exception e) {
+					changedDateMARKETVALUE = changedDateMARKETVALUE.minusDays(1);
+				}
+			}
+			//NIBOR
+			double threeMonthNibor = 0.0;
+			DateTime changedDateNIBOR = currentDate;
+			while(threeMonthNibor == 0.0){
+				try {
+					System.out.println("NIBOR DENNE ER EVIG: " + threeMonthNibor);
+					threeMonthNibor = niborDateValueHashMap.get(changedDateNIBOR);
+					currentDateRegressionObject.setThreeMonthNIBOR(threeMonthNibor);
+				} catch (Exception e) {
+					changedDateNIBOR = changedDateNIBOR.minusDays(1);
+				}
+			}
+			//RECESSION
+			double recessionDouble = 0.0;
+			DateTime changedDateRecession = currentDate;
+			while(recessionDouble == 0.0){
+				try {
+					boolean recession = oseaxHashmap.get(changedDateRecession).isRecession();
+					System.out.println("RECESSION DENNE ER EVIG: " + recession);
+					currentDateRegressionObject.setRecession(recession);
+					recessionDouble = 1.0;
+				} catch (Exception e) {
+					changedDateRecession = changedDateRecession.minusDays(1);
+				}
+			}
+			//BULL
+			double bullDouble = 0.0;
+			DateTime changedDateBULL = currentDate;
+			while(bullDouble == 0.0){
+				try {
+					boolean bull = oseaxHashmap.get(changedDateBULL).isBull();
+					System.out.println("BULL DENNE ER EVIG: " + bull);
+					currentDateRegressionObject.setBull(bull);
+					bullDouble = 1.0;
+				} catch (Exception e) {
+					changedDateBULL = changedDateBULL.minusDays(1);
+				}
+			}
+		
+			//OSEAX STDDEV
+			double STDDEV = 0.0;
+			DateTime changedDateSTDDEV = currentDate;
+			while(STDDEV == 0.0){
+				try {
+					System.out.println("STDDEV DENNE ER EVIG: " + threeMonthNibor);
+					STDDEV = oseaxHashmap.get(changedDateSTDDEV).getStddevReturnLastThirtyDays();
+					currentDateRegressionObject.setOseaxStddevReturnLastThrityDays(STDDEV);
+				} catch (Exception e) {
+					changedDateSTDDEV = changedDateSTDDEV.minusDays(1);
+				}
+			}
+			//OSEAX CLOSE
+			double oseaxClose = 0.0;
+			DateTime changedDateOseaxClose = currentDate;
+			while(oseaxClose == 0.0){
+				try {
+					System.out.println("OSEAX CLOSE DENNE ER EVIG: " + oseaxClose);
+					oseaxClose = oseaxHashmap.get(changedDateOseaxClose).getClose();
+					currentDateRegressionObject.setOseaxClose(oseaxClose);
+				} catch (Exception e) {
+					changedDateOseaxClose = changedDateOseaxClose.minusDays(1);
+				}
+			}
+			//OSEAX INTRADAY RETUNR
+			double oseaxIntradayReturn = -999999999999999999999999.0;
+			DateTime changedDateOseaxINTRDAYRETURN = currentDate;
+			while(oseaxIntradayReturn == -999999999999999999999999.0){
+				try {
+					System.out.println("OSEAX INTRADAY DENNE ER EVIG: " + oseaxIntradayReturn);
+					oseaxIntradayReturn = oseaxHashmap.get(changedDateOseaxINTRDAYRETURN).getIntradayReturn();
+					currentDateRegressionObject.setOseaxIntradayReturn(oseaxIntradayReturn);
+				} catch (Exception e) {
+					changedDateOseaxINTRDAYRETURN = changedDateOseaxINTRDAYRETURN.minusDays(1);
+				}
+			}
+
+			//OSEAX STDDEV CHANGE RETUNR
+			double oseaxSTDDEVCHANGE = -999999999999999999999999.0;
+			DateTime changeDateOseaxSTDDEVCHANGE = currentDate;
+			while(oseaxSTDDEVCHANGE == -999999999999999999999999.0){
+				try {
+					System.out.println("OSEAX STDDEV CHANGE DENNE ER EVIG: " + oseaxSTDDEVCHANGE);
+					oseaxSTDDEVCHANGE = oseaxHashmap.get(changeDateOseaxSTDDEVCHANGE).getChangeInStddevLastThirtyDays();
+					currentDateRegressionObject.setOseaxChangeInStddevLastThirtyDays(oseaxSTDDEVCHANGE);
+				} catch (Exception e) {
+					changeDateOseaxSTDDEVCHANGE = changeDateOseaxSTDDEVCHANGE.minusDays(1);
+				}
+			}
+			//OSEAX TOTAL TRADED
+			double oseaxTotalTraded = -999999999999999999999999.0;
+			DateTime changeDateOseaxTOTALTRADED = currentDate;
+			while(oseaxTotalTraded == -999999999999999999999999.0){
+				try {
+					System.out.println("OSEAX TOTAL TRADED DENNE ER EVIG: " + oseaxTotalTraded);
+					oseaxTotalTraded = oseaxHashmap.get(changeDateOseaxTOTALTRADED).getTotalTraded();
+					currentDateRegressionObject.setTradedVolumeTotalTradedVolumeVariable(oseaxTotalTraded);
+				} catch (Exception e) {
+					changeDateOseaxTOTALTRADED = changeDateOseaxTOTALTRADED.minusDays(1);
+				}
+			}
+			//UNEMPLOYMENT RATE
+			double unemploymentRate = -999999999999999999999999.0;
+			DateTime changeDateUnemployment = currentDate;
+			while(unemploymentRate == -999999999999999999999999.0){
+				try {
+					System.out.println("UNEMPLOYEMENT ER EVIG: " + oseaxSTDDEVCHANGE);
+					unemploymentRate = unemploymentDateValueHashMap.get(changeDateUnemployment);
+					currentDateRegressionObject.setUnemploymentRate(unemploymentRate);
+				} catch (Exception e) {
+					changeDateUnemployment = changeDateUnemployment.minusDays(1);
+				}
+			}
+			
+			//INDICE VALUE
+			double indiceValue = -999999999999999999999999.0;
+			DateTime changeDateIndiceValue = currentDate;
+			while(indiceValue == -999999999999999999999999.0){
+				try {
+					System.out.println("INDICE VALUE DENNE ER EVIG: " + oseaxSTDDEVCHANGE);
+					indiceValue = indiceOverview.get(changeDateIndiceValue).getValue();
+					currentDateRegressionObject.setIndiceValue(indiceValue);
+				} catch (Exception e) {
+					changeDateIndiceValue = changeDateIndiceValue.minusDays(1);
+				}
+			}
+			//INDICE VOLUME
+			double indiceVolume = -999999999999999999999999.0;
+			DateTime changeDateIndiceVolume = currentDate;
+			while(indiceVolume == -999999999999999999999999.0){
+				try {
+					System.out.println("INDICE VOLUME DENNE ER EVIG: " + oseaxSTDDEVCHANGE);
+					indiceVolume = indiceOverview.get(changeDateIndiceVolume).getVolume();
+					currentDateRegressionObject.setIndiceVolume(indiceVolume);
+				} catch (Exception e) {
+					changeDateIndiceVolume = changeDateIndiceVolume.minusDays(1);
+				}
+			}
+			//INDICE CLOSE
+			double indiceClose = -999999999999999999999999.0;
+			DateTime changeDateIndiceClose = currentDate;
+			while(indiceClose == -999999999999999999999999.0){
+				try {
+					System.out.println("INDICE CLOSE DENNE ER EVIG: " + oseaxSTDDEVCHANGE);
+					indiceClose = indiceOverview.get(changeDateIndiceClose).getClose();
+					currentDateRegressionObject.setIndiceClose(indiceClose);
+				} catch (Exception e) {
+					changeDateIndiceClose = changeDateIndiceClose.minusDays(1);
+				}
+			}
+			
+	
+			
+			currentDateRegressionObject.setTicker(ticker);
+			tickerRegressionDates.add(currentDateRegressionObject);
+			System.out.println(counter + "  " + currentDateRegressionObject.toString());
+			counter++;
+			currentDate = currentDate.plusDays(1);
+		}
+		return tickerRegressionDates;
+		
+		
+		
 		
 	}
 	
@@ -434,6 +665,152 @@ public class tickerRegressionOverviewGenerator {
 		return monthNumber;
 	}
 	
+	public void generateExcelSheet(ArrayList<tickerRegressionDate> listToExcel) throws IOException{
+		Workbook wb = new HSSFWorkbook(); 
+		Sheet tickerSheet = wb.createSheet("EXCEL");
+		
+		   CellStyle style = wb.createCellStyle();
+		    Font font = wb.createFont();
+		    font.setBoldweight(Font.BOLDWEIGHT_BOLD);
+		    style.setFont(font);
+	       
+		
+		   Row row = tickerSheet.createRow((short)0);
+		   Cell cellHeader1 = row.createCell(0);
+		   cellHeader1.setCellValue("DATE");
+		   cellHeader1.setCellStyle(style);
+		   
+		   Cell cellHeader2 = row.createCell(1);
+		   cellHeader2.setCellValue("INDICE VALUE");
+		   cellHeader2.setCellStyle(style);
+		   
+		   Cell cellHeader3 = row.createCell(2);
+		   cellHeader3.setCellValue("INDICE VOLUME");
+		   cellHeader3.setCellStyle(style);
+		   
+		   Cell cellHeader4 = row.createCell(3);
+		   cellHeader4.setCellValue("INDICE CLOSE");
+		   cellHeader4.setCellStyle(style);
+		   
+		   Cell cellHeader5 = row.createCell(4);
+		   cellHeader5.setCellValue("OSEAX CLOSE");
+		   cellHeader5.setCellStyle(style);
+		   
+		   Cell cellHeader6 = row.createCell(5);
+		   cellHeader6.setCellValue("OSEAX STDDEV CHANGE LAST THIRTY DAYS");
+		   cellHeader6.setCellStyle(style);
+		   
+		   Cell cellHeader7 = row.createCell(6);
+		   cellHeader7.setCellValue("OSEAX OSEAX INTRADAY RETURN");
+		   cellHeader7.setCellStyle(style);
+		   
+		   Cell cellHeader8 = row.createCell(7);
+		   cellHeader8.setCellValue("OSEAX STDDEV RETURN LAST THIRTY DAYS");
+		   cellHeader8.setCellStyle(style);
+		   
+		   Cell cellHeader9 = row.createCell(8);
+		   cellHeader9.setCellValue("OSEAX TOTAL TRADED");
+		   cellHeader9.setCellStyle(style);
+		   
+		   Cell cellHeader10 = row.createCell(9);
+		   cellHeader10.setCellValue("THREE MONTH NIBOR");
+		   cellHeader10.setCellStyle(style);
+		   
+		   Cell cellHeader11 = row.createCell(10);
+		   cellHeader11.setCellValue("MONTHY INFLATION");
+		   cellHeader11.setCellStyle(style);
+		   
+		   Cell cellHeader12 = row.createCell(11);
+		   cellHeader12.setCellValue("UNEMPLOYMENT RATE");
+		   cellHeader12.setCellStyle(style);
+		   
+		   Cell cellHeader13 = row.createCell(12);
+		   cellHeader13.setCellValue("OIL PRICE");
+		   cellHeader13.setCellStyle(style);
+		   
+		   Cell cellHeader14 = row.createCell(13);
+		   cellHeader14.setCellValue("EURO NOK EXCHANGE RATE");
+		   cellHeader14.setCellStyle(style);
+		   
+		   Cell cellHeader15 = row.createCell(14);
+		   cellHeader15.setCellValue("RECESSION");
+		   cellHeader15.setCellStyle(style);
+		   
+		   Cell cellHeader16 = row.createCell(15);
+		   cellHeader16.setCellValue("BULL");
+		   cellHeader16.setCellStyle(style);
+		   
+		   Cell cellHeader17 = row.createCell(16);
+		   cellHeader17.setCellValue("MARKET VALUE");
+		   cellHeader17.setCellStyle(style);
+		   
+		
+		
+		for(int i=1; i<listToExcel.size(); i++){
+			//CREATE ROW
+		    Row dateRow = tickerSheet.createRow((short)i);
+		   
+		    
+		    dateRow.createCell(0).setCellValue(listToExcel.get(i).getDate().toString("dd.MM.YYYY"));
+		    dateRow.createCell(1).setCellValue(listToExcel.get(i).getIndiceValue());
+		    dateRow.createCell(2).setCellValue(listToExcel.get(i).getIndiceVolume());
+		    dateRow.createCell(3).setCellValue(listToExcel.get(i).getIndiceClose());
+		    dateRow.createCell(4).setCellValue(listToExcel.get(i).getOseaxClose());
+		    dateRow.createCell(5).setCellValue(listToExcel.get(i).getOseaxChangeInStddevLastThirtyDays());
+		    dateRow.createCell(6).setCellValue(listToExcel.get(i).getOseaxIntradayReturn());
+		    dateRow.createCell(7).setCellValue(listToExcel.get(i).getOseaxStddevReturnLastThrityDays());
+		    dateRow.createCell(8).setCellValue(listToExcel.get(i).getTradedVolumeTotalTradedVolumeVariable());
+		    dateRow.createCell(9).setCellValue(listToExcel.get(i).getThreeMonthNIBOR());
+		    dateRow.createCell(10).setCellValue(listToExcel.get(i).getMonthlyInflation());
+		    dateRow.createCell(11).setCellValue(listToExcel.get(i).getUnemploymentRate());
+		    dateRow.createCell(12).setCellValue(listToExcel.get(i).getOilPrice());
+		    dateRow.createCell(13).setCellValue(listToExcel.get(i).getEuroNokExchangeRate());
+		    if (listToExcel.get(i).isRecession())
+		    	dateRow.createCell(14).setCellValue(1.0);
+		    else{
+		    	dateRow.createCell(14).setCellValue(0.0);
+		    }
+		    if (listToExcel.get(i).isBull())
+			    dateRow.createCell(15).setCellValue(1.0);
+		    else{
+			    dateRow.createCell(15).setCellValue(0.0);
+		    }
+		    dateRow.createCell(16).setCellValue(listToExcel.get(i).getTradedVolumeMarketValueVariable());
+		    
+		}
+		
+		 tickerSheet.autoSizeColumn((short)0);
+		 tickerSheet.autoSizeColumn((short)1);
+		 tickerSheet.autoSizeColumn((short)2);
+		 tickerSheet.autoSizeColumn((short)3);
+		 tickerSheet.autoSizeColumn((short)4);
+		 tickerSheet.autoSizeColumn((short)5);
+		 tickerSheet.autoSizeColumn((short)6);
+		 tickerSheet.autoSizeColumn((short)7);
+		 tickerSheet.autoSizeColumn((short)8);
+		 tickerSheet.autoSizeColumn((short)9);
+		 tickerSheet.autoSizeColumn((short)10);
+		 tickerSheet.autoSizeColumn((short)11);
+		 tickerSheet.autoSizeColumn((short)12);
+		 tickerSheet.autoSizeColumn((short)13);
+		 tickerSheet.autoSizeColumn((short)14);
+		 tickerSheet.autoSizeColumn((short)15);
+		 tickerSheet.autoSizeColumn((short)16);
+		 tickerSheet.autoSizeColumn((short)17);
+		 
+		 FileOutputStream fileOut = new FileOutputStream(this.getPath()+"/TickerRegressionGeneratedExcelSheets/EXCEL.xls");
+		 wb.write(fileOut);
+		 fileOut.close();
+		
+	}
+	public String getPath() {
+	    String path = String.format("%s/%s", System.getProperty("user.dir"), this.getClass().getPackage().getName().replace(".", "/"));
+	    return path.split(this.getClass().getPackage().getName())[0]+"/ArticleResources/";
+	}
+	
+             
+	
+	
 	public static void main(String[] args) throws IOException{
 		tickerRegressionOverviewGenerator trog = new tickerRegressionOverviewGenerator();
 
@@ -442,12 +819,17 @@ public class tickerRegressionOverviewGenerator {
 //		System.out.println("SHEET DATE ROW:  " + testSheet.getRow(1).getCell(0).toString().replace(".", "").substring(0, 8));
 //		System.out.println(trog.stringToDateTime(testSheet.getRow(1).getCell(0).toString().replace(".", "").substring(0, 8)));
 		trog.getEuroNokExchangeRateForDate();
+		
+		DateTime startDate = new DateTime(2010,1,1,0,0);
+		DateTime endDate = new DateTime(2014,1,1,0,0);
+		
+		ArrayList<tickerRegressionDate> list = trog.initiateTickerRegressionDateObjects("STL", startDate, endDate);
+		trog.generateExcelSheet(list);
+//		System.out.println("LIST SIZE: " +  list.size());
+//		for(int i=0; i<list.size(); i++){
+//			System.out.println(list.get(i).toString());
+//		}
 	}
-	
-	
-	
-	
-	
 	
 	
 
