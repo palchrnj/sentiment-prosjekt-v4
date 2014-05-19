@@ -39,6 +39,7 @@ public class NBClassifier {
      			Classifier cModel = (Classifier) new NaiveBayes();
 //     			J48 tree = new J48();
      			cModel.buildClassifier(trainingSet);
+     			
      			// Test the model
      			Evaluation eTest = new Evaluation(testSet);
      			eTest.evaluateModel(cModel, testSet);

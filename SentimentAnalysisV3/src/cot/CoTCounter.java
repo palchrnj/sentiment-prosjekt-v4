@@ -52,6 +52,7 @@ public class CoTCounter {
 		this.filename = filename;
 		this.radius = radius;
 	}
+	
 	public CoTCounter(int radius) {
 		this.map = new HashMap<String, Integer>();
 		this.mapDocFreq = new HashMap<String, Integer>();
@@ -223,6 +224,11 @@ public class CoTCounter {
 					ptwList.add(posTaggedWord);
 				}
 			}
+//			if(nawsv.getPosTaggedMainText().getPosTaggedWords()!= null){
+//				for (PosTaggedWord posTaggedWord : nawsv.getPosTaggedMainText().getPosTaggedWords()) {
+//					ptwList.add(posTaggedWord);
+//				}
+//			}
 			Set<String> wordset = new TreeSet<String>();
 			for (int i = 0; i < ptwList.size();i++) {
 				ArrayList<String> permittedWordclasses = new ArrayList<String>(Arrays.asList("subst", "adj", "verb", "adv"));
@@ -472,9 +478,9 @@ public class CoTCounter {
 		return articleHashmap;
 		
 	}
+	
 	public NewsArticleWithCots initiateCotsArticle(NewsArticleWithStemmedVersion stemmedArticle){
 		NewsArticleWithCots nawc = new NewsArticleWithCots();
-		
 		
 		nawc.setcat(stemmedArticle.getcat());
 		nawc.setId(stemmedArticle.getId());
@@ -505,7 +511,6 @@ public class CoTCounter {
 		nawc.setCots(this.getCotsForArticle(stemmedArticle));
 		
 		//System.out.println("Initiating article" + nawc.getCots().toString());
-		
 		
 		return nawc;
 		
@@ -635,7 +640,7 @@ public class CoTCounter {
 
 	public void writeTermFreqToFile(String text) throws IOException{
 		Writer out = new BufferedWriter(new OutputStreamWriter(
-				new FileOutputStream(getPath()+folder + "allNounAdjectiveVervAdverbCotsTermFreq" + radius + ".json"), "UTF-8"));
+				new FileOutputStream(getPath()+ folder + "allNounAdjectiveVervAdverbCotsTermFreq" + radius + ".json"), "UTF-8"));
 		try {
 			out.write(text);
 		} finally {
@@ -860,45 +865,45 @@ public class CoTCounter {
 	}
 	
 	public static void main(String[] args) throws Exception {
+		main3();
 	
-		JsonHandler jh = new JsonHandler("/ArticleSteps/4_StemmedArticles/MainDataSetStemmed.json", "stemmed");
-		CoTCounter ccWORDCLASS = new CoTCounter(2);
-		ccWORDCLASS.termCountArticlesNotMainTextNounAdjectiveVerbAdverbForMatlabGraph(jh);
-		
-		LinkedHashMap<String, Integer> sortedDocFreqMapWC = ccWORDCLASS.sortHashMapByValuesD(ccWORDCLASS.docFrequency);
-		LinkedHashMap<String, Integer> sortedTermFreqMapWC = ccWORDCLASS.sortHashMapByValuesD(ccWORDCLASS.termFrequency);
-		
-		//cc.writeFrequencyOverviewToFile(sortedDocFreqMap, jh.getPath()+"WordlistsOfImportance/DOCFREQUENCYwWC.json");
-		//cc.writeFrequencyOverviewToFile(sortedTermFreqMap, jh.getPath()+"WordlistsOfImportance/TERMFREQUENCYwWC.json");
-		System.out.println("");
-		System.out.println("SORTED TERM FREQUENCY WITH WORDCLASSES");
-		ccWORDCLASS.printSortedHashmapsForMatlab(sortedTermFreqMapWC);
-		System.out.println("");
-		System.out.println("SORTED DOC FREQUENCY WITH WORDCLASSES");
-		ccWORDCLASS.printSortedHashmapsForMatlab(sortedDocFreqMapWC);
-		
-		
-		
-		
-		CoTCounter ccNOWORDCLASS = new CoTCounter(2);
-		ccNOWORDCLASS.termCountArticlesNotMainTextForMatlabGraph(jh);
-		
-		LinkedHashMap<String, Integer> sortedDocFreqMapNOWC = ccNOWORDCLASS.sortHashMapByValuesD(ccNOWORDCLASS.docFrequency);
-		LinkedHashMap<String, Integer> sortedTermFreqMapNOWC = ccNOWORDCLASS.sortHashMapByValuesD(ccNOWORDCLASS.termFrequency);
-		
-		//cc.writeFrequencyOverviewToFile(sortedDocFreqMap, jh.getPath()+"WordlistsOfImportance/DOCFREQUENCYwWC.json");
-		//cc.writeFrequencyOverviewToFile(sortedTermFreqMap, jh.getPath()+"WordlistsOfImportance/TERMFREQUENCYwWC.json");
-		System.out.println("");
-		System.out.println("SORTED TERM FREQUENCY NO WORDLCASSES");
-		ccNOWORDCLASS.printSortedHashmapsForMatlab(sortedTermFreqMapNOWC);
-		System.out.println("");
-		System.out.println("SORTED DOC FREQUENCY NO WORDCLASSES");
-		ccNOWORDCLASS.printSortedHashmapsForMatlab(sortedDocFreqMapNOWC);
+//		JsonHandler jh = new JsonHandler("/ArticleSteps/4_StemmedArticles/MainDataSetStemmed.json", "stemmed");
+//		CoTCounter ccWORDCLASS = new CoTCounter(2);
+//		ccWORDCLASS.termCountArticlesNotMainTextNounAdjectiveVerbAdverbForMatlabGraph(jh);
+//		
+//		LinkedHashMap<String, Integer> sortedDocFreqMapWC = ccWORDCLASS.sortHashMapByValuesD(ccWORDCLASS.docFrequency);
+//		LinkedHashMap<String, Integer> sortedTermFreqMapWC = ccWORDCLASS.sortHashMapByValuesD(ccWORDCLASS.termFrequency);
+//		
+//		//cc.writeFrequencyOverviewToFile(sortedDocFreqMap, jh.getPath()+"WordlistsOfImportance/DOCFREQUENCYwWC.json");
+//		//cc.writeFrequencyOverviewToFile(sortedTermFreqMap, jh.getPath()+"WordlistsOfImportance/TERMFREQUENCYwWC.json");
+//		System.out.println("");
+//		System.out.println("SORTED TERM FREQUENCY WITH WORDCLASSES");
+//		ccWORDCLASS.printSortedHashmapsForMatlab(sortedTermFreqMapWC);
+//		System.out.println("");
+//		System.out.println("SORTED DOC FREQUENCY WITH WORDCLASSES");
+//		ccWORDCLASS.printSortedHashmapsForMatlab(sortedDocFreqMapWC);
+//		
+//		
+//		
+//		
+//		CoTCounter ccNOWORDCLASS = new CoTCounter(2);
+//		ccNOWORDCLASS.termCountArticlesNotMainTextForMatlabGraph(jh);
+//		
+//		LinkedHashMap<String, Integer> sortedDocFreqMapNOWC = ccNOWORDCLASS.sortHashMapByValuesD(ccNOWORDCLASS.docFrequency);
+//		LinkedHashMap<String, Integer> sortedTermFreqMapNOWC = ccNOWORDCLASS.sortHashMapByValuesD(ccNOWORDCLASS.termFrequency);
+//		
+//		//cc.writeFrequencyOverviewToFile(sortedDocFreqMap, jh.getPath()+"WordlistsOfImportance/DOCFREQUENCYwWC.json");
+//		//cc.writeFrequencyOverviewToFile(sortedTermFreqMap, jh.getPath()+"WordlistsOfImportance/TERMFREQUENCYwWC.json");
+//		System.out.println("");
+//		System.out.println("SORTED TERM FREQUENCY NO WORDLCASSES");
+//		ccNOWORDCLASS.printSortedHashmapsForMatlab(sortedTermFreqMapNOWC);
+//		System.out.println("");
+//		System.out.println("SORTED DOC FREQUENCY NO WORDCLASSES");
+//		ccNOWORDCLASS.printSortedHashmapsForMatlab(sortedDocFreqMapNOWC);
 		
 		
 //		main4();
 		
-//		main3();
 		
 //		CoTCounter cc = new CoTCounter(10);
 //		cc.generateChiSquaredCots(10);

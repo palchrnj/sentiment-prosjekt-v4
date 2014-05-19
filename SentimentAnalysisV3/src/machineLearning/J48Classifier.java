@@ -33,7 +33,17 @@ public class J48Classifier {
      		    trainingSet = Filter.useFilter(trainingSet, filter);
      		    testSet  = Filter.useFilter(testSet,  filter);
      			
-     			J48 tree = new J48();    
+     			J48 tree = new J48();
+     			ArrayList<String> options = new ArrayList<String>();
+     			//[-C 0.10, -M 2, -N 2, -R, -S, -J]
+     			options.add("-C 0.10"); // // 0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.5
+     			options.add("-M 2"); // 1, 2, 3, 4, 5
+     			options.add("-N 2"); // 1, 2, 3, 4
+     			options.add("-R");
+     			options.add("-S");
+     			options.add("-J");
+     			String optionArray[]=options.toArray(new String[options.size()]);
+     			tree.setOptions(optionArray);
      			tree.buildClassifier(trainingSet);
 
      			// Test the model
@@ -53,6 +63,145 @@ public class J48Classifier {
      	averagePrecision = totalPrecision/ ( folds.size() * 5);
      	return averagePrecision;
     }
+
+	 public static double runJ48WithOptions(MLDataSet data, String[] optionArray) throws Exception{
+		 double totalPrecision = 0;
+		 double averagePrecision = 0;
+		 ArrayList<Fold> folds = new ArrayList<Fold>();
+		 
+		 for(int i = 0; i < 5; i++){
+			 data = randomShufftle(data);
+			 folds = genereateNFold(data, 5);
+			 
+			 for(Fold f : folds){
+				 Instances trainingSet = InstancesMLDataSetWrapper.convert(f.getTrainingSet());
+				 Instances testSet = InstancesMLDataSetWrapper.convert(f.getTestSet());
+				 
+				 Discretize filter = new Discretize();
+				 filter.setInputFormat(trainingSet);
+				 trainingSet = Filter.useFilter(trainingSet, filter);
+				 testSet  = Filter.useFilter(testSet,  filter);
+				 
+				 J48 tree = new J48();
+				 tree.setOptions(optionArray);
+				 tree.buildClassifier(trainingSet);
+				 
+// Test the model
+				 Evaluation eTest = new Evaluation(testSet);
+				 eTest.evaluateModel(tree, testSet);
+				 double thisPrecision = eTest.correct() / testSet.numInstances();
+				 
+// Print the result à la Weka explorer:
+//     			String strSummary = eTest.toSummaryString();
+//     			System.out.println(strSummary);
+				 
+//     			nb.trainNBclassificator(f.getTrainingSet());
+//     			double thisError = nb.calculateError(f.getTestSet());
+				 totalPrecision += thisPrecision;
+			 }
+		 }
+		 averagePrecision = totalPrecision/ ( folds.size() * 5);
+		 return averagePrecision;
+	 }
+	 
+	public static void tuneJ48(MLDataSet data) throws Exception{
+		ArrayList<String> optionStrings= getFeatureSelectionString();
+		String[] optionArray = null;
+		double maxPrecision = 0.0;
+		ArrayList<String> bestOptions = null;
+		int counter = 0;
+		for (String optionString : optionStrings) {
+			ArrayList<String> options = new ArrayList<String>();
+			if (optionString.charAt(0) == '1') {
+				if (optionString.charAt(1) == '1') {
+					options.add("-C 0.10"); // /0.10, 0.20, 0.30, 0.40, 0.5
+				} else {
+					options.add("-C 0.20"); // /0.10, 0.20, 0.30, 0.40, 0.5
+				}
+			} else {
+				if (optionString.charAt(1) == '1') {
+					options.add("-C 0.30"); // /0.10, 0.20, 0.30, 0.40, 0.5
+				} else {
+					options.add("-C 0.40"); // /0.10, 0.20, 0.30, 0.40, 0.5
+				}
+				
+			}
+			if (optionString.charAt(2) == '1') {
+				if (optionString.charAt(3) == '1') {
+					options.add("-M 1"); // 1, 2, 3, 4
+				} else {
+					options.add("-M 2"); // 1, 2, 3, 4
+				}
+			} else {
+				if (optionString.charAt(3) == '1') {
+					options.add("-M 3"); // 1, 2, 3, 4
+				} else {
+					options.add("-M 4"); // 1, 2, 3, 4
+				}
+			}
+			if (optionString.charAt(4) == '1') {
+				if (optionString.charAt(5) == '1') {
+					options.add("-N 2"); // 1, 2, 3, 4
+				} else {
+					options.add("-N 3"); // 1, 2, 3, 4
+				}
+			} else {
+				if (optionString.charAt(5) == '1') {
+					options.add("-N 4"); // 1, 2, 3, 4
+				} else {
+					options.add("-N 5"); // 1, 2, 3, 4
+				}
+			}
+			if (optionString.charAt(6) == '1') {
+				options.add("-R");
+			}
+			if (optionString.charAt(7) == '1') {
+				options.add("-B");
+			}
+			if (optionString.charAt(8) == '1') {
+				options.add("-S");
+			}
+			if (optionString.charAt(9) == '1') {
+				options.add("-A");
+			}
+			if (optionString.charAt(10) == '1') {
+				options.add("-J");
+			}
+			if (optionString.charAt(11) == '1') {
+				options.add("-doNotMakeSplitPointActualValue");
+			}
+			optionArray = options.toArray(new String[options.size()]);
+			if (counter % 100 == 0) {
+				System.out.println(counter);
+			}
+			counter++;
+			try {
+				double precision = runJ48WithOptions(data, optionArray) * 100;
+				if (precision > maxPrecision) {
+					maxPrecision = precision;
+					bestOptions = options;
+					System.out.println(maxPrecision + " @ " + bestOptions);
+				}
+				
+			} catch (Exception e) {
+				System.out.println(e + ". Option string=" + options);
+			}
+		}
+//		setBinarySplits(boolean v)
+//		setCollapseTree(boolean v)
+//		setDoNotMakeSplitPointActualValue(boolean m_doNotMakeSplitPointActualValue)
+//		setReducedErrorPruning(boolean v)
+//		setSaveInstanceData(boolean v)
+//		setSubtreeRaising(boolean v)
+//		setUnpruned(boolean v)
+//		setUseLaplace(boolean newuseLaplace)
+//		setUseMDLcorrection(boolean newuseMDLcorrection)
+//
+//		setConfidenceFactor(float v) // 0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.5
+//		setMinNumObj(int v)  
+//		setNumFolds(int v) // 3
+//		setSeed(int newSeed) // 
+	}
 	 
 	
  	public static MLDataSet randomShufftle(MLDataSet unshuffeledDataSet) {
@@ -89,4 +238,20 @@ public class J48Classifier {
     	}
     	return foldSet;
     }
+   
+   public static ArrayList<String> getFeatureSelectionString() {
+		ArrayList<String> stringList = new ArrayList<String>();
+		for (int i = 1; i < 4096; i++) {
+			stringList.add(getBinaryStringLength12(i));
+		}
+		return stringList;
+	}
+	
+	public static String getBinaryStringLength12(int i) {
+		String str = Integer.toBinaryString(i);
+		while (str.length() < 12) {
+			str = "0" + str;
+		}
+		return str;
+	}
 }

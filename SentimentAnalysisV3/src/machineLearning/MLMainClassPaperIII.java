@@ -24,15 +24,17 @@ import preProcessing.NewsArticleWithStemmedVersion;
 import preProcessing.TextFileHandler;
 import newsAPI.JsonHandler;
 
-public class MLMainClassPaperII {
+public class MLMainClassPaperIII {
 
 	public static String defaultSelector = "1111110000000";
 	
-	public static MLDataSet getMLDataSet(JsonHandler jh, int radius, String function, int sigma, String binaryIndicator) throws Exception {
+	public static MLDataSet getMLDataSet(JsonHandler jh, int radius, String binaryIndicator) throws Exception {
 		MLDataSet mldataset = new BasicMLDataSet();
+		int counter = 0;
 		for (NewsArticleWithStemmedVersion nawsv : jh.stemmedArticles.getNawsv()) {
-			MLArticle mla = new MLArticle(nawsv, radius, function, sigma);
+			MLArticlePaperIII mla = new MLArticlePaperIII(nawsv, radius);
 			mldataset.add(mla.getMLDataPair(binaryIndicator));
+//			System.out.println("Done with article article number " + counter++);
 		}
 		return mldataset;
 	}
@@ -40,7 +42,11 @@ public class MLMainClassPaperII {
 	public static void main(String[] args) throws Exception {
 		
 //		writeArticlesToFiles();
-		writeArticlesToFilesSigmas();
+		exhaustiveSearch();
+//		J48Classifier.tuneJ48(readMLDataSetSubsetFromFileForTuning(6, "111111001001"));
+//		J48Classifier.tuneJ48(readMLDataSetSubsetFromFile(6, "111111111000000011100011111100"));
+//		System.out.print(String.format("%.3g", precision).replace(',', '.'));
+//		writeArticlesToFilesSigmas();
 //		computeAndPrintResultsForLatexTableProportion();
 //		computeAndPrintResultsForLatexGraphsProportions();
 		
@@ -266,8 +272,6 @@ public class MLMainClassPaperII {
 		System.out.println(rankingAverage);
 		System.out.println(mlAverage);
 	}
-	
-	
 
 	public static void computeAndPrintResultsForLatexGraphsProportions() throws Exception {
 		ArrayList<String> functions = new ArrayList<String>(Arrays.asList("tf", "idf", "tfidf", "mi", "chi"));
@@ -368,39 +372,15 @@ public class MLMainClassPaperII {
 		}	
 	}
 	
-	
-
 	public static void writeArticlesToFiles() throws Exception {
-		JsonHandler jh = new JsonHandler("/ArticleSteps/4_StemmedArticles/MainDataSetStemmed.json", "stemmed");
-		ArrayList<String> functions = new ArrayList<String>(Arrays.asList("tf", "idf", "tfidf", "mi", "chi"));
-		ArrayList<Integer> sigmas = new ArrayList<Integer>();
-		sigmas.add(new Integer(1000));
-		sigmas.add(new Integer(2000));
-		sigmas.add(new Integer(4000));
-		Collections.sort(sigmas);
-		HashMap<Integer, Integer> cotCountMap = new HashMap<Integer, Integer>();
-		cotCountMap.put(2,2209);
-		cotCountMap.put(3, 3240);
-		cotCountMap.put(4, 4133);
-		cotCountMap.put(5, 4959);
-		cotCountMap.put(6, 5730);
-		cotCountMap.put(7, 6426);
-		cotCountMap.put(8, 7033);
-		ArrayList<Double> proportions = new ArrayList<Double>();
-		proportions.add(0.10);
-		proportions.add(0.30);
-		proportions.add(0.50);
-		for (int radius = 2; radius <= 8; radius = radius + 1) {
-			for (String function : functions) {
-				for (double proportion: proportions) {
-					int numberOfCotsToConsider =  (int) (proportion * cotCountMap.get(radius));
-					MLDataSet mldataset = getMLDataSet(jh, radius, function, numberOfCotsToConsider, "111111000000011111111111111");
-					writeMLDataSetToFile(mldataset, radius, function, proportion);
-					System.out.println(String.format("Done with r=%s, f=%s and p=%s ", radius, function, proportion));
-				}
-			}
-		}
+		JsonHandler jh = new JsonHandler("/ArticleSteps/4_StemmedArticles/NEW-ARTICLE-TO-ANNOTATE-COMBINED-STEMMED.json", "stemmed");
+		int radius = 6;
+		MLDataSet mldataset = getMLDataSet(jh, radius, "111111111000000011100011111100");
+		writeMLDataSetToFile(mldataset, radius);
+		System.out.println("Done");
 	}
+	
+	
 
 	public static void writeArticlesToFilesSigmas() throws Exception {
 		JsonHandler jh = new JsonHandler("/ArticleSteps/4_StemmedArticles/MainDataSetStemmed.json", "stemmed");
@@ -421,18 +401,20 @@ public class MLMainClassPaperII {
 		}
 	}
 	
-	public static void writeMLDataSetToFile(MLDataSet mldataset, int radius, String function, double proportion) throws Exception {
-		JsonHandler jh = new JsonHandler("/ArticleSteps/4_StemmedArticles/MainDataSetStemmed.json", "stemmed");
+	public static void writeMLDataSetToFile(MLDataSet mldataset, int radius) throws Exception {
+		JsonHandler jh = new JsonHandler("/ArticleSteps/4_StemmedArticles/NEW-ARTICLE-TO-ANNOTATE-COMBINED-STEMMED.json", "stemmed");
 		ArrayList<ArrayList<Double>> arrayList = MLArticle.wrapper(mldataset);
 		Gson gson = new Gson();
 		String text = gson.toJson(arrayList);
 		MLMainClassPaperII mlmcpii = new MLMainClassPaperII();
 		String path = String.format("%s/%s", System.getProperty("user.dir"), mlmcpii.getClass().getPackage().getName().replace(".", "/"));
 	    path = path.substring(0, path.length()-16);
-	    path = path + "/ArticleResources/MLDataSetProportion/";
-		Writer out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(path+"r="+radius + "-f=" + function + "-p="+proportion+".json"), "UTF-8"));
+	    path = path + "/ArticleResources/MLDataSetPaperIII/";
+		Writer out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(path + "mldataset.json"), "UTF-8"));
 		try {
 			out.write(text);
+		} catch (Exception e) {
+			System.out.println("Something failed when trying to write!");
 		} finally {
 			out.close();
 		}
@@ -534,6 +516,145 @@ public class MLMainClassPaperII {
 	    	return MLArticle.wrapper(arrayList);
 	}
 
+	public static MLDataSet readMLDataSetSubsetFromFile(int radius, String binarySelector) throws Exception {
+		MLMainClassPaperII mlmcpii = new MLMainClassPaperII();
+		Gson gson = new Gson();
+		String path = String.format("%s/%s", System.getProperty("user.dir"), mlmcpii.getClass().getPackage().getName().replace(".", "/"));
+		path = path.substring(0, path.length()-16);
+		path = path + "/ArticleResources/MLDataSetPaperIII/";
+		String filePath = path + "mldataset.json";
+		TextFileHandler tfh = new TextFileHandler();
+		String file = tfh.getTextFileAsString(filePath, StandardCharsets.UTF_8);
+		Type arrayListType = new TypeToken<ArrayList<ArrayList<Double>>>(){}.getType();
+		ArrayList<ArrayList<Double>> arrayList = gson.fromJson(file, arrayListType);
+//		for (ArrayList<Double> innerList : arrayList) {
+//			if (binarySelector.charAt(0) == '0') {
+//				innerList.remove(0+6);
+//			}
+//			if (binarySelector.charAt(1) == '0') {
+//				innerList.remove(1+6);
+//			}
+//			if (binarySelector.charAt(2) == '0') {
+//				innerList.remove(2+6);
+//			}
+//			if (binarySelector.charAt(3) == '0') {
+//				innerList.remove(2+6);
+//			}
+//			if (binarySelector.charAt(4) == '0') {
+//				innerList.remove(2+6);
+//			}
+//			if (binarySelector.charAt(5) == '0') {
+//				innerList.remove(2+6);
+//			}
+//			if (binarySelector.charAt(6) == '0') {
+//				innerList.remove(2+6);
+//			}
+//			if (binarySelector.charAt(7) == '0') {
+//				innerList.remove(2+6);
+//			}
+//			if (binarySelector.charAt(8) == '0') {
+//				innerList.remove(2+6);
+//			}
+//			if (binarySelector.charAt(9) == '0') {
+//				innerList.remove(2+6);
+//			}
+//			if (binarySelector.charAt(10) == '0') {
+//				innerList.remove(2+6);
+//			}
+//			if (binarySelector.charAt(11) == '0') {
+//				innerList.remove(2+6);
+//			}
+//		}
+		return MLArticle.wrapper(arrayList);
+	}
+	
+	public static void exhaustiveSearch() throws Exception {
+		double maxPrecision = 0;
+		String bestSelector = null;
+		int counter = 0;
+		for (String selector : getFeatureSelectionString()) {
+//			String selector = "111111111111"; 
+			selector = "111" + selector;
+			MLDataSet mldataset = readMLDataSetSubsetFromFileForTuning(6, selector);
+			double precision = J48Classifier.runJ48(mldataset) * 100;
+			if (precision > maxPrecision) {
+				maxPrecision = precision;
+				bestSelector = selector;
+				System.out.println(String.format("Precision=%s, selector=%s", maxPrecision, bestSelector));
+			}
+			if (counter++ % 128 == 0) {
+				System.out.println("Counter=" + counter);
+			}
+		}
+		System.out.println("Done.");
+	}
+
+	public static MLDataSet readMLDataSetSubsetFromFileForTuning(int radius, String binarySelector) throws Exception {
+		MLMainClassPaperII mlmcpii = new MLMainClassPaperII();
+		Gson gson = new Gson();
+		String path = String.format("%s/%s", System.getProperty("user.dir"), mlmcpii.getClass().getPackage().getName().replace(".", "/"));
+		path = path.substring(0, path.length()-16);
+		path = path + "/ArticleResources/MLDataSetPaperIII/";
+		String filePath = path + "mldataset.json";
+		TextFileHandler tfh = new TextFileHandler();
+		String file = tfh.getTextFileAsString(filePath, StandardCharsets.UTF_8);
+		Type arrayListType = new TypeToken<ArrayList<ArrayList<Double>>>(){}.getType();
+		ArrayList<ArrayList<Double>> inputList = gson.fromJson(file, arrayListType);
+		ArrayList<ArrayList<Double>> outputList = new ArrayList<ArrayList<Double>>();
+		for (ArrayList<Double> innerInputList : inputList) {
+			ArrayList<Double> innerOutputList = new ArrayList<Double>(); 
+			if (binarySelector.charAt(0) == '1') {
+				// Title COTS
+				innerOutputList.add(innerInputList.get(0));
+				innerOutputList.add(innerInputList.get(1));
+				innerOutputList.add(innerInputList.get(2));
+			}
+			if (binarySelector.charAt(1) == '1') {
+				// Lead COTS
+				innerOutputList.add(innerInputList.get(3));
+				innerOutputList.add(innerInputList.get(4));
+				innerOutputList.add(innerInputList.get(5));
+			}
+			if (binarySelector.charAt(2) == '1') {
+				// Main COTS
+				innerOutputList.add(innerInputList.get(6));
+				innerOutputList.add(innerInputList.get(7));
+				innerOutputList.add(innerInputList.get(8));
+			}
+			if (binarySelector.charAt(3) == '1') {
+				innerOutputList.add(innerInputList.get(9));
+			}
+			if (binarySelector.charAt(4) == '1') {
+				innerOutputList.add(innerInputList.get(10));
+			}
+			if (binarySelector.charAt(5) == '1') {
+				innerOutputList.add(innerInputList.get(11));
+			}
+			if (binarySelector.charAt(6) == '1') {
+				innerOutputList.add(innerInputList.get(12));
+			}
+			if (binarySelector.charAt(7) == '1') {
+				innerOutputList.add(innerInputList.get(13));
+			}
+			if (binarySelector.charAt(8) == '1') {
+				innerOutputList.add(innerInputList.get(14));
+			}
+			if (binarySelector.charAt(9) == '1') {
+				innerOutputList.add(innerInputList.get(15));
+			}
+			if (binarySelector.charAt(10) == '1') {
+				innerOutputList.add(innerInputList.get(16));
+			}
+			if (binarySelector.charAt(11) == '1') {
+				innerOutputList.add(innerInputList.get(17));
+			}
+			innerOutputList.add(innerInputList.get(innerInputList.size()-1));
+			outputList.add(innerOutputList);
+		}
+//		System.out.println(outputList);
+		return MLArticle.wrapper(outputList);
+	}
+
 	public static MLDataSet readMLDataSetProportionSubsetFromFile(int radius, String function, double proportion, String binarySelector) throws Exception {
 		MLMainClassPaperII mlmcpii = new MLMainClassPaperII();
 		Gson gson = new Gson();
@@ -620,22 +741,27 @@ public class MLMainClassPaperII {
 		return str;
 	}
 	
-	
-	
     public static ArrayList<String> getFeatureSelectionString() {
  		ArrayList<String> stringList = new ArrayList<String>();
- 		for (int i = 1; i < 4096; i++) {
- 			stringList.add(getBinaryStringLength12(i));
+ 		for (int i = 1; i < 512; i++) {
+ 			stringList.add(getBinaryStringLength9(i));
  		}
  		return stringList;
  	}
  	
- 
-	public static String getBinaryStringLength12(int i) {
+	public static String getBinaryStringLength9(int i) {
  		String str = Integer.toBinaryString(i);
- 		while (str.length() < 12) {
+ 		while (str.length() < 9) {
  			str = "0" + str;
  		}
  		return str;
  	}
+
+	public static String getBinaryStringLength12(int i) {
+		String str = Integer.toBinaryString(i);
+		while (str.length() < 12) {
+			str = "0" + str;
+		}
+		return str;
+	}
 }
