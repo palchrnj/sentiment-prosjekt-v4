@@ -134,7 +134,7 @@ public class ArticleTypeGenerator {
 		//atg.generateCleanTickerArticles("ArticleSteps/0_UntouchedArticles/MainDataSet.txt", "MainDataSetClean");
 		
 		//atg.generateTickerArticles("ArticleSteps/1_RawArticles/ArticleGeneratorTestClean.json", "ArticleGeneratorTestTicker");
-		atg.generatePOStaggedArticles("ArticleSteps/2_TickerArticles/NEW-HEGNAR-ARTICLES-COMBINED.json", "NEW-HEGNAR-ARTICLES-COMBINED-POS-0-500", 0, 10);
+		atg.generatePOStaggedArticles("ArticleSteps/2_TickerArticles/NEW-HEGNAR-ARTICLES-COMBINED.json", "NEW-HEGNAR-ARTICLES-COMBINED-POS-0-500", 0, 500);
 		//atg.generateStemmedArticles("ArticleSteps/3_POStaggedArticles/NEW-HEGNAR-ARTICLES-COMBINED.json", "NEW-ARTICLE-TO-ANNOTATE-COMBINED-STEMMED");
 		//atg.generateCotsArticles("ArticleSteps/4_StemmedArticles/MainDataSetStemmed.json", "MainDataSetCOTS");
 	
