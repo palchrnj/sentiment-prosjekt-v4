@@ -57,10 +57,10 @@ public class ArticleTypeGenerator {
 		this.writeToArticleFile(tickerArticlesAsJson, this.getPath()+"ArticleSteps/2_TickerArticles", newFileName);	
 	}
 	
-	public void generatePOStaggedArticles(String TickerArticlesFileSource, String newFileName) throws IOException{
+	public void generatePOStaggedArticles(String TickerArticlesFileSource, String newFileName, int from, int to) throws IOException{
 		JsonHandler tickerHandler = new JsonHandler(TickerArticlesFileSource, "ticker");
 		PosTaggedJsonCreater ptjc = new PosTaggedJsonCreater();
-		String posTaggedArticlesAsJson = ptjc.getAllArticlesAsJson(tickerHandler.getTickerArticles());
+		String posTaggedArticlesAsJson = ptjc.getAllArticlesAsJson(tickerHandler.getTickerArticles(), from, to);
 		this.writeToArticleFile(posTaggedArticlesAsJson, this.getPath()+"ArticleSteps/3_POStaggedArticles", newFileName);	
 	}
 	
@@ -134,7 +134,7 @@ public class ArticleTypeGenerator {
 		//atg.generateCleanTickerArticles("ArticleSteps/0_UntouchedArticles/MainDataSet.txt", "MainDataSetClean");
 		
 		//atg.generateTickerArticles("ArticleSteps/1_RawArticles/ArticleGeneratorTestClean.json", "ArticleGeneratorTestTicker");
-		atg.generatePOStaggedArticles("ArticleSteps/2_TickerArticles/NEW-HEGNAR-ARTICLES-COMBINED.json", "NEW-HEGNAR-ARTICLES-COMBINED-POS");
+		atg.generatePOStaggedArticles("ArticleSteps/2_TickerArticles/NEW-HEGNAR-ARTICLES-COMBINED.json", "NEW-HEGNAR-ARTICLES-COMBINED-POS-0-500", 0, 10);
 		//atg.generateStemmedArticles("ArticleSteps/3_POStaggedArticles/NEW-HEGNAR-ARTICLES-COMBINED.json", "NEW-ARTICLE-TO-ANNOTATE-COMBINED-STEMMED");
 		//atg.generateCotsArticles("ArticleSteps/4_StemmedArticles/MainDataSetStemmed.json", "MainDataSetCOTS");
 	

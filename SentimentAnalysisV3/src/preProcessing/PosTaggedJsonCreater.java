@@ -159,12 +159,12 @@ public class PosTaggedJsonCreater {
 		
 	}
 	
-	public String getAllArticlesAsJson(NewsArticlesWithTickers articles) throws IOException{
+	public String getAllArticlesAsJson(NewsArticlesWithTickers articles, int from, int to) throws IOException{
 	
 		NewsArticlesWithPosTaggedWords nawpti = new NewsArticlesWithPosTaggedWords();
 		//System.out.println("Length of articles: " + articles.getNewsArticlesWithTickers().size());
 		
-		for(int i=0; i<articles.getNewsArticlesWithTickers().size(); i++){
+		for(int i=from; i<to; i++){
 			System.out.println("ARTICLES SIZE: " + articles.getNewsArticlesWithTickers().size());
 			System.out.println("Counter: " + i);
 			nawpti.getNawpti().add(this.getNiceArticle(articles.getNewsArticlesWithTickers().get(i)));
