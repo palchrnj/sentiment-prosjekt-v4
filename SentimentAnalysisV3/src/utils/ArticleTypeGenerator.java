@@ -132,8 +132,10 @@ public class ArticleTypeGenerator {
 		ArticleTypeGenerator atg = new ArticleTypeGenerator();
 		//atg.generateCleanRawArticles("ArticleSteps/0_UntouchedArticles/MainDataSet.txt", "MainDataSetClean");
 		//atg.generateCleanTickerArticles("ArticleSteps/0_UntouchedArticles/MainDataSet.txt", "MainDataSetClean");
-		int lower = 4000;
-		int upper = 5000;
+
+		int lower = 9000;
+		int upper = 9547;
+
 		//atg.generateTickerArticles("ArticleSteps/1_RawArticles/ArticleGeneratorTestClean.json", "ArticleGeneratorTestTicker");
 		atg.generatePOStaggedArticles("ArticleSteps/2_TickerArticles/NEW-HEGNAR-ARTICLES-COMBINED.json", "NEW-HEGNAR-ARTICLES-COMBINED-POS-" + lower + "-" + upper, lower, upper);
 		//atg.generateStemmedArticles("ArticleSteps/3_POStaggedArticles/NEW-HEGNAR-ARTICLES-COMBINED.json", "NEW-ARTICLE-TO-ANNOTATE-COMBINED-STEMMED");
