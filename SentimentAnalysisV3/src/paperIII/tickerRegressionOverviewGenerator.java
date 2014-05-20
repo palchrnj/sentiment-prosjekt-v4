@@ -11,6 +11,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import machineLearning.MLArticlePaperIII;
+import newsAPI.JsonHandler;
+
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
@@ -27,6 +30,8 @@ import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 import com.sun.org.apache.bcel.internal.generic.Type;
 
+import preProcessing.NewsArticleWithStemmedVersion;
+import preProcessing.NewsArticlesWithStemmedVersion;
 import preProcessing.TextFileHandler;
 import utils.ExcelStockParser;
 import utils.StockGrapher;
@@ -372,7 +377,7 @@ public class tickerRegressionOverviewGenerator {
 				//System.out.println("OPPDATERERT --SRC: " + src.getNumberOfStockReport() +" " + src.getNumberOfFinancialReports() + " "  +src.getNumberOfTradeNotificationReports());
 			}
 			else{
-				System.out.println("PUTTER: DATO-" + surveyorDate.toString() + " OG VERDI: " + src.getNumberOfStockReport() + " " + src.getNumberOfFinancialReports() + " " + src.getNumberOfTradeNotificationReports());
+				//System.out.println("PUTTER: DATO-" + surveyorDate.toString() + " OG VERDI: " + src.getNumberOfStockReport() + " " + src.getNumberOfFinancialReports() + " " + src.getNumberOfTradeNotificationReports());
 				stockReportDateValueHashMap.put(surveyorDate, src);
 				src = new stockReportCounter();
 				surveyorDate = date;
@@ -394,6 +399,94 @@ public class tickerRegressionOverviewGenerator {
 		
 	}
 	
+	//SENTIMENT
+	public HashMap<DateTime, DateArticleSentimentCounter> getSentimentHashMap(String ticker) throws IOException{
+//		JsonHandler stemmedHandler = new JsonHandler("ArticleSteps/4_StemmedArticles/NEW-HEGNAR-ARTICLES-STEMMED-1.json", "stemmed");
+//		NewsArticlesWithStemmedVersion stemmedArticles1 = stemmedHandler.getStemmedArticles();
+//		stemmedHandler.setJsonSource("ArticleSteps/4_StemmedArticles/NEW-HEGNAR-ARTICLES-STEMMED-2.json");
+//		NewsArticlesWithStemmedVersion stemmedArticles2 = stemmedHandler.getStemmedArticles();
+//		stemmedHandler.setJsonSource("ArticleSteps/4_StemmedArticles/NEW-HEGNAR-ARTICLES-STEMMED-3.json");
+//		NewsArticlesWithStemmedVersion stemmedArticles3 = stemmedHandler.getStemmedArticles();
+//		stemmedHandler.setJsonSource("ArticleSteps/4_StemmedArticles/NEW-HEGNAR-ARTICLES-STEMMED-4.json");
+//		NewsArticlesWithStemmedVersion stemmedArticles4 = stemmedHandler.getStemmedArticles();
+//		stemmedHandler.setJsonSource("ArticleSteps/4_StemmedArticles/NEW-HEGNAR-ARTICLES-STEMMED-5.json");
+//		NewsArticlesWithStemmedVersion stemmedArticles5 = stemmedHandler.getStemmedArticles();
+//		
+//		NewsArticlesWithStemmedVersion allStemmedArticlesWithSentimentValue = new NewsArticlesWithStemmedVersion();
+//		allStemmedArticlesWithSentimentValue.getNawsv().addAll(stemmedArticles1.getNawsv());
+//		allStemmedArticlesWithSentimentValue.getNawsv().addAll(stemmedArticles2.getNawsv());
+//		allStemmedArticlesWithSentimentValue.getNawsv().addAll(stemmedArticles3.getNawsv());
+//		allStemmedArticlesWithSentimentValue.getNawsv().addAll(stemmedArticles4.getNawsv());
+//		allStemmedArticlesWithSentimentValue.getNawsv().addAll(stemmedArticles5.getNawsv());
+		
+		//TESTING PURPOSES
+		
+		JsonHandler stemmedHandler = new JsonHandler("ArticleSteps/4_StemmedArticles/NEW-ARTICLE-TO-ANNOTATE-COMBINED-STEMMED.json", "stemmed");
+		NewsArticlesWithStemmedVersion allStemmedArticlesWithSentimentValue =  stemmedHandler.getStemmedArticles();
+		
+		HashMap<DateTime, DateArticleSentimentCounter> sentimentHashMap = new HashMap<>();
+		
+		for(int i=0; i<allStemmedArticlesWithSentimentValue.getNawsv().size(); i++){
+			if(allStemmedArticlesWithSentimentValue.getNawsv().get(i).getTickerList().contains(ticker)){
+			
+				NewsArticleWithStemmedVersion nawsv = allStemmedArticlesWithSentimentValue.getNawsv().get(i);
+				
+				String dateOfArticle = nawsv.getpublished().split("T")[0];
+				int year = 2000+Integer.parseInt(dateOfArticle.split("-")[0]);
+				int month = Integer.parseInt(dateOfArticle.split("-")[1]);
+				int day = Integer.parseInt(dateOfArticle.split("-")[2]);
+				
+				DateTime dt = new DateTime(year,month,day,0,0);
+				
+				DateArticleSentimentCounter dasc = new DateArticleSentimentCounter();
+				int sentimentValue = MLArticlePaperIII.extractAggregateSentimentFromString(nawsv.getSentimentValue().replaceAll("\\s+",""));
+				
+				if(sentimentHashMap.get(dt)==null){
+					dasc.setNumberOfArticles(1);
+					
+					if(sentimentValue == 1){
+						dasc.setNumberOfPositiveArticles(1);
+					}
+					else if(sentimentValue == -1){
+						dasc.setNumberOfNegativeArticles(1);
+					}
+					else{
+						dasc.setNumberOfNeutralArticles(1);
+					}
+					sentimentHashMap.put(dt, dasc);
+					
+					//System.out.println("STRING LEGNTH:" + nawsv.getSentimentValue().length() + "  SENTIMENT: " +sentimentValue + " SENTIMENT STRING:" +  nawsv.getSentimentValue().replaceAll("\\s+",""));
+					System.out.println("PUTTER: DATO: " + dt.toString("YYYY.MM.dd") + " ANTALL ARTIKLER " + dasc.getNumberOfArticles() + "  ANTALL POSITIVE ARTIKLER " + dasc.getNumberOfPositiveArticles() + " ANTALL NEGATIVE ARTIILER: " + dasc.getNumberOfNegativeArticles());
+				}
+				else{
+					int currentNumberOfArticles = sentimentHashMap.get(dt).getNumberOfArticles();
+					int currentNumberOfPositiveArticles = sentimentHashMap.get(dt).getNumberOfPositiveArticles();
+					int currentNumberOfNegativeArticles = sentimentHashMap.get(dt).getNumberOfNegativeArticles();
+					int currentNumberOfNeutralArticles = sentimentHashMap.get(dt).getNumberOfNeutralArticles();
+					
+					dasc.setNumberOfArticles(currentNumberOfArticles+1);
+					
+					if(sentimentValue == 1){
+						dasc.setNumberOfPositiveArticles(currentNumberOfPositiveArticles+1);
+					}
+					else if(sentimentValue == -1){
+						dasc.setNumberOfNegativeArticles(currentNumberOfNegativeArticles+1);
+					}
+					else{
+						dasc.setNumberOfNeutralArticles(currentNumberOfNeutralArticles+1);
+					}
+					sentimentHashMap.put(dt, dasc);
+					//System.out.println("OPPDATERER: DATO: " + dt.toString("YYYY.MM.dd") + " ANTALL ARTIKLER " + dasc.getNumberOfArticles() + "  ANTALL POSITIVE ARTIKLER " + dasc.getNumberOfPositiveArticles() + " ANTALL NEGATIVE ARTIILER: " + dasc.getNumberOfNegativeArticles());
+					
+				}
+			}
+			
+			
+			
+		}
+		return sentimentHashMap;
+	}
+	
 	
 	
 	
@@ -408,6 +501,7 @@ public class tickerRegressionOverviewGenerator {
 		HashMap<DateTime, oseaxValueHolderDateObject> oseaxHashmap = this.getOseaxForDate();
 		HashMap<DateTime, indiceDateRow> indiceOverview = this.getIndexHashmap(ticker);
 		HashMap<DateTime, stockReportCounter> stockReportOverview = this.getStockReportDateHashMapForTicker(ticker);
+		HashMap<DateTime, DateArticleSentimentCounter> sentimentOverview = this.getSentimentHashMap(ticker);
 		
 		int counter = 0;
 		
@@ -632,7 +726,20 @@ public class tickerRegressionOverviewGenerator {
 				currentDateRegressionObject.setNumberOfTradeNotificationReports(0);
 			}
 			
-
+			//SENTIMENT
+			//STOCK REPORTS
+			if(sentimentOverview.get(currentDate)!=null){
+				currentDateRegressionObject.setNumberOfPublishedArticles(sentimentOverview.get(currentDate).getNumberOfArticles());
+				currentDateRegressionObject.setNumberOfPositivePublishedArticles(sentimentOverview.get(currentDate).getNumberOfPositiveArticles());
+				currentDateRegressionObject.setNumberOfNegativePublishedArticles(sentimentOverview.get(currentDate).getNumberOfNegativeArticles());
+			}
+			else{
+				currentDateRegressionObject.setNumberOfPublishedArticles(0);
+				currentDateRegressionObject.setNumberOfPositivePublishedArticles(0);
+				currentDateRegressionObject.setNumberOfNegativePublishedArticles(0);
+			}
+			
+			
 			currentDateRegressionObject.setTicker(ticker);
 			tickerRegressionDates.add(currentDateRegressionObject);
 			//System.out.println(counter + "  " + currentDateRegressionObject.toString());
@@ -839,6 +946,18 @@ public class tickerRegressionOverviewGenerator {
 		   cellHeader20.setCellValue("TRADE NOTIFICATION STOCK REPORTS");
 		   cellHeader20.setCellStyle(style);
 		   
+		   Cell cellHeader21 = row.createCell(20);
+		   cellHeader21.setCellValue("NUMBER OF ARTICLES");
+		   cellHeader21.setCellStyle(style);
+		   
+		   Cell cellHeader22 = row.createCell(21);
+		   cellHeader22.setCellValue("NUMBER OF POSITIVE ARTICLES");
+		   cellHeader22.setCellStyle(style);
+		   
+		   Cell cellHeader23 = row.createCell(22);
+		   cellHeader23.setCellValue("NUMBER OF NEGATIVE ARTICLES");
+		   cellHeader23.setCellStyle(style);
+		   
 		
 		
 		for(int i=1; i<listToExcel.size(); i++){
@@ -874,6 +993,9 @@ public class tickerRegressionOverviewGenerator {
 		    dateRow.createCell(17).setCellValue(listToExcel.get(i).getNumberOfStockReport());
 		    dateRow.createCell(18).setCellValue(listToExcel.get(i).getNumberOfFinancialStockReports());
 		    dateRow.createCell(19).setCellValue(listToExcel.get(i).getNumberOfTradeNotificationReports());
+		    dateRow.createCell(20).setCellValue(listToExcel.get(i).getNumberOfPublishedArticles());
+		    dateRow.createCell(21).setCellValue(listToExcel.get(i).getNumberOfPositivePublishedArticles());
+		    dateRow.createCell(22).setCellValue(listToExcel.get(i).getNumberOfNegativePublishedArticles());
 		    
 		}
 		
@@ -897,9 +1019,12 @@ public class tickerRegressionOverviewGenerator {
 		 tickerSheet.autoSizeColumn((short)17);
 		 tickerSheet.autoSizeColumn((short)18);
 		 tickerSheet.autoSizeColumn((short)19);
+		 tickerSheet.autoSizeColumn((short)20);
+		 tickerSheet.autoSizeColumn((short)21);
+		 tickerSheet.autoSizeColumn((short)22);
 		 
 		 
-		 FileOutputStream fileOut = new FileOutputStream(this.getPath()+"/TickerRegressionGeneratedExcelSheets/EXCEL-STL.xls");
+		 FileOutputStream fileOut = new FileOutputStream(this.getPath()+"/TickerRegressionGeneratedExcelSheets/EXCEL-FUNCOM.xls");
 		 wb.write(fileOut);
 		 fileOut.close();
 		
@@ -909,13 +1034,13 @@ public class tickerRegressionOverviewGenerator {
 	    return path.split(this.getClass().getPackage().getName())[0]+"/ArticleResources/";
 	}
 	
-             
+              
 	
 	
 	public static void main(String[] args) throws IOException{
 		tickerRegressionOverviewGenerator trog = new tickerRegressionOverviewGenerator();
 
-		//DATE TEST
+//		DATE TEST
 //		HSSFSheet testSheet = trog.getTickerExcelSheet("FUNCOM", "xls"); 
 //		System.out.println("SHEET DATE ROW:  " + testSheet.getRow(1).getCell(0).toString().replace(".", "").substring(0, 8));
 //		System.out.println(trog.stringToDateTime(testSheet.getRow(1).getCell(0).toString().replace(".", "").substring(0, 8)));
@@ -924,7 +1049,7 @@ public class tickerRegressionOverviewGenerator {
 		DateTime startDate = new DateTime(2008,1,1,0,0);
 		DateTime endDate = new DateTime(2013,1,1,0,0);
 		
-		ArrayList<tickerRegressionDate> list = trog.initiateTickerRegressionDateObjects("STL", startDate, endDate);
+		ArrayList<tickerRegressionDate> list = trog.initiateTickerRegressionDateObjects("FUNCOM", startDate, endDate);
 		trog.generateExcelSheet(list);
 //		System.out.println("LIST SIZE: " +  list.size());
 //		for(int i=0; i<list.size(); i++){

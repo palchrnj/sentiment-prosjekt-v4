@@ -171,6 +171,15 @@ public class JsonHandler {
 	public NewsArticlesWithTickers getTickerArticles() {
 		return tickerArticles;
 	}
+	
+
+	public NewsArticlesWithStemmedVersion getStemmedArticles() {
+		return stemmedArticles;
+	}
+
+	public void setStemmedArticles(NewsArticlesWithStemmedVersion stemmedArticles) {
+		this.stemmedArticles = stemmedArticles;
+	}
 
 	public void setTickerArticles(NewsArticlesWithTickers tickerArticles) {
 		this.tickerArticles = tickerArticles;

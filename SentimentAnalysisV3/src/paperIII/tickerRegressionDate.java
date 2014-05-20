@@ -43,7 +43,7 @@ public class tickerRegressionDate {
 	public double tradedVolumeMarketValueVariable;
 	public double tradedVolumeTotalTradedVolumeVariable;
 	
-
+	
 	
 	
 	

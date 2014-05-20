@@ -153,10 +153,7 @@ public class NewswebStockReportScraper {
 			combined.addAll(stockReport4);
 			
 			nwsrs.writeStockReportFromPeriodToFile(combined, tickersAsArray[i]);
-	
 		}
-		
-		
 	}
 	
 	
