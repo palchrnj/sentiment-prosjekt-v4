@@ -51,6 +51,12 @@ public class TextFileHandler {
 		return stockReportList;
 	}
 	
+	public String getCombinedStockReport(String ticker) throws IOException{
+		String stockReportList = this.getTextFileAsString(this.getPath()+"/StockReports/STOCK-REPORT-COMBINED-"+ticker+".json", StandardCharsets.UTF_8);
+		System.out.println(stockReportList);
+		return stockReportList;
+	}
+	
 	
 	//GET ANALYTIC CLUES FROM FILE AS STRINGLIST
 	public String[] getAnalyticalClues() throws IOException{

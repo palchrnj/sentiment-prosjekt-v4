@@ -34,10 +34,16 @@ public class tickerRegressionDate {
 	public boolean isRecession;
 	public boolean isBull;
 	
+	public int numberOfStockReport;
+	public int numberOfFinancialStockReports;
+	public int numberOfTradeNotificationReports;
+	
 	//Dependent variables
 	public double tradedVolume;
 	public double tradedVolumeMarketValueVariable;
 	public double tradedVolumeTotalTradedVolumeVariable;
+	
+
 	
 	
 	
@@ -78,6 +84,31 @@ public class tickerRegressionDate {
 	
 	public DateTime getDate() {
 		return date;
+	}
+
+	public int getNumberOfStockReport() {
+		return numberOfStockReport;
+	}
+
+	public void setNumberOfStockReport(int numberOfStockReport) {
+		this.numberOfStockReport = numberOfStockReport;
+	}
+
+	public int getNumberOfFinancialStockReports() {
+		return numberOfFinancialStockReports;
+	}
+
+	public void setNumberOfFinancialStockReports(int numberOfFinancialStockReports) {
+		this.numberOfFinancialStockReports = numberOfFinancialStockReports;
+	}
+
+	public int getNumberOfTradeNotificationReports() {
+		return numberOfTradeNotificationReports;
+	}
+
+	public void setNumberOfTradeNotificationReports(
+			int numberOfTradeNotificationReports) {
+		this.numberOfTradeNotificationReports = numberOfTradeNotificationReports;
 	}
 
 	public String getTicker() {
