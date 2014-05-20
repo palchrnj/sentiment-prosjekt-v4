@@ -12,7 +12,10 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
+import preProcessing.TextFileHandler;
+
 import com.google.gson.Gson;
+import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
 
 public class NewswebStockReportScraper {
 	
@@ -111,7 +114,7 @@ public class NewswebStockReportScraper {
 	//FILE HANDLERS
 	public String getPath() {
 	    String path = String.format("%s/%s", System.getProperty("user.dir"), this.getClass().getPackage().getName().replace(".", "/"));
-	    return path.split(this.getClass().getPackage().getName())[0]+"/ArticleResources/StockReports/YAR/";
+	    return path.split(this.getClass().getPackage().getName())[0]+"/ArticleResources/StockReports/";
 	}
 	public void writeStockReportsToFile(String text, String path, String name) throws IOException{
 		Writer out = new BufferedWriter(new OutputStreamWriter(
@@ -124,9 +127,39 @@ public class NewswebStockReportScraper {
 	}
 	public void writeStockReportFromPeriodToFile(ArrayList<NewswebStockReportDateValue> stockReport, String ticker) throws IOException{
 		Gson g = new Gson();
-		String name = "STOCK-REPORT-2013-2014-" + ticker;
+		String name = "STOCK-REPORT-COMBINED-" + ticker;
 		this.writeStockReportsToFile(g.toJson(stockReport), this.getPath(), name);	
 	}
+	
+	public static void mergeStockReports() throws IOException{
+		String tickers = "FUNCOM,IOX,NAUR,NOR,NSG,RCL,SDRL,STL,TEL,YAR";
+		String[] tickersAsArray = tickers.split(",");
+		NewswebStockReportScraper nwsrs = new NewswebStockReportScraper();
+		
+		Gson g = new Gson();
+		TextFileHandler tfh = new TextFileHandler();
+		
+		for(int i=0; i<tickersAsArray.length; i++){
+			//System.out.println(tickersAsArray[i]);
+			ArrayList<NewswebStockReportDateValue> combined = new ArrayList<>();
+			ArrayList<NewswebStockReportDateValue> stockReport1 = g.fromJson(tfh.getStockReport(tickersAsArray[i], "2007-2009"), ArrayList.class);
+			ArrayList<NewswebStockReportDateValue> stockReport2 = g.fromJson(tfh.getStockReport(tickersAsArray[i], "2009-2011"), ArrayList.class);
+			ArrayList<NewswebStockReportDateValue> stockReport3 = g.fromJson(tfh.getStockReport(tickersAsArray[i], "2011-2013"), ArrayList.class);
+			ArrayList<NewswebStockReportDateValue> stockReport4 = g.fromJson(tfh.getStockReport(tickersAsArray[i], "2013-2014"), ArrayList.class);
+			
+			combined.addAll(stockReport1);
+			combined.addAll(stockReport2);
+			combined.addAll(stockReport3);
+			combined.addAll(stockReport4);
+			
+			nwsrs.writeStockReportFromPeriodToFile(combined, tickersAsArray[i]);
+	
+		}
+		
+		
+	}
+	
+	
 	
 	
 	public static void main(String[] args) throws IOException{
@@ -136,12 +169,9 @@ public class NewswebStockReportScraper {
 //		Document tempDoc = nwsrs.pageDocument(startString);
 //		nwsrs.getReportsFromPage(tempDoc);
 //		nwsrs.newsWebStockReportUrlStringBuilder("1309", "01.01.2010", "01.01.2013", "1");
-		ArrayList<NewswebStockReportDateValue> completeList = nwsrs.getCompleteObjectArrayList("7760", "01.01.2013", "19.05.2014");
-		nwsrs.writeStockReportFromPeriodToFile(completeList, "YAR");
-		
-		
-		
-		
+//		ArrayList<NewswebStockReportDateValue> completeList = nwsrs.getCompleteObjectArrayList("7760", "01.01.2013", "19.05.2014");
+//		nwsrs.writeStockReportFromPeriodToFile(completeList, "YAR");
+		nwsrs.mergeStockReports();
 	}
 	
 	
