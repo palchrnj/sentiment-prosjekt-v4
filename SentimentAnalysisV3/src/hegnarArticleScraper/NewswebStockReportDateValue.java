@@ -29,6 +29,14 @@ public class NewswebStockReportDateValue {
 		return message;
 	}
 
+	public String getFormatedDate() {
+		return formatedDate;
+	}
+
+	public void setFormatedDate(String formatedDate) {
+		this.formatedDate = formatedDate;
+	}
+
 	public void setMessage(String message) {
 		this.message = message;
 	}
