@@ -7,6 +7,7 @@ import org.encog.ml.data.MLDataPair;
 import org.encog.ml.data.MLDataSet;
 import org.encog.ml.data.basic.BasicMLDataSet;
 
+import weka.classifiers.Classifier;
 import weka.classifiers.Evaluation;
 import weka.classifiers.trees.J48;
 import weka.core.Instances;
@@ -32,8 +33,8 @@ public class J48Classifier {
      		    filter.setInputFormat(trainingSet);
      		    trainingSet = Filter.useFilter(trainingSet, filter);
      		    testSet  = Filter.useFilter(testSet,  filter);
-     			
-     			J48 tree = new J48();
+
+     		    Classifier tree = new J48();
      			ArrayList<String> options = new ArrayList<String>();
      			//[-C 0.10, -M 2, -N 2, -R, -S, -J]
      			options.add("-C 0.10"); // // 0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.5
@@ -50,6 +51,9 @@ public class J48Classifier {
      			Evaluation eTest = new Evaluation(testSet);
      			eTest.evaluateModel(tree, testSet);
      			double thisPrecision = eTest.correct() / testSet.numInstances();
+//     			for (int j = 0; j < testSet.numInstances(); j++) {
+//     				printMatrix(tree.distributionForInstance(testSet.instance(j)));
+//				}
      			
      			// Print the result à la Weka explorer:
 //     			String strSummary = eTest.toSummaryString();
@@ -253,5 +257,72 @@ public class J48Classifier {
 			str = "0" + str;
 		}
 		return str;
+	}
+
+	public static ClassifierAndFilter getClassifier(MLDataSet data, ArrayList<String> options) throws Exception {
+		double totalPrecision = 0;
+		double averagePrecision = 0;
+     	ArrayList<Fold> folds = new ArrayList<Fold>();
+     	ClassifierAndFilter bestClassifierAndFilter = new ClassifierAndFilter();
+     	double bestPrecision = 0;
+     	for(int i = 0; i < 5; i++){
+     		data = randomShufftle(data);
+     		folds = genereateNFold(data, 5);
+     		
+     		for(Fold f : folds){
+     			Instances trainingSet = InstancesMLDataSetWrapper.convert(f.getTrainingSet());
+     			Instances testSet = InstancesMLDataSetWrapper.convert(f.getTestSet());
+     	     	
+     			Discretize filter = new Discretize();
+     		    filter.setInputFormat(trainingSet);
+     		    trainingSet = Filter.useFilter(trainingSet, filter);
+     		    testSet  = Filter.useFilter(testSet,  filter);
+     			
+     			Classifier tree = new J48();
+     			
+     			String optionArray[]=options.toArray(new String[options.size()]);
+     			tree.setOptions(optionArray);
+     			tree.buildClassifier(trainingSet);
+
+     			// Test the model
+     			Evaluation eTest = new Evaluation(testSet);
+     			eTest.evaluateModel(tree, testSet);
+     			double thisPrecision = eTest.correct() / testSet.numInstances();
+     			if (thisPrecision > bestPrecision) {
+     				bestPrecision = thisPrecision;
+     				bestClassifierAndFilter.classifier = tree;
+     				bestClassifierAndFilter.filter = filter;
+     				bestClassifierAndFilter.evaluation = eTest;
+     			}
+     			// Print the result à la Weka explorer:
+//     			String strSummary = eTest.toSummaryString();
+//     			System.out.println(strSummary);
+     			
+//     			nb.trainNBclassificator(f.getTrainingSet());
+//     			double thisError = nb.calculateError(f.getTestSet());
+     			totalPrecision += thisPrecision;
+     		}
+     	}
+     	averagePrecision = totalPrecision/ ( folds.size() * 5);
+     	System.out.println("Average precision = " + averagePrecision + ", best precision=" + bestPrecision);
+     	System.out.println(bestClassifierAndFilter.evaluation.toSummaryString());
+     	printConfusionMatrix(bestClassifierAndFilter.evaluation.confusionMatrix());
+     	return bestClassifierAndFilter;
+	}
+	
+	private static void printMatrix(double[] matrix) {
+		for (int i = 0; i < matrix.length; i++) {
+			System.out.print(matrix[i] + " ");
+		}
+		System.out.print("\n");
+	}
+
+	private static void printConfusionMatrix(double[][] confusionMatrix) {
+		for (int r = 0; r < confusionMatrix.length; r++) {
+			for (int c = 0; c < confusionMatrix[r].length; c++) {
+				System.out.print(confusionMatrix[r][c] + " ");
+			}
+			System.out.print("\n");
+		}
 	}
 }

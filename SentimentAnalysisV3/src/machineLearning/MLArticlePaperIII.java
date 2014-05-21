@@ -85,7 +85,17 @@ public class MLArticlePaperIII {
 	
 	public double sentimentClassification; 
 	
+	public String id;
+	public String date;
+	
 	public MLArticlePaperIII() {
+		
+	}
+	
+	public MLArticlePaperIII(NewsArticleWithStemmedVersion nawsv, int radius, boolean flag) throws Exception {
+		this(nawsv, radius);
+		id = nawsv.id;
+		date = nawsv.published;
 		
 	}
 
@@ -442,6 +452,9 @@ public class MLArticlePaperIII {
 	}
 	
 	public static int extractAggregateSentimentFromString(String string) {
+		if (string.length() == 0) {
+			return 0;
+		}
 		// Format: '0000', '-1-1-1-1', '1111' etc.
 		try {
 			if (string.charAt(string.length()-2) == '0') {
@@ -452,7 +465,7 @@ public class MLArticlePaperIII {
 				} else if (string.charAt(string.length()-2) == '1' && string.charAt(string.length()-3) != '-') {
 					return 1;
 				} else {
-					throw new IllegalStateException("Unknown sentiment classification: " + string);
+					return Integer.MAX_VALUE;
 				}
 			}
 		} catch (Exception e) {

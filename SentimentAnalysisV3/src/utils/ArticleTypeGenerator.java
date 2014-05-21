@@ -151,9 +151,6 @@ public class ArticleTypeGenerator {
 
 	}
 	
-	
-	
-	
 	public void generateStemmedArticles(String PosTaggedArticleFileSource, String newFileName) throws IOException{
 		JsonHandler posHandler = new JsonHandler(PosTaggedArticleFileSource, "pos");
 		Stemmer s = new Stemmer();
