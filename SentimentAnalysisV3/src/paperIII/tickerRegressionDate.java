@@ -13,6 +13,10 @@ public class tickerRegressionDate {
 	public int numberOfPublishedArticles;
 	public int numberOfPositivePublishedArticles;
 	public int numberOfNegativePublishedArticles;
+	
+	public double aggregatePosProb;
+	public double aggregateNegProb;
+	public double aggregateNeutralProb;
 	public double averageSentimentValue;
 	
 	public double oseaxClose;
@@ -84,6 +88,30 @@ public class tickerRegressionDate {
 	
 	public DateTime getDate() {
 		return date;
+	}
+
+	public double getAggregatePosProb() {
+		return aggregatePosProb;
+	}
+
+	public void setAggregatePosProb(double aggregatePosProb) {
+		this.aggregatePosProb = aggregatePosProb;
+	}
+
+	public double getAggregateNegProb() {
+		return aggregateNegProb;
+	}
+
+	public void setAggregateNegProb(double aggregateNegProb) {
+		this.aggregateNegProb = aggregateNegProb;
+	}
+
+	public double getAggregateNeutralProb() {
+		return aggregateNeutralProb;
+	}
+
+	public void setAggregateNeutralProb(double aggregateNeutralProb) {
+		this.aggregateNeutralProb = aggregateNeutralProb;
 	}
 
 	public int getNumberOfStockReport() {

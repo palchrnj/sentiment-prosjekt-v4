@@ -117,6 +117,13 @@ public class TextFileHandler {
 		return tfh.getTextFileAsString(tfh.getPath()+"/CoTs/cotsTFDF.json", StandardCharsets.UTF_8);
 	}
 	
+	
+	public static String getIdDateClassificationDistribution() throws IOException {
+		TextFileHandler tfh = new TextFileHandler();
+		return tfh.getTextFileAsString(tfh.getPath()+"/MLDataSetPaperIII/id_date_classification_distribution.json", StandardCharsets.UTF_8);
+	}
+	
+	
 	public static void main(String args[]) throws IOException {
 		TextFileHandler tfh = new TextFileHandler();
 		//PRINT ANALYTICAL CLUES

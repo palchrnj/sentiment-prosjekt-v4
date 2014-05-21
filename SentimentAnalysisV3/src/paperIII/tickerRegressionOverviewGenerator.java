@@ -401,28 +401,36 @@ public class tickerRegressionOverviewGenerator {
 	
 	//SENTIMENT
 	public HashMap<DateTime, DateArticleSentimentCounter> getSentimentHashMap(String ticker) throws IOException{
-//		JsonHandler stemmedHandler = new JsonHandler("ArticleSteps/4_StemmedArticles/NEW-HEGNAR-ARTICLES-STEMMED-1.json", "stemmed");
-//		NewsArticlesWithStemmedVersion stemmedArticles1 = stemmedHandler.getStemmedArticles();
-//		stemmedHandler.setJsonSource("ArticleSteps/4_StemmedArticles/NEW-HEGNAR-ARTICLES-STEMMED-2.json");
-//		NewsArticlesWithStemmedVersion stemmedArticles2 = stemmedHandler.getStemmedArticles();
-//		stemmedHandler.setJsonSource("ArticleSteps/4_StemmedArticles/NEW-HEGNAR-ARTICLES-STEMMED-3.json");
-//		NewsArticlesWithStemmedVersion stemmedArticles3 = stemmedHandler.getStemmedArticles();
-//		stemmedHandler.setJsonSource("ArticleSteps/4_StemmedArticles/NEW-HEGNAR-ARTICLES-STEMMED-4.json");
-//		NewsArticlesWithStemmedVersion stemmedArticles4 = stemmedHandler.getStemmedArticles();
-//		stemmedHandler.setJsonSource("ArticleSteps/4_StemmedArticles/NEW-HEGNAR-ARTICLES-STEMMED-5.json");
-//		NewsArticlesWithStemmedVersion stemmedArticles5 = stemmedHandler.getStemmedArticles();
-//		
-//		NewsArticlesWithStemmedVersion allStemmedArticlesWithSentimentValue = new NewsArticlesWithStemmedVersion();
-//		allStemmedArticlesWithSentimentValue.getNawsv().addAll(stemmedArticles1.getNawsv());
-//		allStemmedArticlesWithSentimentValue.getNawsv().addAll(stemmedArticles2.getNawsv());
-//		allStemmedArticlesWithSentimentValue.getNawsv().addAll(stemmedArticles3.getNawsv());
-//		allStemmedArticlesWithSentimentValue.getNawsv().addAll(stemmedArticles4.getNawsv());
-//		allStemmedArticlesWithSentimentValue.getNawsv().addAll(stemmedArticles5.getNawsv());
+		JsonHandler stemmedHandler1 = new JsonHandler("ArticleSteps/4_StemmedArticles/NEW-HEGNAR-ARTICLES-STEMMED-1.json", "stemmed");
+		NewsArticlesWithStemmedVersion stemmedArticles1 = stemmedHandler1.getStemmedArticles();
+		
+		JsonHandler stemmedHandler2 = new JsonHandler("ArticleSteps/4_StemmedArticles/NEW-HEGNAR-ARTICLES-STEMMED-2.json", "stemmed");
+		NewsArticlesWithStemmedVersion stemmedArticles2 = stemmedHandler2.getStemmedArticles();
+		
+		JsonHandler stemmedHandler3 = new JsonHandler("ArticleSteps/4_StemmedArticles/NEW-HEGNAR-ARTICLES-STEMMED-3.json", "stemmed");
+		NewsArticlesWithStemmedVersion stemmedArticles3 = stemmedHandler3.getStemmedArticles();
+		
+		JsonHandler stemmedHandler4 = new JsonHandler("ArticleSteps/4_StemmedArticles/NEW-HEGNAR-ARTICLES-STEMMED-4.json", "stemmed");
+		NewsArticlesWithStemmedVersion stemmedArticles4 = stemmedHandler4.getStemmedArticles();
+		
+		JsonHandler stemmedHandler5 = new JsonHandler("ArticleSteps/4_StemmedArticles/NEW-HEGNAR-ARTICLES-STEMMED-5.json", "stemmed");
+		NewsArticlesWithStemmedVersion stemmedArticles5 = stemmedHandler5.getStemmedArticles();
+		
+		
+		NewsArticlesWithStemmedVersion allStemmedArticlesWithSentimentValue = new NewsArticlesWithStemmedVersion();
+		allStemmedArticlesWithSentimentValue.getNawsv().addAll(stemmedArticles1.getNawsv());
+		allStemmedArticlesWithSentimentValue.getNawsv().addAll(stemmedArticles2.getNawsv());
+		allStemmedArticlesWithSentimentValue.getNawsv().addAll(stemmedArticles3.getNawsv());
+		allStemmedArticlesWithSentimentValue.getNawsv().addAll(stemmedArticles4.getNawsv());
+		allStemmedArticlesWithSentimentValue.getNawsv().addAll(stemmedArticles5.getNawsv());
 		
 		//TESTING PURPOSES
+		System.out.println("SIZE: " + allStemmedArticlesWithSentimentValue.getNawsv().size());
 		
-		JsonHandler stemmedHandler = new JsonHandler("ArticleSteps/4_StemmedArticles/NEW-ARTICLE-TO-ANNOTATE-COMBINED-STEMMED.json", "stemmed");
-		NewsArticlesWithStemmedVersion allStemmedArticlesWithSentimentValue =  stemmedHandler.getStemmedArticles();
+		TextFileHandler tfh = new TextFileHandler();
+		Gson g = new Gson();
+		
+		ArrayList<ArrayList<String>> idDateClassificationDistribution = g.fromJson(tfh.getIdDateClassificationDistribution(), ArrayList.class); 
 		
 		HashMap<DateTime, DateArticleSentimentCounter> sentimentHashMap = new HashMap<>();
 		
@@ -439,42 +447,91 @@ public class tickerRegressionOverviewGenerator {
 				DateTime dt = new DateTime(year,month,day,0,0);
 				
 				DateArticleSentimentCounter dasc = new DateArticleSentimentCounter();
-				int sentimentValue = MLArticlePaperIII.extractAggregateSentimentFromString(nawsv.getSentimentValue().replaceAll("\\s+",""));
 				
+				//IF ROW ALREADY EXISTS
 				if(sentimentHashMap.get(dt)==null){
-					dasc.setNumberOfArticles(1);
+					for(int j=0; j<idDateClassificationDistribution.size(); j++){
+						String idDateClassification = idDateClassificationDistribution.get(j).get(0);
+						if(nawsv.getId().equals(idDateClassification)){
+							dasc.setNumberOfArticles(1);
+//							System.out.println("Den er lik");
+						
+							String idDateClassificationSentiment = idDateClassificationDistribution.get(j).get(2);
+							String idDateClassificationNegProb = idDateClassificationDistribution.get(j).get(3);
+							String idDateClassificationNeutralProb = idDateClassificationDistribution.get(j).get(4);
+							String idDateClassificationSentPosProb = idDateClassificationDistribution.get(j).get(5);
+							
+							
+							int sentimentValue = Integer.parseInt(idDateClassificationSentiment);
+							double posProb = Double.parseDouble(idDateClassificationSentPosProb);
+							double negProb = Double.parseDouble(idDateClassificationNegProb);
+							double neutralProb = Double.parseDouble(idDateClassificationNeutralProb);
+
+							//GET SENTIMENT FROM DATE CLASSIFICATION DISTRIBUTION
+							if(sentimentValue == 1){
+								dasc.setNumberOfPositiveArticles(1);
+							}
+							else if(sentimentValue == -1){
+								dasc.setNumberOfNegativeArticles(1);
+							}
+							else{
+								dasc.setNumberOfNeutralArticles(1);
+							}
+							dasc.setAggregateNegativeProb(negProb);
+							dasc.setAggregateNeutralProb(neutralProb);
+							dasc.setAggregatePositiveProb(posProb);
+						}
+					}
 					
-					if(sentimentValue == 1){
-						dasc.setNumberOfPositiveArticles(1);
-					}
-					else if(sentimentValue == -1){
-						dasc.setNumberOfNegativeArticles(1);
-					}
-					else{
-						dasc.setNumberOfNeutralArticles(1);
-					}
 					sentimentHashMap.put(dt, dasc);
-					
 					//System.out.println("STRING LEGNTH:" + nawsv.getSentimentValue().length() + "  SENTIMENT: " +sentimentValue + " SENTIMENT STRING:" +  nawsv.getSentimentValue().replaceAll("\\s+",""));
-					System.out.println("PUTTER: DATO: " + dt.toString("YYYY.MM.dd") + " ANTALL ARTIKLER " + dasc.getNumberOfArticles() + "  ANTALL POSITIVE ARTIKLER " + dasc.getNumberOfPositiveArticles() + " ANTALL NEGATIVE ARTIILER: " + dasc.getNumberOfNegativeArticles());
+					//System.out.println("PUTTER: DATO: " + dt.toString("YYYY.MM.dd") + " ANTALL ARTIKLER " + dasc.getNumberOfArticles() + "  ANTALL POSITIVE ARTIKLER " + dasc.getNumberOfPositiveArticles() + " ANTALL NEGATIVE ARTIILER: " + dasc.getNumberOfNegativeArticles());
 				}
 				else{
 					int currentNumberOfArticles = sentimentHashMap.get(dt).getNumberOfArticles();
 					int currentNumberOfPositiveArticles = sentimentHashMap.get(dt).getNumberOfPositiveArticles();
 					int currentNumberOfNegativeArticles = sentimentHashMap.get(dt).getNumberOfNegativeArticles();
 					int currentNumberOfNeutralArticles = sentimentHashMap.get(dt).getNumberOfNeutralArticles();
+					double currentAggregateNegProb = sentimentHashMap.get(dt).getAggregateNegativeProb();
+					double currentAggregatePosProb = sentimentHashMap.get(dt).getAggregatePositiveProb();
+					double currentAggregateNeutralProb = sentimentHashMap.get(dt).getAggregateNeutralProb();
 					
 					dasc.setNumberOfArticles(currentNumberOfArticles+1);
 					
-					if(sentimentValue == 1){
-						dasc.setNumberOfPositiveArticles(currentNumberOfPositiveArticles+1);
+					for(int j=0; j<idDateClassificationDistribution.size(); j++){
+						String idDateClassification = idDateClassificationDistribution.get(j).get(0);
+						
+						if(nawsv.getId().equals(idDateClassification)){
+			
+//							System.out.println("Den er lik");
+						
+							String idDateClassificationSentiment = idDateClassificationDistribution.get(j).get(2);
+							String idDateClassificationNegProb = idDateClassificationDistribution.get(j).get(3);
+							String idDateClassificationNeutralProb = idDateClassificationDistribution.get(j).get(4);
+							String idDateClassificationSentPosProb = idDateClassificationDistribution.get(j).get(5);
+							
+							
+							int sentimentValue = Integer.parseInt(idDateClassificationSentiment);
+							double posProb = Double.parseDouble(idDateClassificationSentPosProb);
+							double negProb = Double.parseDouble(idDateClassificationNegProb);
+							double neutralProb = Double.parseDouble(idDateClassificationNeutralProb);
+
+							//GET SENTIMENT FROM DATE CLASSIFICATION DISTRIBUTION
+							if(sentimentValue == 1){
+								dasc.setNumberOfPositiveArticles(currentNumberOfPositiveArticles+1);
+							}
+							else if(sentimentValue == -1){
+								dasc.setNumberOfNegativeArticles(currentNumberOfNegativeArticles+1);
+							}
+							else{
+								dasc.setNumberOfNeutralArticles(currentNumberOfNeutralArticles+1);
+							}
+							dasc.setAggregateNegativeProb(currentAggregateNegProb+negProb);
+							dasc.setAggregateNeutralProb(currentAggregatePosProb+posProb);
+							dasc.setAggregatePositiveProb(currentAggregateNeutralProb+neutralProb);
+						}
 					}
-					else if(sentimentValue == -1){
-						dasc.setNumberOfNegativeArticles(currentNumberOfNegativeArticles+1);
-					}
-					else{
-						dasc.setNumberOfNeutralArticles(currentNumberOfNeutralArticles+1);
-					}
+					
 					sentimentHashMap.put(dt, dasc);
 					//System.out.println("OPPDATERER: DATO: " + dt.toString("YYYY.MM.dd") + " ANTALL ARTIKLER " + dasc.getNumberOfArticles() + "  ANTALL POSITIVE ARTIKLER " + dasc.getNumberOfPositiveArticles() + " ANTALL NEGATIVE ARTIILER: " + dasc.getNumberOfNegativeArticles());
 					
@@ -732,11 +789,18 @@ public class tickerRegressionOverviewGenerator {
 				currentDateRegressionObject.setNumberOfPublishedArticles(sentimentOverview.get(currentDate).getNumberOfArticles());
 				currentDateRegressionObject.setNumberOfPositivePublishedArticles(sentimentOverview.get(currentDate).getNumberOfPositiveArticles());
 				currentDateRegressionObject.setNumberOfNegativePublishedArticles(sentimentOverview.get(currentDate).getNumberOfNegativeArticles());
+				currentDateRegressionObject.setAggregateNegProb(sentimentOverview.get(currentDate).getAggregateNegativeProb());
+				currentDateRegressionObject.setAggregatePosProb(sentimentOverview.get(currentDate).getAggregatePositiveProb());
+				currentDateRegressionObject.setAggregateNeutralProb(sentimentOverview.get(currentDate).getAggregateNeutralProb());
 			}
 			else{
 				currentDateRegressionObject.setNumberOfPublishedArticles(0);
 				currentDateRegressionObject.setNumberOfPositivePublishedArticles(0);
 				currentDateRegressionObject.setNumberOfNegativePublishedArticles(0);
+				currentDateRegressionObject.setAggregateNegProb(0.0);
+				currentDateRegressionObject.setAggregatePosProb(0.0);
+				currentDateRegressionObject.setAggregateNeutralProb(0.0);
+			
 			}
 			
 			
@@ -958,6 +1022,18 @@ public class tickerRegressionOverviewGenerator {
 		   cellHeader23.setCellValue("NUMBER OF NEGATIVE ARTICLES");
 		   cellHeader23.setCellStyle(style);
 		   
+		   Cell cellHeader24 = row.createCell(23);
+		   cellHeader24.setCellValue("AGGREGATE POS PROB");
+		   cellHeader24.setCellStyle(style);
+		   
+		   Cell cellHeader25 = row.createCell(24);
+		   cellHeader25.setCellValue("AGGREGATE NEG PROB");
+		   cellHeader25.setCellStyle(style);
+		   
+		   Cell cellHeader26 = row.createCell(25);
+		   cellHeader26.setCellValue("AGGREGATE NEUTRAL PROB");
+		   cellHeader26.setCellStyle(style);
+		   
 		
 		
 		for(int i=1; i<listToExcel.size(); i++){
@@ -996,6 +1072,9 @@ public class tickerRegressionOverviewGenerator {
 		    dateRow.createCell(20).setCellValue(listToExcel.get(i).getNumberOfPublishedArticles());
 		    dateRow.createCell(21).setCellValue(listToExcel.get(i).getNumberOfPositivePublishedArticles());
 		    dateRow.createCell(22).setCellValue(listToExcel.get(i).getNumberOfNegativePublishedArticles());
+		    dateRow.createCell(23).setCellValue(listToExcel.get(i).getAggregatePosProb());
+		    dateRow.createCell(24).setCellValue(listToExcel.get(i).getAggregateNegProb());
+		    dateRow.createCell(25).setCellValue(listToExcel.get(i).getAggregateNeutralProb());
 		    
 		}
 		
@@ -1022,6 +1101,9 @@ public class tickerRegressionOverviewGenerator {
 		 tickerSheet.autoSizeColumn((short)20);
 		 tickerSheet.autoSizeColumn((short)21);
 		 tickerSheet.autoSizeColumn((short)22);
+		 tickerSheet.autoSizeColumn((short)23);
+		 tickerSheet.autoSizeColumn((short)24);
+		 tickerSheet.autoSizeColumn((short)25);
 		 
 		 
 		 FileOutputStream fileOut = new FileOutputStream(this.getPath()+"/TickerRegressionGeneratedExcelSheets/EXCEL-FUNCOM.xls");
