@@ -36,12 +36,25 @@ public class MLMainClassPaperII {
 		}
 		return mldataset;
 	}
+
+	public static MLDataSet getMLDataSet(JsonHandler jh, int radius, String binaryIndicator) throws Exception {
+		MLDataSet mldataset = new BasicMLDataSet();
+		for (NewsArticleWithStemmedVersion nawsv : jh.stemmedArticles.getNawsv()) {
+			MLArticle mla = new MLArticle(nawsv, radius);
+			mldataset.add(mla.getMLDataPair(binaryIndicator));
+		}
+		return mldataset;
+	}
 	
 	public static void main(String[] args) throws Exception {
 		
 //		writeArticlesToFiles();
-		writeArticlesToFilesSigmas();
+//		writeArticlesToFilesRadiAndFullLexicon();
+		
 //		computeAndPrintResultsForLatexTableProportion();
+		
+		computeResultsFullLexicon();
+		
 //		computeAndPrintResultsForLatexGraphsProportions();
 		
 //		computeAndPrintResultsForLatexTable();
@@ -266,8 +279,15 @@ public class MLMainClassPaperII {
 		System.out.println(rankingAverage);
 		System.out.println(mlAverage);
 	}
-	
-	
+
+	public static void computeResultsFullLexicon() throws Exception {
+		String featureString = "111111000000011111100111111";
+//		String featureString = "1111110000000000000000000";
+		for (int r = 2; r <= 8; r = r + 1) {
+			double precision = J48Classifier.tuneJ48(readMLDataSetSubsetFromFile(r, featureString, "r=" + r));
+			System.out.println(String.format("r=%s --> precision=%s", r, precision));
+		}
+	}
 
 	public static void computeAndPrintResultsForLatexGraphsProportions() throws Exception {
 		ArrayList<String> functions = new ArrayList<String>(Arrays.asList("tf", "idf", "tfidf", "mi", "chi"));
@@ -402,6 +422,15 @@ public class MLMainClassPaperII {
 		}
 	}
 
+	public static void writeArticlesToFilesRadiAndFullLexicon() throws Exception {
+		JsonHandler jh = new JsonHandler("/ArticleSteps/4_StemmedArticles/MainDataSetStemmed.json", "stemmed");
+		for (int radius = 2; radius <= 8; radius = radius + 1) {
+			MLDataSet mldataset = getMLDataSet(jh, radius, "111111000000011111111111111");
+			writeMLDataSetToFile(mldataset, radius);
+			System.out.println(String.format("Done with r=%s", radius));
+		}
+	}
+	
 	public static void writeArticlesToFilesSigmas() throws Exception {
 		JsonHandler jh = new JsonHandler("/ArticleSteps/4_StemmedArticles/MainDataSetStemmed.json", "stemmed");
 		ArrayList<String> functions = new ArrayList<String>(Arrays.asList("tf", "idf", "tfidf", "mi", "chi"));
@@ -438,6 +467,23 @@ public class MLMainClassPaperII {
 		}
 	}
 
+	public static void writeMLDataSetToFile(MLDataSet mldataset, int radius) throws Exception {
+		JsonHandler jh = new JsonHandler("/ArticleSteps/4_StemmedArticles/MainDataSetStemmed.json", "stemmed");
+		ArrayList<ArrayList<Double>> arrayList = MLArticle.wrapper(mldataset);
+		Gson gson = new Gson();
+		String text = gson.toJson(arrayList);
+		MLMainClassPaperII mlmcpii = new MLMainClassPaperII();
+		String path = String.format("%s/%s", System.getProperty("user.dir"), mlmcpii.getClass().getPackage().getName().replace(".", "/"));
+		path = path.substring(0, path.length()-16);
+		path = path + "/ArticleResources/MLDataSet/full/";
+		Writer out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(path+"r="+radius+".json"), "UTF-8"));
+		try {
+			out.write(text);
+		} finally {
+			out.close();
+		}
+	}
+	
 	public static void writeMLDataSetToFileSigmas(MLDataSet mldataset, int radius, String function, int sigma) throws Exception {
 		JsonHandler jh = new JsonHandler("/ArticleSteps/4_StemmedArticles/MainDataSetStemmed.json", "stemmed");
 		ArrayList<ArrayList<Double>> arrayList = MLArticle.wrapper(mldataset);
@@ -534,6 +580,71 @@ public class MLMainClassPaperII {
 	    	return MLArticle.wrapper(arrayList);
 	}
 
+	public static MLDataSet readMLDataSetSubsetFromFile(int radius, String binarySelector, String filename) throws Exception {
+		MLMainClassPaperII mlmcpii = new MLMainClassPaperII();
+		Gson gson = new Gson();
+		
+		String path = String.format("%s/%s", System.getProperty("user.dir"), mlmcpii.getClass().getPackage().getName().replace(".", "/"));
+		path = path.substring(0, path.length()-16);
+		path = path + "/ArticleResources/MLDataSet/full/";
+		String filePath = path + filename +".json";
+		TextFileHandler tfh = new TextFileHandler();
+		String file = tfh.getTextFileAsString(filePath, StandardCharsets.UTF_8);
+		Type arrayListType = new TypeToken<ArrayList<ArrayList<Double>>>(){}.getType();
+		ArrayList<ArrayList<Double>> arrayList = gson.fromJson(file, arrayListType);
+		for (ArrayList<Double> innerList : arrayList) {
+			if (binarySelector.charAt(0) == '0') {
+				innerList.remove(0+6);
+			}
+			if (binarySelector.charAt(1) == '0') {
+				innerList.remove(1+6);
+			}
+			if (binarySelector.charAt(2) == '0') {
+				innerList.remove(2+6);
+			}
+			if (binarySelector.charAt(3) == '0') {
+				innerList.remove(2+6);
+			}
+			if (binarySelector.charAt(4) == '0') {
+				innerList.remove(2+6);
+			}
+			if (binarySelector.charAt(5) == '0') {
+				innerList.remove(2+6);
+			}
+			if (binarySelector.charAt(6) == '0') {
+				innerList.remove(2+6);
+			}
+			if (binarySelector.charAt(7) == '0') {
+				innerList.remove(2+6);
+			}
+			if (binarySelector.charAt(8) == '0') {
+				innerList.remove(2+6);
+			}
+			if (binarySelector.charAt(9) == '0') {
+				innerList.remove(2+6);
+			}
+			if (binarySelector.charAt(10) == '0') {
+				innerList.remove(2+6);
+			}
+			if (binarySelector.charAt(11) == '0') {
+				innerList.remove(2+6);
+			}
+		}
+		int counter = 0;
+		ArrayList<ArrayList<Double>> larsArrayList = new ArrayList<ArrayList<Double>>();
+		ArrayList<ArrayList<Double>> palArrayList = new ArrayList<ArrayList<Double>>();
+		for (ArrayList<Double> innerList : arrayList) {
+			if (0 <= counter && counter <= 370) {
+				larsArrayList.add(innerList);
+			} else if (492 <= counter && counter <= 992) {
+				palArrayList.add(innerList);
+			}
+			counter++;
+		}
+		arrayList = larsArrayList;
+		return MLArticle.wrapper(arrayList);
+	}
+
 	public static MLDataSet readMLDataSetProportionSubsetFromFile(int radius, String function, double proportion, String binarySelector) throws Exception {
 		MLMainClassPaperII mlmcpii = new MLMainClassPaperII();
 		Gson gson = new Gson();
@@ -588,7 +699,7 @@ public class MLMainClassPaperII {
 		ArrayList<ArrayList<Double>> larsArrayList = new ArrayList<ArrayList<Double>>();
 		ArrayList<ArrayList<Double>> palArrayList = new ArrayList<ArrayList<Double>>();
 		for (ArrayList<Double> innerList : arrayList) {
-			if (0 <= counter && counter <= 480) {
+			if (0 <= counter && counter <= 400) {
 				larsArrayList.add(innerList);
 			} else if (492 <= counter && counter <= 992) {
 				palArrayList.add(innerList);

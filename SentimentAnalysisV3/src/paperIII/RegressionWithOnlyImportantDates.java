@@ -13,8 +13,6 @@ public class RegressionWithOnlyImportantDates {
 	String ticker;
 	ArrayList<tickerRegressionDate> allTickerDates;
 	
-	
-	
 	public RegressionWithOnlyImportantDates(DateTime sd, DateTime ed, String ticker) throws IOException{
 		this.startDate = sd;
 		this.endDate = ed;
@@ -187,30 +185,14 @@ public class RegressionWithOnlyImportantDates {
 		return tickerWeeks;
 	}
 	
-	
 	public static void main(String args[]) throws IOException{
-			
-		
-
 		DateTime startDate = new DateTime(2007,1,1,0,0);
 		DateTime endDate = new DateTime(2014,1,1,0,0);
-		
-		RegressionWithOnlyImportantDates rwoid = new RegressionWithOnlyImportantDates(startDate, endDate, "FUNCOM");
+		String ticker = "STL";
+		RegressionWithOnlyImportantDates rwoid = new RegressionWithOnlyImportantDates(startDate, endDate, ticker);
 		
 		tickerRegressionOverviewGenerator trog = new tickerRegressionOverviewGenerator();
-		trog.generateExcelSheet(rwoid.getAllWeeks());
+		trog.generateExcelSheet(rwoid.getAllImportantTickerRegressionDates(), ticker);
 
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
 }

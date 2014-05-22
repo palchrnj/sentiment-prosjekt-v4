@@ -919,7 +919,7 @@ public class tickerRegressionOverviewGenerator {
 		return monthNumber;
 	}
 	
-	public void generateExcelSheet(ArrayList<tickerRegressionDate> listToExcel) throws IOException{
+	public void generateExcelSheet(ArrayList<tickerRegressionDate> listToExcel, String ticker) throws IOException{
 		Workbook wb = new HSSFWorkbook(); 
 		Sheet tickerSheet = wb.createSheet("EXCEL");
 		
@@ -1106,7 +1106,7 @@ public class tickerRegressionOverviewGenerator {
 		 tickerSheet.autoSizeColumn((short)25);
 		 
 		 
-		 FileOutputStream fileOut = new FileOutputStream(this.getPath()+"/TickerRegressionGeneratedExcelSheets/EXCEL-FUNCOM-IMPORTANT-DATES.xls");
+		 FileOutputStream fileOut = new FileOutputStream(this.getPath()+"/TickerRegressionGeneratedExcelSheets/EXCEL-" + ticker + "-IMPORTANT-DATES.xls");
 		 wb.write(fileOut);
 		 fileOut.close();
 		
@@ -1115,9 +1115,6 @@ public class tickerRegressionOverviewGenerator {
 	    String path = String.format("%s/%s", System.getProperty("user.dir"), this.getClass().getPackage().getName().replace(".", "/"));
 	    return path.split(this.getClass().getPackage().getName())[0]+"/ArticleResources/";
 	}
-	
-              
-	
 	
 	public static void main(String[] args) throws IOException{
 		tickerRegressionOverviewGenerator trog = new tickerRegressionOverviewGenerator();

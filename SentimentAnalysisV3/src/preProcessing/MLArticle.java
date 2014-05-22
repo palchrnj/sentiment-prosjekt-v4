@@ -101,7 +101,34 @@ public class MLArticle {
 		ExcelStockParser esp = new ExcelStockParser();
 		stockPricePercentageChangeYesterday = esp.getPercentageChangeOfArticle(nawsv, 1);
 		stockPricePercentageChangeLastWeek = esp.getPercentageChangeOfArticle(nawsv, 7);
+	}
+
+	public MLArticle(NewsArticleWithStemmedVersion nawsv, int radius) throws Exception {
+		ArrayList<Double> titleList = getPosNegNeuCotCount(cotCountArticlesTitleNounAdjectiveVerbAdverb(nawsv, radius));
+		positiveCotsTitle = titleList.get(0);
+		negativeCotsTitle = titleList.get(1);
+		neutralCotsTitle = titleList.get(2);
 		
+		ArrayList<Double> leadList = getPosNegNeuCotCount(cotCountArticlesTitleNounAdjectiveVerbAdverb(nawsv, radius));
+		positiveCotsLead = leadList.get(0);
+		negativeCotsLead = leadList.get(1);
+		neutralCotsLead = leadList.get(2);
+		
+		setDate(nawsv.published);
+		
+		isBors = getBors(nawsv);
+		isAnalyse = getAnalyse(nawsv);
+		isOkonomi = getOkonomi(nawsv);
+		
+		setLengthOfTitleAndLead(nawsv);
+		
+		setUpTitleClues(nawsv);
+		
+		sentimentClassification = extractAggregateSentimentFromString(nawsv.getSentimentValue());
+		
+		ExcelStockParser esp = new ExcelStockParser();
+		stockPricePercentageChangeYesterday = esp.getPercentageChangeOfArticle(nawsv, 1);
+		stockPricePercentageChangeLastWeek = esp.getPercentageChangeOfArticle(nawsv, 7);
 	}
 	
 	private void setDate(String dateStr) {
@@ -213,28 +240,35 @@ public class MLArticle {
 				
 			}
 		}
-		
-//		System.out.println(annotations);
-//		int poscount = 0;
-//		int negcount = 0;
-//		int neucount = 0;
-//		for (String key : annotations.keySet()) {
-//			int classification = annotations.get(key);
-//			if (classification == 1) {
-//				poscount++;
-//			} else if (classification == -1) {
-//				negcount++;
-//			} else if (classification == 0) {
-//				neucount++;
-//			} else {
-//				System.out.println("None of the above:-s");
-//			}
-//		}
-//		System.out.println("Pos = " + poscount);
-//		System.out.println("Neg = " + negcount);
-//		System.out.println("Neu = " + neucount);
-//		System.out.println(legalannotations);
-//		System.out.println(legalannotations.size());
+		cotCount.add(posCount); // positive count
+		cotCount.add(negCount); // negative count
+		cotCount.add(neuCount); // neutral count
+		return cotCount;
+	}
+
+	public static ArrayList<Double> getPosNegNeuCotCount(Map<String, Integer> map) throws Exception {
+		ArrayList<Double> cotCount = new ArrayList<Double>();
+		double posCount = 0.0;
+		double negCount = 0.0;
+		double neuCount = 0.0;
+		HashMap<String, Integer> annotations = loadAllCotAnnotations();
+//		HashMap<String, Integer> legalannotations = loadLegalCotAnnotations(radius, function, sigma);
+		HashMap<String, Integer> legalannotations = annotations; //mergeAnnotations(annotations, legalannotations);
+		for (String key : map.keySet()) {
+			if (legalannotations.get(key) != null) {
+				int classification = legalannotations.get(key);
+				if (classification == 1) {
+					posCount++;
+				} else if (classification == -1) {
+					negCount++;
+				} else if (classification == 0) {
+					neuCount++;
+				} else {
+					System.err.println("Unknown classification: " + classification);
+				}
+				
+			}
+		}
 		cotCount.add(posCount); // positive count
 		cotCount.add(negCount); // negative count
 		cotCount.add(neuCount); // neutral count

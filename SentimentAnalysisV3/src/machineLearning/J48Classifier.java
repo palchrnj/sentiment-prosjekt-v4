@@ -108,7 +108,7 @@ public class J48Classifier {
 		 return averagePrecision;
 	 }
 	 
-	public static void tuneJ48(MLDataSet data) throws Exception{
+	public static double tuneJ48(MLDataSet data) throws Exception{
 		ArrayList<String> optionStrings= getFeatureSelectionString();
 		String[] optionArray = null;
 		double maxPrecision = 0.0;
@@ -175,9 +175,9 @@ public class J48Classifier {
 				options.add("-doNotMakeSplitPointActualValue");
 			}
 			optionArray = options.toArray(new String[options.size()]);
-			if (counter % 100 == 0) {
-				System.out.println(counter);
-			}
+//			if (counter % 100 == 0) {
+//				System.out.println(counter);
+//			}
 			counter++;
 			try {
 				double precision = runJ48WithOptions(data, optionArray) * 100;
@@ -205,6 +205,7 @@ public class J48Classifier {
 //		setMinNumObj(int v)  
 //		setNumFolds(int v) // 3
 //		setSeed(int newSeed) // 
+		return maxPrecision;
 	}
 	 
 	
