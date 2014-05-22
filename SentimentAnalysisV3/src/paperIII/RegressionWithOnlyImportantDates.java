@@ -134,40 +134,94 @@ public class RegressionWithOnlyImportantDates {
 		double aggregateIndiceValue = 0.0;
 		double aggregateIndiceVolume = 0.0;
 		double latestIndiceClose = 0.0;
+		double latestOseaxClose = 0.0;
+		double aggregateSTDDEV_CHANGE_LAST_THIRTY_DAYS = 0.0;
+		double aggregateOSEAX_INTRADAY_RETURN = 0.0;
+		double aggregateSTTDEV_RETURN_LAST_THIRTY_DAYS = 0.0;
+		double aggregateOSEAX_TOTAL_TRADED = 0.0;
+		double aggregateThreeMonthNIBOR = 0.0;
+		double aggregateMonthlyInflation = 0.0;
+		double aggregateUnemploymentRate = 0.0;
+		double aggregateOilPrice = 0.0;
+		double aggregateEuroNokExchangeRate = 0.0;
+		boolean latestRecession = false;
+		boolean latestBull = false;
+		double latestMarketValue = 0.0;
 		
 
-		for(int i=0; i<allTickerDates.size(); i++){
-			tickerRegressionDate currentSpecialDate = allTickerDates.get(i-7);
+
+
+		for(int i=7; i<allTickerDates.size()-7; i++){
+			tickerRegressionDate lastWeeksDate = allTickerDates.get(i-7);
+			tickerRegressionDate thisWeeksDate = allTickerDates.get(i);
 			
 			
 			//AGGREGATE VALUES FROM LAST WEEK
-			aggregateNumberOfStockReport += currentSpecialDate.getNumberOfStockReport();
-			aggregateNumberOfFinancialStockReports += currentSpecialDate.getNumberOfFinancialStockReports();
-			aggregateNumberOfTradeNotificationReports += currentSpecialDate.getNumberOfTradeNotificationReports();
-			aggregateNumberOfArticles += currentSpecialDate.getNumberOfPublishedArticles();
-			aggregateNumberOfPositiveArticles += currentSpecialDate.getNumberOfPositivePublishedArticles();
-			aggregateNumberOfNegativeArticles += currentSpecialDate.getNumberOfNegativePublishedArticles();
-			aggregatePosProb += currentSpecialDate.getAggregatePosProb();
-			aggregateNegProb += currentSpecialDate.getAggregateNegProb();
-			aggregateNeutralProb += currentSpecialDate.getAggregateNeutralProb();
+			aggregateNumberOfStockReport += lastWeeksDate.getNumberOfStockReport();
+			aggregateNumberOfFinancialStockReports += lastWeeksDate.getNumberOfFinancialStockReports();
+			aggregateNumberOfTradeNotificationReports += lastWeeksDate.getNumberOfTradeNotificationReports();
+			aggregateNumberOfArticles += lastWeeksDate.getNumberOfPublishedArticles();
+			aggregateNumberOfPositiveArticles += lastWeeksDate.getNumberOfPositivePublishedArticles();
+			aggregateNumberOfNegativeArticles += lastWeeksDate.getNumberOfNegativePublishedArticles();
+			aggregatePosProb += lastWeeksDate.getAggregatePosProb();
+			aggregateNegProb += lastWeeksDate.getAggregateNegProb();
+			aggregateNeutralProb += lastWeeksDate.getAggregateNeutralProb();
+			aggregateSTDDEV_CHANGE_LAST_THIRTY_DAYS += lastWeeksDate.getOseaxChangeInStddevLastThirtyDays();
+			aggregateOSEAX_INTRADAY_RETURN += lastWeeksDate.getOseaxIntradayReturn();
+			aggregateSTTDEV_RETURN_LAST_THIRTY_DAYS += lastWeeksDate.getOseaxStddevReturnLastThrityDays();
+			aggregateThreeMonthNIBOR += lastWeeksDate.getThreeMonthNIBOR();
+			aggregateMonthlyInflation += lastWeeksDate.getMonthlyInflation();
+			aggregateUnemploymentRate += lastWeeksDate.getUnemploymentRate();
+			aggregateOilPrice += lastWeeksDate.getOilPrice();
+			aggregateEuroNokExchangeRate += lastWeeksDate.getEuroNokExchangeRate();
 			
 			//AGGREGATE VALUES FOR THIS WEEK
+			aggregateIndiceValue += thisWeeksDate.getIndiceValue();
+			aggregateIndiceVolume += thisWeeksDate.getIndiceVolume();
+			aggregateOSEAX_TOTAL_TRADED += thisWeeksDate.getTradedVolumeTotalTradedVolumeVariable();
+			if(this.isSpecialDay(thisWeeksDate.getDate())){
+				latestIndiceClose = thisWeeksDate.getIndiceClose();
+				latestOseaxClose = thisWeeksDate.getOseaxClose();
+				latestRecession = thisWeeksDate.isRecession();
+				latestBull = thisWeeksDate.isBull();
+				latestMarketValue = thisWeeksDate.getTradedVolumeMarketValueVariable();
+			}
 			
 			
 			
 			//CHECK TO SEE IF DATE IS SPECIAL
 			if(allTickerDates.get(i).getDate().getDayOfWeek()==1){
-
+				System.out.println("THIS HAPPENED " +i+" TIMES");
 				//UPDATE THIS WEEKS OBJECT
-				allTickerDates.get(i).setNumberOfStockReport(allTickerDates.get(i).getNumberOfStockReport()+aggregateNumberOfStockReport);
-				allTickerDates.get(i).setNumberOfFinancialStockReports(allTickerDates.get(i).getNumberOfFinancialStockReports()+aggregateNumberOfFinancialStockReports);
-				allTickerDates.get(i).setNumberOfTradeNotificationReports(allTickerDates.get(i).getNumberOfTradeNotificationReports()+aggregateNumberOfTradeNotificationReports);
-				allTickerDates.get(i).setNumberOfPublishedArticles(allTickerDates.get(i).getNumberOfPublishedArticles()+aggregateNumberOfArticles);
-				allTickerDates.get(i).setNumberOfPositivePublishedArticles(allTickerDates.get(i).getNumberOfPositivePublishedArticles()+aggregateNumberOfPositiveArticles);
-				allTickerDates.get(i).setNumberOfNegativePublishedArticles(allTickerDates.get(i).getNumberOfNegativePublishedArticles()+aggregateNumberOfNegativeArticles);
-				allTickerDates.get(i).setAggregatePosProb(allTickerDates.get(i).getAggregatePosProb()+aggregatePosProb);
-				allTickerDates.get(i).setAggregateNegProb(allTickerDates.get(i).getAggregateNegProb()+aggregateNegProb);
-				allTickerDates.get(i).setAggregateNeutralProb(allTickerDates.get(i).getAggregateNeutralProb()+aggregateNeutralProb);
+				tickerRegressionDate weekObject = new tickerRegressionDate();
+				weekObject.setDate(allTickerDates.get(i).getDate());
+				weekObject.setNumberOfStockReport(aggregateNumberOfStockReport);
+				weekObject.setNumberOfFinancialStockReports(aggregateNumberOfFinancialStockReports);
+				weekObject.setNumberOfTradeNotificationReports(aggregateNumberOfTradeNotificationReports);
+				weekObject.setNumberOfPublishedArticles(aggregateNumberOfArticles);
+				weekObject.setNumberOfPositivePublishedArticles(aggregateNumberOfPositiveArticles);
+				weekObject.setNumberOfNegativePublishedArticles(aggregateNumberOfNegativeArticles);
+				weekObject.setAggregatePosProb(aggregatePosProb);
+				weekObject.setAggregateNegProb(aggregateNegProb);
+				weekObject.setAggregateNeutralProb(aggregateNeutralProb);
+				
+				weekObject.setIndiceValue(aggregateIndiceValue);
+				weekObject.setIndiceVolume(aggregateIndiceVolume);
+				weekObject.setIndiceClose(latestIndiceClose);
+				weekObject.setOseaxClose(latestOseaxClose);
+				weekObject.setOseaxChangeInStddevLastThirtyDays(aggregateSTDDEV_CHANGE_LAST_THIRTY_DAYS/7);
+				weekObject.setOseaxIntradayReturn(aggregateOSEAX_INTRADAY_RETURN/7);
+				weekObject.setOseaxStddevReturnLastThrityDays(aggregateSTTDEV_RETURN_LAST_THIRTY_DAYS/7);
+				weekObject.setTradedVolumeTotalTradedVolumeVariable(aggregateOSEAX_TOTAL_TRADED);
+				weekObject.setThreeMonthNIBOR(aggregateThreeMonthNIBOR/7);
+				weekObject.setMonthlyInflation(aggregateMonthlyInflation/7);
+				weekObject.setUnemploymentRate(aggregateUnemploymentRate/7);
+				weekObject.setOilPrice(aggregateOilPrice/7);
+				weekObject.setEuroNokExchangeRate(aggregateEuroNokExchangeRate/7);
+				weekObject.setRecession(latestRecession);
+				weekObject.setBull(latestBull);
+				weekObject.setTradedVolumeMarketValueVariable(latestMarketValue);
+				
 					
 				//RESET AGGREGATE TO NULL
 				aggregateNumberOfStockReport = 0;
@@ -179,8 +233,24 @@ public class RegressionWithOnlyImportantDates {
 				aggregatePosProb = 0.0;
 				aggregateNegProb = 0.0;
 				aggregateNeutralProb = 0.0;
-					
-				tickerWeeks.add(allTickerDates.get(i));
+				 aggregateIndiceValue = 0.0;
+				 aggregateIndiceVolume = 0.0;
+				 latestIndiceClose = 0.0;
+				 latestOseaxClose = 0.0;
+				 aggregateSTDDEV_CHANGE_LAST_THIRTY_DAYS = 0.0;
+				 aggregateOSEAX_INTRADAY_RETURN = 0.0;
+				 aggregateSTTDEV_RETURN_LAST_THIRTY_DAYS = 0.0;
+				 aggregateOSEAX_TOTAL_TRADED = 0.0;
+				 aggregateThreeMonthNIBOR = 0.0;
+				 aggregateMonthlyInflation = 0.0;
+				 aggregateUnemploymentRate = 0.0;
+				 aggregateOilPrice = 0.0;
+				 aggregateEuroNokExchangeRate = 0.0;
+				 latestRecession = false;
+				 latestBull = false;
+				 latestMarketValue = 0.0;
+	
+				 tickerWeeks.add(weekObject);
 			}
 
 		}
