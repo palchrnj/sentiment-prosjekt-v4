@@ -85,7 +85,6 @@ public class tickerRegressionDate {
 
 	//GETTERS & SETTERS
 	
-	
 	public DateTime getDate() {
 		return date;
 	}
@@ -93,7 +92,7 @@ public class tickerRegressionDate {
 	public double getAggregatePosProb() {
 		return aggregatePosProb;
 	}
-
+	
 	public void setAggregatePosProb(double aggregatePosProb) {
 		this.aggregatePosProb = aggregatePosProb;
 	}

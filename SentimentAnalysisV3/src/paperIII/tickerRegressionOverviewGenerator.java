@@ -1106,7 +1106,7 @@ public class tickerRegressionOverviewGenerator {
 		 tickerSheet.autoSizeColumn((short)25);
 		 
 		 
-		 FileOutputStream fileOut = new FileOutputStream(this.getPath()+"/TickerRegressionGeneratedExcelSheets/EXCEL-FUNCOM.xls");
+		 FileOutputStream fileOut = new FileOutputStream(this.getPath()+"/TickerRegressionGeneratedExcelSheets/EXCEL-FUNCOM-IMPORTANT-DATES.xls");
 		 wb.write(fileOut);
 		 fileOut.close();
 		
@@ -1130,6 +1130,8 @@ public class tickerRegressionOverviewGenerator {
 		
 		DateTime startDate = new DateTime(2008,1,1,0,0);
 		DateTime endDate = new DateTime(2013,1,1,0,0);
+		
+		
 		
 		ArrayList<tickerRegressionDate> list = trog.initiateTickerRegressionDateObjects("FUNCOM", startDate, endDate);
 		trog.generateExcelSheet(list);
