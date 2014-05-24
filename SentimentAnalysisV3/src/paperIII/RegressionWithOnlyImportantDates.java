@@ -265,7 +265,7 @@ public class RegressionWithOnlyImportantDates {
 		DateTime startDate = new DateTime(2007,1,1,0,0);
 		DateTime endDate = new DateTime(2014,1,1,0,0);
 		
-		RegressionWithOnlyImportantDates rwoid = new RegressionWithOnlyImportantDates(startDate, endDate, "FUNCOM");
+		RegressionWithOnlyImportantDates rwoid = new RegressionWithOnlyImportantDates(startDate, endDate, "STL");
 		
 		tickerRegressionOverviewGenerator trog = new tickerRegressionOverviewGenerator();
 		trog.generateExcelSheet(rwoid.getAllWeeks());
