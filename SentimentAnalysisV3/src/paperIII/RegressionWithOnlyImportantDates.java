@@ -406,13 +406,47 @@ public ArrayList<tickerRegressionDate> getAllMonths(){
 			
 		
 
-		DateTime startDate = new DateTime(2007,1,1,0,0);
-		DateTime endDate = new DateTime(2014,1,1,0,0);
+		DateTime startDate = new DateTime(2008,1,1,0,0);
+		DateTime endDate = new DateTime(2014,4,15,0,0);
 		
-		RegressionWithOnlyImportantDates rwoid = new RegressionWithOnlyImportantDates(startDate, endDate, "STL");
+		
+		
+		RegressionWithOnlyImportantDates rwoid1 = new RegressionWithOnlyImportantDates(startDate, endDate, "YAR");
+
+		
+//		ArrayList<ArrayList<tickerRegressionDate>> aggregateRwoid = new ArrayList<ArrayList<tickerRegressionDate>>();
+//		aggregateRwoid.add(rwoid1.getAllImportantTickerRegressionDates());
+//		RegressionWithOnlyImportantDates rwoid2 = new RegressionWithOnlyImportantDates(startDate, endDate, "IOX");
+//		aggregateRwoid.add(rwoid2.getAllImportantTickerRegressionDates());
+//		
+//		RegressionWithOnlyImportantDates rwoid3 = new RegressionWithOnlyImportantDates(startDate, endDate, "NAUR");
+//		aggregateRwoid.add(rwoid3.getAllImportantTickerRegressionDates());
+//		
+//		RegressionWithOnlyImportantDates rwoid4 = new RegressionWithOnlyImportantDates(startDate, endDate, "NOR");
+//		aggregateRwoid.add(rwoid4.getAllImportantTickerRegressionDates());
+//		
+//		RegressionWithOnlyImportantDates rwoid5 = new RegressionWithOnlyImportantDates(startDate, endDate, "NSG");
+//		aggregateRwoid.add(rwoid5.getAllImportantTickerRegressionDates());
+//		
+//		RegressionWithOnlyImportantDates rwoid6 = new RegressionWithOnlyImportantDates(startDate, endDate, "RCL");
+//		aggregateRwoid.add(rwoid6.getAllImportantTickerRegressionDates());
+//		
+//		RegressionWithOnlyImportantDates rwoid7 = new RegressionWithOnlyImportantDates(startDate, endDate, "SDRL");
+//		aggregateRwoid.add(rwoid7.getAllImportantTickerRegressionDates());
+//		
+//		RegressionWithOnlyImportantDates rwoid8 = new RegressionWithOnlyImportantDates(startDate, endDate, "STL");
+//		aggregateRwoid.add(rwoid8.getAllImportantTickerRegressionDates());
+//		
+//		RegressionWithOnlyImportantDates rwoid9 = new RegressionWithOnlyImportantDates(startDate, endDate, "TEL");
+//		aggregateRwoid.add(rwoid9.getAllImportantTickerRegressionDates());
+//		
+//		RegressionWithOnlyImportantDates rwoid10 = new RegressionWithOnlyImportantDates(startDate, endDate, "YAR");
+//		aggregateRwoid.add(rwoid10.getAllImportantTickerRegressionDates());
+		
 		
 		tickerRegressionOverviewGenerator trog = new tickerRegressionOverviewGenerator();
-		trog.generateExcelSheet(rwoid.getAllMonths());
+		
+		trog.generateExcelSheet(rwoid1.getAllMonths());
 
 	}
 	
