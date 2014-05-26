@@ -439,13 +439,19 @@ public class tickerRegressionOverviewGenerator {
 			
 				NewsArticleWithStemmedVersion nawsv = allStemmedArticlesWithSentimentValue.getNawsv().get(i);
 				
-				String dateOfArticle = nawsv.getpublished().split("T")[0];
-				int year = 2000+Integer.parseInt(dateOfArticle.split("-")[0]);
-				int month = Integer.parseInt(dateOfArticle.split("-")[1]);
-				int day = Integer.parseInt(dateOfArticle.split("-")[2]);
-				
-				DateTime dt = new DateTime(year,month,day,0,0);
-				
+				DateTime dt = new DateTime();
+				try {
+					String dateOfArticle = nawsv.getpublished().split("T")[0];
+					int year = 2000+Integer.parseInt(dateOfArticle.split("-")[0]);
+					int month = Integer.parseInt(dateOfArticle.split("-")[1]);
+					int day = Integer.parseInt(dateOfArticle.split("-")[2]);
+					
+					 dt = new DateTime(year,month,day,0,0);
+					
+				} catch (Exception e) {
+					 dt = new DateTime(2014,1,1,0,0);
+				}
+
 				DateArticleSentimentCounter dasc = new DateArticleSentimentCounter();
 				
 				//IF ROW ALREADY EXISTS
@@ -549,6 +555,8 @@ public class tickerRegressionOverviewGenerator {
 	
 	//INITIATE ALL VARIABLES
 	public ArrayList<tickerRegressionDate> initiateTickerRegressionDateObjects(String ticker, DateTime startDate, DateTime endDate) throws IOException{
+		
+		System.out.println("INITIATING VARIABLES");
 		HashMap<DateTime, Double> oilPriceDateValueHashMap = this.getOilPriceForDate();
 		HashMap<DateTime, Double> eurNokExchangeRateDateValueHashMap = this.getEuroNokExchangeRateForDate();
 		HashMap<DateTime, Double> inflationDateValueHashMap = this.getInflationForDate();
@@ -610,9 +618,9 @@ public class tickerRegressionOverviewGenerator {
 				}
 			}
 			//MARKET VALUE
-			double marketValue = 0.0;
+			double marketValue = -999999999999.0;
 			DateTime changedDateMARKETVALUE = currentDate;
-			while(marketValue == 0.0){
+			while(marketValue == -999999999999.0){
 				try {
 					//System.out.println("MARKETVALUE DENNE ER EVIG: " + marketValue);
 					marketValue = marketValueHashMap.get(changedDateMARKETVALUE);
@@ -806,7 +814,7 @@ public class tickerRegressionOverviewGenerator {
 			
 			currentDateRegressionObject.setTicker(ticker);
 			tickerRegressionDates.add(currentDateRegressionObject);
-			//System.out.println(counter + "  " + currentDateRegressionObject.toString());
+			System.out.println(counter + "  " + currentDateRegressionObject.toString());
 			counter++;
 			currentDate = currentDate.plusDays(1);
 		}
@@ -1106,11 +1114,230 @@ public class tickerRegressionOverviewGenerator {
 		 tickerSheet.autoSizeColumn((short)25);
 		 
 		 
+<<<<<<< HEAD
 		 FileOutputStream fileOut = new FileOutputStream(this.getPath()+"/TickerRegressionGeneratedExcelSheets/EXCEL-" + ticker + "-IMPORTANT-DATES.xls");
+=======
+		 FileOutputStream fileOut = new FileOutputStream(this.getPath()+"/TickerRegressionGeneratedExcelSheets/Monthly/EXCEL-YAR-MONTHLY-2008-2014.xls");
+>>>>>>> 6042190964907157ffd8d3dbd2935c71a98c3235
 		 wb.write(fileOut);
 		 fileOut.close();
 		
 	}
+	
+//	public void generateExcelSheetWithMultipleTickers(ArrayList<ArrayList<tickerRegressionDate>> listsToExcel) throws IOException{
+//		
+//		Workbook wb = new HSSFWorkbook(); 
+//		Sheet tickerSheet = wb.createSheet("EXCEL");
+//		
+//		   CellStyle style = wb.createCellStyle();
+//		    Font font = wb.createFont();
+//		    font.setBoldweight(Font.BOLDWEIGHT_BOLD);
+//		    style.setFont(font);
+//	       
+//		   Row row = tickerSheet.createRow((short)0);
+//		   Cell cellHeader1 = row.createCell(0);
+//		   cellHeader1.setCellValue("TICKER");
+//		   cellHeader1.setCellStyle(style);
+//		   
+//		   Cell cellHeader2 = row.createCell(1);
+//		   cellHeader2.setCellValue("BLUECHIP");
+//		   cellHeader2.setCellStyle(style);
+//		    
+//		   Cell cellHeader3 = row.createCell(2);
+//		   cellHeader3.setCellValue("DATE");
+//		   cellHeader3.setCellStyle(style);
+//		   
+//		   Cell cellHeader4 = row.createCell(3);
+//		   cellHeader4.setCellValue("INDICE VALUE");
+//		   cellHeader4.setCellStyle(style);
+//		   
+//		   Cell cellHeader5 = row.createCell(4);
+//		   cellHeader5.setCellValue("INDICE VOLUME");
+//		   cellHeader5.setCellStyle(style);
+//		   
+//		   Cell cellHeader6 = row.createCell(5);
+//		   cellHeader6.setCellValue("INDICE CLOSE");
+//		   cellHeader6.setCellStyle(style);
+//		   
+//		   Cell cellHeader7 = row.createCell(6);
+//		   cellHeader7.setCellValue("OSEAX CLOSE");
+//		   cellHeader7.setCellStyle(style);
+//		   
+//		   Cell cellHeader8 = row.createCell(7);
+//		   cellHeader8.setCellValue("OSEAX STDDEV CHANGE LAST THIRTY DAYS");
+//		   cellHeader8.setCellStyle(style);
+//		   
+//		   Cell cellHeader9 = row.createCell(8);
+//		   cellHeader9.setCellValue("OSEAX OSEAX INTRADAY RETURN");
+//		   cellHeader9.setCellStyle(style);
+//		   
+//		   Cell cellHeader10 = row.createCell(9);
+//		   cellHeader10.setCellValue("OSEAX STDDEV RETURN LAST THIRTY DAYS");
+//		   cellHeader10.setCellStyle(style);
+//		   
+//		   Cell cellHeader11 = row.createCell(10);
+//		   cellHeader11.setCellValue("OSEAX TOTAL TRADED");
+//		   cellHeader11.setCellStyle(style);
+//		   
+//		   Cell cellHeader12 = row.createCell(11);
+//		   cellHeader12.setCellValue("THREE MONTH NIBOR");
+//		   cellHeader12.setCellStyle(style);
+//		   
+//		   Cell cellHeader13 = row.createCell(12);
+//		   cellHeader13.setCellValue("MONTHY INFLATION");
+//		   cellHeader13.setCellStyle(style);
+//		   
+//		   Cell cellHeader14 = row.createCell(13);
+//		   cellHeader14.setCellValue("UNEMPLOYMENT RATE");
+//		   cellHeader14.setCellStyle(style);
+//		   
+//		   Cell cellHeader15 = row.createCell(14);
+//		   cellHeader15.setCellValue("OIL PRICE");
+//		   cellHeader15.setCellStyle(style);
+//		   
+//		   Cell cellHeader16 = row.createCell(15);
+//		   cellHeader16.setCellValue("EURO NOK EXCHANGE RATE");
+//		   cellHeader16.setCellStyle(style);
+//		   
+//		   Cell cellHeader17 = row.createCell(16);
+//		   cellHeader17.setCellValue("RECESSION");
+//		   cellHeader17.setCellStyle(style);
+//		   
+//		   Cell cellHeader18 = row.createCell(17);
+//		   cellHeader18.setCellValue("BULL");
+//		   cellHeader18.setCellStyle(style);
+//		   
+//		   Cell cellHeader19 = row.createCell(18);
+//		   cellHeader19.setCellValue("MARKET VALUE");
+//		   cellHeader19.setCellStyle(style);
+//		   
+//		   Cell cellHeader20 = row.createCell(19);
+//		   cellHeader20.setCellValue("STOCK REPORT");
+//		   cellHeader20.setCellStyle(style);
+//		   
+//		   Cell cellHeader21 = row.createCell(20);
+//		   cellHeader21.setCellValue("FINANCIAL STOCK REPORTS");
+//		   cellHeader21.setCellStyle(style);
+//		   
+//		   Cell cellHeader22 = row.createCell(21);
+//		   cellHeader22.setCellValue("TRADE NOTIFICATION STOCK REPORTS");
+//		   cellHeader22.setCellStyle(style);
+//		   
+//		   Cell cellHeader23 = row.createCell(22);
+//		   cellHeader23.setCellValue("NUMBER OF ARTICLES");
+//		   cellHeader23.setCellStyle(style);
+//		   
+//		   Cell cellHeader24 = row.createCell(23);
+//		   cellHeader24.setCellValue("NUMBER OF POSITIVE ARTICLES");
+//		   cellHeader24.setCellStyle(style);
+//		   
+//		   Cell cellHeader25 = row.createCell(24);
+//		   cellHeader25.setCellValue("NUMBER OF NEGATIVE ARTICLES");
+//		   cellHeader25.setCellStyle(style);
+//		   
+//		   Cell cellHeader26 = row.createCell(25);
+//		   cellHeader26.setCellValue("AGGREGATE POS PROB");
+//		   cellHeader26.setCellStyle(style);
+//		   
+//		   Cell cellHeader27 = row.createCell(26);
+//		   cellHeader27.setCellValue("AGGREGATE NEG PROB");
+//		   cellHeader27.setCellStyle(style);
+//		   
+//		   Cell cellHeader28 = row.createCell(27);
+//		   cellHeader28.setCellValue("AGGREGATE NEUTRAL PROB");
+//		   cellHeader28.setCellStyle(style);
+//		
+//		for(int tickerCounter=0; tickerCounter<listsToExcel.size(); tickerCounter++){
+//			ArrayList<tickerRegressionDate> listToExcel = listsToExcel.get(tickerCounter);
+//		
+//			
+//			for(int i=0; i<listToExcel.size(); i++){
+//				int rowCounter = i;
+//				
+//				if(tickerCounter>0){
+//					rowCounter = listsToExcel.get(i-1).size()+i;
+//				}
+//				  
+//				//CREATE ROW
+//			    Row dateRow = tickerSheet.createRow((short)rowCounter);
+//			    
+//			    dateRow.createCell(0).setCellValue("TICKER" + i);
+//			    dateRow.createCell(1).setCellValue("BIG");
+//			    dateRow.createCell(2).setCellValue(listToExcel.get(i).getDate().toString("dd.MM.YYYY"));
+//			    dateRow.createCell(3).setCellValue(listToExcel.get(i).getIndiceValue());
+//			    dateRow.createCell(4).setCellValue(listToExcel.get(i).getIndiceVolume());
+//			    dateRow.createCell(5).setCellValue(listToExcel.get(i).getIndiceClose());
+//			    dateRow.createCell(6).setCellValue(listToExcel.get(i).getOseaxClose());
+//			    dateRow.createCell(7).setCellValue(listToExcel.get(i).getOseaxChangeInStddevLastThirtyDays());
+//			    dateRow.createCell(8).setCellValue(listToExcel.get(i).getOseaxIntradayReturn());
+//			    dateRow.createCell(9).setCellValue(listToExcel.get(i).getOseaxStddevReturnLastThrityDays());
+//			    dateRow.createCell(10).setCellValue(listToExcel.get(i).getTradedVolumeTotalTradedVolumeVariable());
+//			    dateRow.createCell(11).setCellValue(listToExcel.get(i).getThreeMonthNIBOR());
+//			    dateRow.createCell(12).setCellValue(listToExcel.get(i).getMonthlyInflation());
+//			    dateRow.createCell(13).setCellValue(listToExcel.get(i).getUnemploymentRate());
+//			    dateRow.createCell(14).setCellValue(listToExcel.get(i).getOilPrice());
+//			    dateRow.createCell(15).setCellValue(listToExcel.get(i).getEuroNokExchangeRate());
+//			    if (listToExcel.get(i).isRecession())
+//			    	dateRow.createCell(16).setCellValue(1.0);
+//			    else{
+//			    	dateRow.createCell(16).setCellValue(0.0);
+//			    }
+//			    if (listToExcel.get(i).isBull())
+//				    dateRow.createCell(17).setCellValue(1.0);
+//			    else{
+//				    dateRow.createCell(17).setCellValue(0.0);
+//			    }
+//			    dateRow.createCell(18).setCellValue(listToExcel.get(i).getTradedVolumeMarketValueVariable());
+//			    dateRow.createCell(19).setCellValue(listToExcel.get(i).getNumberOfStockReport());
+//			    dateRow.createCell(20).setCellValue(listToExcel.get(i).getNumberOfFinancialStockReports());
+//			    dateRow.createCell(21).setCellValue(listToExcel.get(i).getNumberOfTradeNotificationReports());
+//			    dateRow.createCell(22).setCellValue(listToExcel.get(i).getNumberOfPublishedArticles());
+//			    dateRow.createCell(23).setCellValue(listToExcel.get(i).getNumberOfPositivePublishedArticles());
+//			    dateRow.createCell(24).setCellValue(listToExcel.get(i).getNumberOfNegativePublishedArticles());
+//			    dateRow.createCell(25).setCellValue(listToExcel.get(i).getAggregatePosProb());
+//			    dateRow.createCell(26).setCellValue(listToExcel.get(i).getAggregateNegProb());
+//			    dateRow.createCell(27).setCellValue(listToExcel.get(i).getAggregateNeutralProb());
+//			    
+//			}
+//			
+//			 tickerSheet.autoSizeColumn((short)0);
+//			 tickerSheet.autoSizeColumn((short)1);
+//			 tickerSheet.autoSizeColumn((short)2);
+//			 tickerSheet.autoSizeColumn((short)3);
+//			 tickerSheet.autoSizeColumn((short)4);
+//			 tickerSheet.autoSizeColumn((short)5);
+//			 tickerSheet.autoSizeColumn((short)6);
+//			 tickerSheet.autoSizeColumn((short)7);
+//			 tickerSheet.autoSizeColumn((short)8);
+//			 tickerSheet.autoSizeColumn((short)9);
+//			 tickerSheet.autoSizeColumn((short)10);
+//			 tickerSheet.autoSizeColumn((short)11);
+//			 tickerSheet.autoSizeColumn((short)12);
+//			 tickerSheet.autoSizeColumn((short)13);
+//			 tickerSheet.autoSizeColumn((short)14);
+//			 tickerSheet.autoSizeColumn((short)15);
+//			 tickerSheet.autoSizeColumn((short)16);
+//			 tickerSheet.autoSizeColumn((short)17);
+//			 tickerSheet.autoSizeColumn((short)18);
+//			 tickerSheet.autoSizeColumn((short)19);
+//			 tickerSheet.autoSizeColumn((short)20);
+//			 tickerSheet.autoSizeColumn((short)21);
+//			 tickerSheet.autoSizeColumn((short)22);
+//			 tickerSheet.autoSizeColumn((short)23);
+//			 tickerSheet.autoSizeColumn((short)24);
+//			 tickerSheet.autoSizeColumn((short)25);
+//			 tickerSheet.autoSizeColumn((short)26);
+//			 tickerSheet.autoSizeColumn((short)27);
+//			 
+//			 
+//			 FileOutputStream fileOut = new FileOutputStream(this.getPath()+"/TickerRegressionGeneratedExcelSheets/FUNCOM-DAILY-2007-2014.xls");
+//			 wb.write(fileOut);
+//			 fileOut.close();
+//		}
+//		
+//	}
+	
+	
 	public String getPath() {
 	    String path = String.format("%s/%s", System.getProperty("user.dir"), this.getClass().getPackage().getName().replace(".", "/"));
 	    return path.split(this.getClass().getPackage().getName())[0]+"/ArticleResources/";
@@ -1125,8 +1352,8 @@ public class tickerRegressionOverviewGenerator {
 //		System.out.println(trog.stringToDateTime(testSheet.getRow(1).getCell(0).toString().replace(".", "").substring(0, 8)));
 		trog.getEuroNokExchangeRateForDate();
 		
-		DateTime startDate = new DateTime(2008,1,1,0,0);
-		DateTime endDate = new DateTime(2013,1,1,0,0);
+		DateTime startDate = new DateTime(2011,1,1,0,0);
+		DateTime endDate = new DateTime(2012,1,1,0,0);
 		
 		
 		
