@@ -20,16 +20,16 @@ public class IPOParser {
 		String cols[] = null;
 		while (bufferedReader.ready()) {
 			String line = bufferedReader.readLine();
-			System.out.println(line);
+//			System.out.println(line);
 			cols = line.split(",");
 		}
 //		for (int i = 0; i < cols.length; i++) {
 //			System.out.print(cols[i] + " - ");
 //		}
-//		double opening = Double.parseDouble(cols[3]);
-//		double closing = Double.parseDouble(cols[6]);
-//		double ret = (closing - opening) / opening;
-//		System.out.println("Return of ticker " + ticker + " first day of trading, " + cols[0] + ", on exchange " + exchange + " was: " + ret);
-		return ret = 0;
+		double opening = Double.parseDouble(cols[3]);
+		double closing = Double.parseDouble(cols[6]);
+		double ret = (closing - opening) / opening;
+		System.out.println("Return of ticker " + ticker + " first day of trading, " + cols[0] + ", on exchange " + exchange + " was: " + ret);
+		return ret;
 	}
 }
